@@ -9,8 +9,9 @@ const routes: Routes = [
     component:WelcomeComponent
   },
   {
-    path:'presentation',
-    component:PresentationComponent
+    path:'welcome',
+    loadChildren: ()=> import('../shared/shared.module')
+    .then(m => m.SharedModule)
   }
 ];
 

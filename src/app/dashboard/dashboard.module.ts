@@ -1,22 +1,34 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { SideBarComponent } from './../shared/side-bar/side-bar.component';
+import { HeaderComponent } from './../shared/header/header.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { DashboardRoutingModule } from './dashboard-routing.module';
 import { PresentationComponent } from './presentation/presentation.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { SharedModule } from '../shared/shared.module';
-
+import { RouterModule } from '@angular/router';
+ 
 
 
 @NgModule({
   declarations: [
     PresentationComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SideBarComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     DashboardRoutingModule,
-    SharedModule
+
   ],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  exports: [
+    PresentationComponent,
+    WelcomeComponent,
+    SideBarComponent,
+    HeaderComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DashboardModule { }
