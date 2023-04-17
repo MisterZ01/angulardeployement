@@ -1,7 +1,35 @@
 .separator{
     border-left: 1px solid #ccc;
-    height: 220px; 
+    height: 250px; 
     margin: auto;
     display: flex;
     align-items: center;
 }
+
+.rounded-button{
+    border:0,5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100px;
+    height: 40px;
+    width: 115%;
+    font-weight: bold;
+    background: #FFFFFF;
+  }
+
+  *google-btn{
+
+    background-image: url('https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 5px;
+  }
+
+ 
+  
+  
