@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { PresentationComponent } from './dashboard/presentation/presentation.component';
+import { WelcomeComponent } from './dashboard/welcome/welcome.component';
 
 
 @NgModule({
@@ -14,7 +16,10 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot([
+      {path:'presentation', component: PresentationComponent},
+      {path:'dashboard', component: WelcomeComponent}
+    ])
 
   ],
   providers: [],

@@ -1,0 +1,25 @@
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+
+
+.card {
+    border-radius: 10px; /* Arrondir les bords */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+    padding: 20px; /* Ajouter un peu d'espace intérieur */
+    text-align: center; /* Centrer le contenu */
+    width: 300px; /* Définir une largeur pour la card */
+    flex: 1; /* Afficher les cards en ligne */
+    margin: 50px; /* Ajouter de l'espace entre les cards */
+  }
+  
+  .midde_cont {
+    text-align: center; /* Centrer les cards */
+    display: flex;
+    justify-content: center;
+  }
+  
