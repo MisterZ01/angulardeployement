@@ -2,9 +2,71 @@
 <app-side-bar></app-side-bar>
 <!-- right content -->
 <div id="content">
-    <div class="midde_cont">
-        <p> ca marche </p>
+        <div class="midde_cont mt-5">
+            <h4>Présentation de l'équipe intervenant</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Fonction</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="name"></td>
+                    <td><input type="text" class="form-control" id="surname"></td>
+                    <td><input type="text" class="form-control" id="function"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" id="name"></td>
+                    <td><input type="text" class="form-control" id="surname"></td>
+                    <td><input type="text" class="form-control" id="function"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" id="name"></td>
+                    <td><input type="text" class="form-control" id="surname"></td>
+                    <td><input type="text" class="form-control" id="function"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+          <div class=" midde_cont mt-3">
+            <h4>Informations sur le contrôle</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">Date du contrôle</th>
+                      <th scope="col">heure de début du contrôle</th>
+                      <th scope="col">heure de fin du contrôle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td><input type="date" class="form-control" id="date"></td>
+                      <td><input type="text" class="form-control" id="before"></td>
+                      <td><input type="text" class="form-control" id="after"></td>
+                    </tr>
+                </tbody>
 
-    </div>
+            </table> 
+          </div>
+          <div class=" midde_cont mt-3">
+               <h4>Présentation du demandeur</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Nom du demandeur</th>
+                        <th scope="col">Representant du demandeur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td><input type="text" class="form-control" id="name"></td>
+                        <td><input type="text" class="form-control" id="other"></td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
     <!-- end dashboard inner -->
 </div>
