@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-presentation',
-  templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.scss']
+  selector: 'app-environnement',
+  templateUrl: './environnement.component.html',
+  styleUrls: ['./environnement.component.scss']
 })
-export class PresentationComponent {
+export class EnvironnementComponent {
 
   public imageSrc: any;
 

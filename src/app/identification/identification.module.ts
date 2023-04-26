@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConnexionComponent } from './connexion/connexion.component';
-import {RouterModule, Router} from '@angular/router';
 
+import { IdentificationRoutingModule } from './identification-routing.module';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { RouterModule } from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 
 @NgModule({
@@ -11,8 +13,9 @@ import {RouterModule, Router} from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
-
-  ]
+    RouterModule,
+    IdentificationRoutingModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class IdentificationModule { }

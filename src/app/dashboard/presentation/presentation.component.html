@@ -32,41 +32,254 @@
             </table>
         </div>
           <div class=" midde_cont mt-3">
-            <h4>Informations sur le contrôle</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                      <th scope="col">Date du contrôle</th>
-                      <th scope="col">heure de début du contrôle</th>
-                      <th scope="col">heure de fin du contrôle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <td><input type="date" class="form-control" id="date"></td>
-                      <td><input type="text" class="form-control" id="before"></td>
-                      <td><input type="text" class="form-control" id="after"></td>
-                    </tr>
-                </tbody>
-
-            </table> 
-          </div>
-          <div class=" midde_cont mt-3">
-               <h4>Présentation du demandeur</h4>
+                <h4>Informations sur le site et le contrôle du site</h4>
                 <table class="table">
                     <thead>
                         <tr>
-                        <th scope="col">Nom du demandeur</th>
-                        <th scope="col">Representant du demandeur</th>
+                        <th scope="col">Nom du site</th>
+                        <th scope="col">Région du site</th>
+                        <th scope="col">Département du site</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        <td><input type="text" class="form-control" id="name"></td>
-                        <td><input type="text" class="form-control" id="other"></td>
+                        <td><input type="text" class="form-control" id="nsite"></td>
+                        <td><input type="text" class="form-control" id="region"></td>
+                        <td><input type="text" class="form-control" id="dpmt"></td>
+                        </tr>
+                    </tbody>
+                </table> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Commune du site</th>
+                            <th scope="col">Ville/Quartier</th>
+                            <th scope="col">Environnement du site</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="commune"></td>
+                            <td><input type="text" class="form-control" id="ville"></td>
+                            <td><input type="text" class="form-control" id="env" list="suggestions">
+                                <datalist id="suggestions">
+                                    <option value="Classique">
+                                    <option value="Salin">
+                                    <option value="Montagneux">
+                                    <option value="Autre">
+                                </datalist></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Situation géographique</th>
+                            <th scope="col">Densité de population </th>
+                            <th scope="col">Typologie du site</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="situation" list="suggestion">
+                                <datalist id="suggestion">
+                                    <option value="Zone Urbaine">
+                                    <option value="Zone Rurale">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="densite" list="suggest">
+                                <datalist id="suggest">
+                                    <option value="Forte">
+                                    <option value="Faible">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="typologie" list="sugges">
+                                <datalist id="sugges">
+                                    <option value="Grenfield">
+                                    <option value="Rooftop">
+                                </datalist></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Type de station</th>
+                            <th scope="col">Local technique</th>
+                            <th scope="col">Présence de plaque</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="station" list="sugge">
+                                <datalist id="sugge">
+                                    <option value="BSC/RNC">
+                                    <option value="BTS">
+                                    <option value="MW">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="local" list="sugg">
+                                <datalist id="sugg">
+                                    <option value="Shelter">
+                                    <option value="Bâtiment">
+                                    <option value="Abri">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="identite" list="sug">
+                                <datalist id="sug">
+                                    <option value="Oui">
+                                    <option value="Non">
+                                </datalist></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date de mise en service site</th>
+                            <th scope="col">Hauteur du bâtiment</th>
+                            <th scope="col">Surveillance du site</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="date" class="form-control" id="m-e-s"></td>
+                            <td><input type="text" class="form-control" id="hauteur"></td>
+                            <td><input type="text" class="form-control" id="surveillance" list="choix">
+                                <datalist id="choix">
+                                    <option value="Présent">
+                                    <option value="Absent">
+                                </datalist></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre de vigile</th>
+                            <th scope="col">Société de gardiennage</th>
+                            <th scope="col">Type Station</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="nbre"></td>
+                            <td><input type="text" class="form-control" id="societe"></td>
+                            <td><input type="text" class="form-control" id="type" list="choi">
+                                <datalist id="choi">
+                                    <option value="Indoor">
+                                    <option value="Outdoor">
+                                </datalist></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Latitude (N)</th>
+                            <th scope="col">Longitude (W)</th>
+                            <th scope="col">Altitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="commune"></td>
+                            <td><input type="text" class="form-control" id="ville"></td>
+                            <td><input type="text" class="form-control" id="env"></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date de début du contrôle</th>
+                            <th scope="col">Heure de début du contrôle</th>
+                            <th scope="col">Heure de fin du contrôle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="date" class="form-control" id="date"></td>
+                            <td><input type="text" class="form-control" id="debut"></td>
+                            <td><input type="text" class="form-control" id="fin"></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+
+                </table>
+          </div>
+          <div class=" midde_cont mt-3">
+               <h4>Illustration photos</h4>
+                 <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col-6">Photo</th>
+                            <th scope="col-6">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                <br>
+                                <img [src]="imageSrc" alt="" width="200"></td>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                <br>
+                                <img [src]="imageSrc" alt="" width="200"></td>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                <br>
+                                <img [src]="imageSrc" alt="" width="200"></td>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                <br>
+                                <img [src]="imageSrc" alt="" width="200"></td>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div class="button">
+                    <button class="next-btn">Suivant</button> 
+                </div>
           </div>
-    <!-- end dashboard inner -->
 </div>

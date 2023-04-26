@@ -7,6 +7,14 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { PresentationComponent } from './presentation/presentation.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RouterModule } from '@angular/router';
+import { EnvironnementComponent } from './environnement/environnement.component';
+import { StructureComponent } from './structure/structure.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ElectriciteComponent } from './electricite/electricite.component';
+import { ProtectionComponent } from './protection/protection.component';
+import { AntennaireComponent } from './antennaire/antennaire.component';
+import { SyntheseComponent } from './synthese/synthese.component';
+import { ConclusionComponent } from './conclusion/conclusion.component';
  
 
 
@@ -15,7 +23,15 @@ import { RouterModule } from '@angular/router';
     PresentationComponent,
     WelcomeComponent,
     SideBarComponent,
-    HeaderComponent
+    HeaderComponent,
+    EnvironnementComponent,
+    StructureComponent,
+    NavigationComponent,
+    ElectriciteComponent,
+    ProtectionComponent,
+    AntennaireComponent,
+    SyntheseComponent,
+    ConclusionComponent
   ],
   imports: [
     CommonModule,

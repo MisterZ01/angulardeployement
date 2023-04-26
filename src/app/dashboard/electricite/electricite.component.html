@@ -1,0 +1,253 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Installations électriques</h2>
+            <div class="midde_cont mt-5">
+                <h4 class="mt-5">Contrôle installations électriques</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Source d’énergie</th>
+                        <th scope="col">Local énergie  </th>
+                        <th scope="col">Etat du local</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="source-energie" list="choisir-trente-huit">
+                                <datalist id="choisir-trente-huit">
+                                    <option value="CIE">
+                                    <option value="GE">
+                                    <option value="Panneaux solaires">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="local-energie" list="choisi-trente-huit"> 
+                                <datalist id="choisi-trente-huit">
+                                    <option value="Niche">
+                                    <option value="Grille CIE">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-local" list="chois-trente-huit"> 
+                                <datalist id="chois-trente-huit">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Tableau Electrique</th>
+                        <th scope="col">Etat du tableau</th>
+                        <th scope="col">Parafoudre</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="tableau-electrique" list="choisir-trente-neuf">
+                                <datalist id="choisir-trente-neuf">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-tableau" list="choisi-trente-neuf"> 
+                                <datalist id="choisi-trente-neuf">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="parafoudre" list="chois-trente-neuf"> 
+                                <datalist id="chois-trente-neuf">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat du Parafoudre</th>
+                        <th scope="col">Groupe Electrogène(GE)</th>
+                        <th scope="col">Fonctionnel</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-parafoudre" list="choisir-quarante">
+                                <datalist id="choisir-quarante">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="group-electrogne" list="choisi-quarante"> 
+                                <datalist id="choisi-quarante">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="fonctionnel" list="chois-quarante"> 
+                                <datalist id="chois-quarante">
+                                    <option value="Oui">
+                                    <option value="Non">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type de GE</th>
+                        <th scope="col">Marque du GE</th>
+                        <th scope="col">Puissance du GE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-parafoudre" list="choisir-quarante-un">
+                                <datalist id="choisir-quarante-un">
+                                    <option value="Insonorisé">
+                                    <option value="Classique">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="group-electrogne"></td>
+                            <td><input type="text" class="form-control" id="fonctionnel"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Puissance acoustique GE</th>
+                        <th scope="col">Valeur du bruit sonore du GE </th>
+                        <th scope="col">Conformité de la valeur</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="puissance"></td>
+                            <td><input type="text" class="form-control" id="bruit-sonore"></td>
+                            <td><input type="text" class="form-control" id="conformite" list="chois-quarante-deux"> 
+                                <datalist id="chois-quarante-deux">
+                                    <option value="Conforme">
+                                    <option value="Non conforme">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Citerne à carburant</th>
+                        <th scope="col">Environnement de la source d’énergie</th>
+                        <th scope="col">Panneaux Solaires</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="Citerne" list="choisir-quarante-trois">
+                                <datalist id="choisir-quarante-trois">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                    <option value="Oxydée">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="env-source-energie" list="choisi-quarante-trois"> 
+                                <datalist id="choisi-quarante-trois">
+                                    <option value="Propre">
+                                    <option value="Sale">
+                                    <option value="Aéré">
+                                    <option value="Non aéré">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="panneaux-solaire" list="chois-quarante-trois"> 
+                                <datalist id="chois-quarante-trois">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">PS fonctionnel</th>
+                        <th scope="col">Système d'éclairage du site</th>
+                        <th scope="col">Etat du système</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-ps" list="choisir-quarante-quatre">
+                                <datalist id="choisir-quarante-quatre">
+                                    <option value="Oui">
+                                    <option value="Non">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="eclairage" list="choisi-quarante-quatre"> 
+                                <datalist id="choisi-quarante-quatre">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-eclairage" list="chois-quarante-quatre"> 
+                                <datalist id="chois-quarante-quatre">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class=" midde_cont mt-3">
+                <h4>Illustration photos</h4>
+                  <table class="table table-bordered border-primary">
+                     <thead>
+                         <tr>
+                             <th scope="col-6">Photo</th>
+                             <th scope="col-6">Description</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                     </tbody>
+                 </table>
+    
+                 <div class="button">
+                    <button class="prev-btn">Précedent</button>
+                     <button class="next-btn">Suivant</button> 
+                 </div>
+           </div>
+
+</div>

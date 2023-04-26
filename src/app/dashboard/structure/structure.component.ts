@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-presentation',
-  templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.scss']
+  selector: 'app-structure',
+  templateUrl: './structure.component.html',
+  styleUrls: ['./structure.component.scss']
 })
-export class PresentationComponent {
+export class StructureComponent {
 
+  
   public imageSrc: any;
 
   constructor(private sanitizer: DomSanitizer) {}

@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Conclusion de l'audit</h2>
+    <div class="midde_cont mt-5">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Nom du site</th>
+                <th scope="col">Nom de l'opérateur</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="nom-site"></td>
+                    <td><input type="text" class="form-control" id="operateur"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Contrôle infrastructure et environnement</th>
+                <th scope="col">Contrôle radio</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="infr&env" list="choisir-cinquante-quatre">
+                        <datalist id="choisir-cinquante-quatre">
+                            <option value="Conforme">
+                            <option value="Non conforme">
+                        </datalist></td>
+                    <td><input type="text" class="form-control" id="radio" list="choisi-cinquante-quatre"> 
+                        <datalist id="choisi-cinquante-quatre">
+                            <option value="Conforme">
+                            <option value="Non conforme">
+                        </datalist></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

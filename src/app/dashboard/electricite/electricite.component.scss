@@ -1,3 +1,8 @@
+h2{
+    display: flex;
+    justify-content: center;
+}
+
 h4{
     display: flex;
     justify-content: center;
@@ -57,7 +62,7 @@ textarea{
 
 .button button{
     height:35px;
-   width:10%;
+   width:20%;
    border-radius:20px;
    /*margin:0 20px;*/
     border:none;
