@@ -1,0 +1,15 @@
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    display:flex; /* Afficher les icônes sur une même ligne */
+    justify-content: space-between;
+    width: 50%; /* Définir la largeur de chaque icône */
+    height: 50%;
+    text-align: center; /* Centrer le contenu de chaque icône horizontalement */
+    margin: 0 20%; /* Définir une marge horizontale de 5 pixels entre chaque icône */
+    margin-top: 5%;
+  }
+  

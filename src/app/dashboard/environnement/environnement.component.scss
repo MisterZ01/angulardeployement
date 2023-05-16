@@ -1,26 +1,11 @@
-h2{
+h2, h4{
     display: flex;
     justify-content: center;
 }
-
-h4{
-    display: flex;
-    justify-content: center;
-}
-
 .observation{
     display: flex;
     justify-content: center;
 }
-
-input[type="file"] {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    // border: 1px solid #ccc;
-    border-radius: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.075);
-  }
 
   input[type="text"]{
     height:35px;

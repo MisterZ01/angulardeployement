@@ -15,6 +15,16 @@ import { ProtectionComponent } from './protection/protection.component';
 import { AntennaireComponent } from './antennaire/antennaire.component';
 import { SyntheseComponent } from './synthese/synthese.component';
 import { ConclusionComponent } from './conclusion/conclusion.component';
+import { ListerapportsComponent } from './listerapports/listerapports.component';
+import { ProfilComponent } from './profil/profil.component';
+import { UsersComponent } from './users/users.component';
+import { EquipesComponent } from './equipes/equipes.component';
+import { AdminComponent } from './admin/admin.component';
+import { RapportComponent } from './rapport/rapport.component';
+import { InfositeComponent } from './infosite/infosite.component';
+import { PhotositeComponent } from './photosite/photosite.component';
+import { PhotoenvironnementComponent } from './photoenvironnement/photoenvironnement.component';
+import { AnnexesComponent } from './annexes/annexes.component';
  
 
 
@@ -31,7 +41,17 @@ import { ConclusionComponent } from './conclusion/conclusion.component';
     ProtectionComponent,
     AntennaireComponent,
     SyntheseComponent,
-    ConclusionComponent
+    ConclusionComponent,
+    ListerapportsComponent,
+    ProfilComponent,
+    UsersComponent,
+    EquipesComponent,
+    AdminComponent,
+    RapportComponent,
+    InfositeComponent,
+    PhotositeComponent,
+    PhotoenvironnementComponent,
+    AnnexesComponent
   ],
   imports: [
     CommonModule,
@@ -40,6 +60,11 @@ import { ConclusionComponent } from './conclusion/conclusion.component';
 
   ],
   exports: [
+    AdminComponent,
+    EquipesComponent,
+    UsersComponent,
+    ProfilComponent,
+    ListerapportsComponent,
     PresentationComponent,
     WelcomeComponent,
     SideBarComponent,

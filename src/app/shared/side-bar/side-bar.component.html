@@ -20,22 +20,22 @@
        <h4>General</h4>
        <ul class="list-unstyled components">
         <li class="active">
-            <a [routerLink]="['/welcome']"><i class="fa fa-home blue1_color"></i> <span>ACCEUIL</span></a>
+            <a [routerLink]="['/dashboard']"><i class="fa fa-home blue1_color"></i> <span>ACCEUIL</span></a>
         </li>
         <li>
             <a href="#presentation" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clock-o yellow_color"></i><span>PRESENTATIONS</span></a>
 
             <ul class="collapse list-unstyled" id="presentation">
-                <li><a href="equipe.html">> <span>Composition de l'équipe</span></a></li>
-                <li><a href="infosite.html">> <span>Informations sur le site</span></a></li>
-                <li><a href="photopresentaion.html">> <span>Illustration photos</span></a></li>
+                <li><a routerLink="/presentation">> <span>Composition de l'équipe</span></a></li>
+                <li><a routerLink="/infosite">> <span>Informations sur le site</span></a></li>
+                <li><a routerLink="/photosite">> <span>Illustration photos</span></a></li>
             </ul>
         </li>
         <li>
             <a href="#enviprotection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i><span>ENVIRONNEMENT</span></a>
                 <ul class="collapse list-unstyled" id="enviprotection">
-                    <li><a href="envir.html">> <span>Contrôle de environnement</span></a></li>
-                    <li><a href="photoenvir.html">> <span>Illustration photos</span></a></li>
+                    <li><a routerLink="/environnement">> <span>Contrôle environnement</span></a></li>
+                    <li><a routerLink="/photoenvironnement">> <span>Illustration photos</span></a></li>
                 </ul>
         </li>
         <li>
@@ -89,8 +89,8 @@
                     <li><a href="tableau.html">><span>Tableau de synthèses et recommandations</span></a></li>
                 </ul>
         </li>
-        <li><a href="charts.html"><i class="fa fa-bar-chart-o yellow_color"></i> <span>CONCLUSION DE L’AUDIT</span></a></li>
-        <li><a href="settings.html"><i class="fa fa-cog red_color"></i> <span>ANNEXES</span></a></li>
+        <li><a routerLink="/conclusion"><i class="fa fa-bar-chart-o yellow_color"></i> <span>CONCLUSION DE L’AUDIT</span></a></li>
+        <li><a routerLink="/annexes"><i class="fa fa-cog red_color"></i> <span>ANNEXES</span></a></li>
     </ul>
     </div>
  </nav>

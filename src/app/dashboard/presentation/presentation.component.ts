@@ -20,5 +20,5 @@ export class PresentationComponent {
     reader.readAsDataURL(event.target.files[0]);
 
     }
-
+  
 }

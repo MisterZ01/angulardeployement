@@ -1,0 +1,74 @@
+
+    <div class="full_container">
+        <div class="container mt-5">
+           <div class="center verticle_center">
+              <div class="login_section">
+                 <div class="logo_login">
+                    <div class="center">
+                       <img width="210" src="assets/images/logo/un.png" alt="#" />
+                    </div>
+                 </div>
+                 <div class="login_form">
+                    <form>
+                        <h2>Présentation</h2>
+                       <fieldset class="mt-5">
+                          <div class="field">
+                             <label class="label_field">Nom</label>
+                             <input type="nom" name="nom" placeholder="nom">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Prenom</label>
+                             <input type="prenom" name="prenom" placeholder="prenom">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Contact</label>
+                             <input type="contact" name="num" placeholder="numero">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Profession</label>
+                             <input type="profession" name="profession" placeholder="profession">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Nom Utilisateur</label>
+                             <input type="nom-user" name="username" placeholder="Nom_Utilisateur">
+                          </div>
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="profil">Profil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                                </tr>
+                
+                            </tbody>
+                
+                          </table>
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="profil">Entrez une photo de vous</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="file" id="file-input" name="image" (change)="previewImage($event)"></td>
+                                </tr>
+                
+                            </tbody>
+                
+                          </table>
+                          
+
+                          <div class="button center verticle_center">
+                        <button class="next-btn" routerLink="/inscription-competence">Suivant</button>
+                        </div>
+                        </fieldset>
+                    </form>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
