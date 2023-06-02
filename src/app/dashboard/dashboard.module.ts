@@ -1,4 +1,4 @@
-import { SideBarComponent } from './../shared/side-bar/side-bar.component';
+import { SideBarUnComponent } from './../shared/side-bar-un/side-bar-un.component';
 import { HeaderComponent } from './../shared/header/header.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -25,6 +25,11 @@ import { InfositeComponent } from './infosite/infosite.component';
 import { PhotositeComponent } from './photosite/photosite.component';
 import { PhotoenvironnementComponent } from './photoenvironnement/photoenvironnement.component';
 import { AnnexesComponent } from './annexes/annexes.component';
+import { SideBarDeuxComponent } from '../shared/side-bar-deux/side-bar-deux.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
  
 
 
@@ -32,7 +37,8 @@ import { AnnexesComponent } from './annexes/annexes.component';
   declarations: [
     PresentationComponent,
     WelcomeComponent,
-    SideBarComponent,
+    SideBarUnComponent,
+    SideBarDeuxComponent,
     HeaderComponent,
     EnvironnementComponent,
     StructureComponent,
@@ -51,12 +57,17 @@ import { AnnexesComponent } from './annexes/annexes.component';
     InfositeComponent,
     PhotositeComponent,
     PhotoenvironnementComponent,
-    AnnexesComponent
+    AnnexesComponent,
+    
   ],
   imports: [
     CommonModule,
     RouterModule,
     DashboardRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AngularEditorModule,
 
   ],
   exports: [
@@ -67,7 +78,8 @@ import { AnnexesComponent } from './annexes/annexes.component';
     ListerapportsComponent,
     PresentationComponent,
     WelcomeComponent,
-    SideBarComponent,
+    SideBarUnComponent,
+    SideBarDeuxComponent,
     HeaderComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

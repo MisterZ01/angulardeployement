@@ -20,10 +20,15 @@ import { InfositeComponent } from './infosite/infosite.component';
 import { PhotositeComponent } from './photosite/photosite.component';
 import { PhotoenvironnementComponent } from './photoenvironnement/photoenvironnement.component';
 import { AnnexesComponent } from './annexes/annexes.component';
+import { ConnexionComponent } from '../identification/connexion/connexion.component';
 
 const routes: Routes = [
   {
     path:'',
+    component:ConnexionComponent
+  },
+  {
+    path:'welcome',
     component:WelcomeComponent
   },
   {

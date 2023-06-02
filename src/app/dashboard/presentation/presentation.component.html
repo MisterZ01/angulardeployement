@@ -1,13 +1,10 @@
 <app-header></app-header>
-<app-side-bar></app-side-bar>
+<app-side-bar-deux></app-side-bar-deux>
 <!-- right content -->
 <div id="content">
         <div class="midde_cont mt-5">
             <h4>Présentation de l'équipe intervenant</h4>
-            <div class=" btn-modal row mt-5">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ajouter un nouvel intervenant</button>
-            </div>
-            <table class="table">
+            <table class="table mt-5">
                 <thead>
                 <tr>
                     <th scope="col">Nom</th>
@@ -35,7 +32,8 @@
             </table>
         </div>
         
-        <div class="button">
+        <div class="button center verticle_center">
+            <button class="save-btn" type="submit">Enregistrer</button> 
             <button class="next-btn" routerLink="/infosite">Suivant</button> 
         </div>
 </div>

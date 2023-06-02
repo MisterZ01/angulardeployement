@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-side-bar></app-side-bar>
+<app-side-bar-deux></app-side-bar-deux>
 
 <div id="content">
     <div class=" midde_cont mt-5">
@@ -197,23 +197,16 @@
 
         </table>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col" class="observation">Observations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
-                </tr>
-
-            </tbody>
-
-        </table>
+            <h5>Observation</h5>
+            <angular-editor class="bg-black" [ngModel]="htmlContent" [config]="config"></angular-editor>
+            <div class="html">
+               {{ htmlContent }}
+            </div>
+          
     </div>
-    <div class="button mt-5">
+    <div class="button mt-5 center verticle_center">
         <button class="prev-btn" routerLink="/presentation">Précedent</button>
+        <button class="save-btn" type="submit">Enregistrer</button> 
         <button class="next-btn" routerLink="/photosite">Suivant</button> 
     </div>
 </div>

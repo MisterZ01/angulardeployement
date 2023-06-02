@@ -1,64 +1,76 @@
 <app-header></app-header>
-<app-side-bar></app-side-bar>
+<app-side-bar-un></app-side-bar-un>
 <!-- right content -->
-<div id="content">
-    <h1>BIENVENNUE DANS NOTRE APPLICATION PLUSWORDS</h1>
-        <div class="midde_cont mt-5 row">
-              <div class="fonction1">
-                    <div class="card" style="width: 18rem;">
-                      <img src="assets/images/landing_page/deux.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <a routerLink="/presentation" class="card-text">Enregistrer les informations collectées pour éditer un rapport.</a>
-                      </div>
-                    </div>
-              </div>
-
-              <div class="fonction2">
-                  <div class="card" style="width: 18rem;">
-                      <img src="assets/images/landing_page/trois.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <a routerLink="/listerapports" class="card-text">Voir la liste des rapports enregistrés pour mener des actions.</a>
-                      </div>
-                    </div>
-              </div>
-              <div class="fonction3">
-                    <div class="card" style="width: 18rem;">
-                      <img src="assets/images/landing_page/quatre.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <a routerLink="/profil" class="card-text">Voir son profil utilisateur pour des modifications ou plus de précisions.</a>
-                      </div>
-                    </div>
-              </div>
-        </div>
-
-
-
-        <div class="midde_cont mt-3 row">
-            <div class="fonction4">
-                 <div class="card" style="width: 18rem;">
-                    <img src="assets/images/landing_page/cinq.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a routerLink="/users" class="card-text">Forum des utilisateurs ayant un compte pour des prises des contacts.</a>
-                    </div>
-                  </div>
+<div id="content" >
+    <div class="row column1 mt-5 center verticle_center">
+      <div class="col-md-6 col-lg-3">
+         <div class="full counter_section margin_bottom_30 yellow_bg">
+            <div class="couter_icon">
+               <div> 
+                  <i class="fa fa-user"></i>
+               </div>
             </div>
-
-            <div class="fonction5">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/images/landing_page/six.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <a routerLink="/equipes" class="card-text">la liste des équipes ayant éffectuées des contrôles de terrain.</a>
-                    </div>
+            <div class="counter_no">
+               <div>
+                  <p class="total_no">2500</p>
+                  <p class="head_couter">utilisateurs inscrits</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+         <div class="full counter_section margin_bottom_30 green_bg">
+            <div class="couter_icon">
+               <div> 
+                  <i class="fa fa-file"></i>
+               </div>
+            </div>
+            <div class="counter_no">
+               <div>
+                  <p class="total_no">1,805</p>
+                  <p class="head_couter">rapports finalisés</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+         <div class="full counter_section margin_bottom_30 red_bg">
+            <div class="couter_icon">
+               <div> 
+                  <i class="fa fa-comments-o"></i>
+               </div>
+            </div>
+            <div class="counter_no">
+               <div>
+                  <p class="total_no">54</p>
+                  <p class="head_couter">Raports en cours</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+                        
+    <div class="row column2 graph margin_bottom_30">
+      <div class="col-md-l2 col-lg-12">
+          <div class="white_shd full">
+            <div class="full graph_head">
+                <div class="heading1 margin_0">
+                  <h2>Graphique en aires supplémentaires</h2>
                 </div>
             </div>
-            <div class="fonction6">
-                <div class="card" style="width: 18rem;">
-                    <img src="assets/images/landing_page/sept.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <a routerLink="/admin" class="card-text">Espace administrateur pour l'organisation et la suppervision.</a>
-                    </div>
+            <div class="full graph_revenue">
+                <div class="row">
+                  <div class="col-md-12">
+                      <div class="content">
+                        <div class="area_chart">
+                            <canvas height="120" id="canvas"></canvas>
+                        </div>
+                      </div>
                   </div>
+                </div>
             </div>
-        </div>
-    <!-- end dashboard inner -->
+          </div>
+      </div>
+    </div>
+
 </div>

@@ -1,7 +1,8 @@
+import { SideBarDeuxComponent } from './side-bar-deux/side-bar-deux.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+import { SideBarUnComponent } from './side-bar-un/side-bar-un.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,11 @@ const routes: Routes = [
   },
   {
     path:'ok',
-    component:SideBarComponent
+    component:SideBarUnComponent
+  },
+  {
+    path:'okk',
+   component: SideBarDeuxComponent
   }
 ];
 

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideBarComponent } from './side-bar.component';
+import { SideBarUnComponent } from './side-bar-un.component';
 
-describe('SideBarComponent', () => {
-  let component: SideBarComponent;
-  let fixture: ComponentFixture<SideBarComponent>;
+describe('SideBarUnComponent', () => {
+  let component: SideBarUnComponent;
+  let fixture: ComponentFixture<SideBarUnComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideBarComponent ]
+      declarations: [ SideBarUnComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SideBarComponent);
+    fixture = TestBed.createComponent(SideBarUnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
