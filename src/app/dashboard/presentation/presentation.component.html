@@ -14,26 +14,26 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="name"></td>
-                    <td><input type="text" class="form-control" id="surname"></td>
-                    <td><input type="text" class="form-control" id="function"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="fonction" [ngModelOptions]="{standalone: true}"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" id="name"></td>
-                    <td><input type="text" class="form-control" id="surname"></td>
-                    <td><input type="text" class="form-control" id="function"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="fonction" [ngModelOptions]="{standalone: true}"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" id="name"></td>
-                    <td><input type="text" class="form-control" id="surname"></td>
-                    <td><input type="text" class="form-control" id="function"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="fonction" [ngModelOptions]="{standalone: true}"></td>
                 </tr>
                 </tbody>
             </table>
         </div>
         
         <div class="button center verticle_center">
-            <button class="save-btn" type="submit">Enregistrer</button> 
+            <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
             <button class="next-btn" routerLink="/infosite">Suivant</button> 
         </div>
 </div>

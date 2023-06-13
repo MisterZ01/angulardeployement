@@ -14,9 +14,9 @@
             </thead>
             <tbody>
                 <tr>
-                <td><input type="text" class="form-control" id="nsite"></td>
-                <td><input type="text" class="form-control" id="region"></td>
-                <td><input type="text" class="form-control" id="dpmt"></td>
+                <td><input type="text" class="form-control" id="nsite" [(ngModel)]="nom_site" [ngModelOptions]="{standalone: true}"></td>
+                <td><input type="text" class="form-control" id="region" [(ngModel)]="nom_region" [ngModelOptions]="{standalone: true}"></td>
+                <td><input type="text" class="form-control" id="dpmt" [(ngModel)]="nom_departement" [ngModelOptions]="{standalone: true}"></td>
                 </tr>
             </tbody>
         </table> 
@@ -30,9 +30,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="commune"></td>
-                    <td><input type="text" class="form-control" id="ville"></td>
-                    <td><input type="text" class="form-control" id="env" list="suggestions">
+                    <td><input type="text" class="form-control" id="commune" [(ngModel)]="nom_commune" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="ville" [(ngModel)]="nom_city" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="env" list="suggestions" [(ngModel)]="typenvir" [ngModelOptions]="{standalone: true}">
                         <datalist id="suggestions">
                             <option value="Classique">
                             <option value="Salin">
@@ -55,17 +55,17 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="situation" list="suggestion">
+                    <td><input type="text" class="form-control" id="situation" list="suggestion" [(ngModel)]="situation_geo" [ngModelOptions]="{standalone: true}">
                         <datalist id="suggestion">
                             <option value="Zone Urbaine">
                             <option value="Zone Rurale">
                         </datalist></td>
-                    <td><input type="text" class="form-control" id="densite" list="suggest">
+                    <td><input type="text" class="form-control" id="densite" list="suggest" [(ngModel)]="densite" [ngModelOptions]="{standalone: true}">
                         <datalist id="suggest">
                             <option value="Forte">
                             <option value="Faible">
                         </datalist></td>
-                    <td><input type="text" class="form-control" id="typologie" list="sugges">
+                    <td><input type="text" class="form-control" id="typologie" list="sugges" [(ngModel)]="typologie" [ngModelOptions]="{standalone: true}">
                         <datalist id="sugges">
                             <option value="Grenfield">
                             <option value="Rooftop">
@@ -79,28 +79,28 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Type de station</th>
+                    <th scope="col">station</th>
                     <th scope="col">Local technique</th>
                     <th scope="col">Présence de plaque</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="station" list="sugge">
+                    <td><input type="text" class="form-control" id="station" list="sugge" [(ngModel)]="station" [ngModelOptions]="{standalone: true}">
                         <datalist id="sugge">
                             <option value="BSC/RNC">
                             <option value="BTS">
                             <option value="MW">
                             <option value="Autre">
                         </datalist></td>
-                    <td><input type="text" class="form-control" id="local" list="sugg">
+                    <td><input type="text" class="form-control" id="local" list="sugg" [(ngModel)]="localtec" [ngModelOptions]="{standalone: true}">
                         <datalist id="sugg">
                             <option value="Shelter">
                             <option value="Bâtiment">
                             <option value="Abri">
                             <option value="Autre">
                         </datalist></td>
-                    <td><input type="text" class="form-control" id="identite" list="sug">
+                    <td><input type="text" class="form-control" id="identite" list="sug" [(ngModel)]="plaque_ident" [ngModelOptions]="{standalone: true}">
                         <datalist id="sug">
                             <option value="Oui">
                             <option value="Non">
@@ -121,9 +121,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="date" class="form-control" id="m-e-s"></td>
-                    <td><input type="text" class="form-control" id="hauteur"></td>
-                    <td><input type="text" class="form-control" id="surveillance" list="choix">
+                    <td><input type="date" class="form-control" id="m-e-s" [(ngModel)]="date_de_ms" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="hauteur" [(ngModel)]="hauteur_bat" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="surveillance" list="choix" [(ngModel)]="gardient" [ngModelOptions]="{standalone: true}">
                         <datalist id="choix">
                             <option value="Présent">
                             <option value="Absent">
@@ -145,9 +145,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="nbre"></td>
-                    <td><input type="text" class="form-control" id="societe"></td>
-                    <td><input type="text" class="form-control" id="type" list="choi">
+                    <td><input type="text" class="form-control" id="nbre" [(ngModel)]="nbre_gardient" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="societe" [(ngModel)]="societe_gardient" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="type" list="choi" [(ngModel)]="typestation" [ngModelOptions]="{standalone: true}">
                         <datalist id="choi">
                             <option value="Indoor">
                             <option value="Outdoor">
@@ -169,9 +169,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="commune"></td>
-                    <td><input type="text" class="form-control" id="ville"></td>
-                    <td><input type="text" class="form-control" id="env"></td>
+                    <td><input type="text" class="form-control" id="commune" [(ngModel)]="latitude" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="ville" [(ngModel)]="longitude" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="env" [(ngModel)]="altitude" [ngModelOptions]="{standalone: true}"></td>
                 </tr>
 
             </tbody>
@@ -188,9 +188,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="date" class="form-control" id="date"></td>
-                    <td><input type="text" class="form-control" id="debut"></td>
-                    <td><input type="text" class="form-control" id="fin"></td>
+                    <td><input type="date" class="form-control" id="date" [(ngModel)]="date_controle" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="debut" [(ngModel)]="heure_debut" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="fin" [(ngModel)]="heure_fin" [ngModelOptions]="{standalone: true}"></td>
                 </tr>
 
             </tbody>
@@ -198,7 +198,7 @@
         </table>
 
             <h5>Observation</h5>
-            <angular-editor class="bg-black" [ngModel]="htmlContent" [config]="config"></angular-editor>
+            <angular-editor class="bg-black" [ngModel]="commentaire" [ngModelOptions]="{standalone: true}" [config]="config"></angular-editor>
             <div class="html">
                {{ htmlContent }}
             </div>
@@ -206,7 +206,7 @@
     </div>
     <div class="button mt-5 center verticle_center">
         <button class="prev-btn" routerLink="/presentation">Précedent</button>
-        <button class="save-btn" type="submit">Enregistrer</button> 
+        <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
         <button class="next-btn" routerLink="/photosite">Suivant</button> 
     </div>
 </div>

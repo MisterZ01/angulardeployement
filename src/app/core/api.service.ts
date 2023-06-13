@@ -9,6 +9,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+  registerMemb(memb: { nom: any; prenom: any; fonction: any; }) {
+    throw new Error('Method not implemented.');
+  }
 
   private apiUrl = 'http://localhost:3000/utilisateur';
 
@@ -22,10 +25,6 @@ export class ApiService {
   registerUser(user: any):Observable<any> {
     return this.Http.post(`${this.apiUrl}/inscription`, user);
   }
-
-  // registerMembre(memb: any):Observable<any> {
-  //   return this.Http.post(`${this.apiUrl}/membreequipe`, memb);
-  // }
 
   create(){}
 

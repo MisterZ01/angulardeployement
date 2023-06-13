@@ -56,7 +56,7 @@ export class InscriptionComponent implements OnInit {
         console.log('Utilisateur enregistré avec succès', response);
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
-      (      error: any) => {
+      (  error: any) => {
         console.error('Une erreur s\'est produite lors de l\'inscription', error);
         // Gérer l'erreur d'inscription
       }
