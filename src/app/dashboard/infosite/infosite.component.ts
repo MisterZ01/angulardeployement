@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { ApiCommuneService } from 'src/app/core/api-commune.service';
-import { ApiDepmtService } from 'src/app/core/api-depmt.service';
 import { ApiEnvService } from 'src/app/core/api-env.service';
 import { ApiInfositeService } from 'src/app/core/api-infosite.service';
-import { ApiRegionService } from 'src/app/core/api-region.service';
-import { ApiVilleService } from 'src/app/core/api-ville.service';
+
 
 
 
@@ -19,10 +16,6 @@ export class InfositeComponent implements OnInit{
   public imageSrc: any;
   sit: any;
   env: any;
-  vil: any;
-  com: any;
-  dpt: any;
-  reg: any;
 
 
   typenvir : any;
@@ -48,19 +41,10 @@ export class InfositeComponent implements OnInit{
   heure_debut : any;
   heure_fin : any;
 
-  nom_city: any;
-
-  nom_commune: any;
-
-  nom_departement: any;
-
-  nom_region: any;
-
   htmlContent: string;
   config: AngularEditorConfig;
 
-  constructor(private sanitizer: DomSanitizer, private api_site:ApiInfositeService, private api_envmt:ApiEnvService, private api_city:ApiVilleService,
-    private api_commune:ApiCommuneService, private api_depmt:ApiDepmtService, private api_region:ApiRegionService) {
+  constructor(private sanitizer: DomSanitizer, private api_site:ApiInfositeService, private api_envmt:ApiEnvService) {
     this.htmlContent = ''; 
     this.config  = {
  
@@ -139,65 +123,6 @@ export class InfositeComponent implements OnInit{
     this.api_envmt.registerEnvironnement(control_env).subscribe(
       (response: any) => {
         console.log("les infos du controle environnement ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-
-    let city= {
-
-      nom_ville_quartier :this.nom_city,
-    }
-    this.api_city.registerVille(city).subscribe(
-      (response: any) => {
-        console.log("les infos sur la ville_quartier ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-
-    let comune= {
-
-      nom_commune :this.nom_commune,
-    }
-    this.api_commune.registerCommune(comune).subscribe(
-      (response: any) => {
-        console.log("les infos sur la commune ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-    let dpatmt= {
-
-      nom_departement :this.nom_departement,
-    }
-    this.api_depmt.registerDepartement(dpatmt).subscribe(
-      (response: any) => {
-        console.log("les infos sur le departement ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-
-    let region= {
-
-      nom_region :this.nom_region,
-    }
-    this.api_region.registerRegion(region).subscribe(
-      (response: any) => {
-        console.log("les infos sur la region ont été enregistré avec succès", response);
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
       (  error: any) => {

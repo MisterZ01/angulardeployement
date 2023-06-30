@@ -61,9 +61,11 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input type="file" id="file-input" (change)="previewImage($event)" name="uploaded_file"></td>
+                                    <td>
+                                       <input type="file" id="file-input"(change)="previewImage($event)"  [(ngModel)]="imageusers" [ngModelOptions]="{standalone: true}">
+                                    </td>
                                     <br>
-                                     <img [src]="imageSrc" alt="" width="200">
+                                     
                                 </tr>
                 
                             </tbody>

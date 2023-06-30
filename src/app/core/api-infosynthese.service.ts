@@ -6,17 +6,15 @@ import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiDepmtService {
+export class ApiInfosyntheseService {
 
-  private apiUrl = 'http://localhost:3000/departement';
+  private apiUrl = 'http://localhost:3000/synthese';
 
   host = environment.host
 
-
   constructor(private Http: HttpClient) { }
 
-
-   registerDepartement(dpt: any):Observable<any> {
-    return this.Http.post(`${this.apiUrl}/departement`, dpt);
-}
+  registerSynthese(synthe: any):Observable<any> {
+    return this.Http.post(`${this.apiUrl}/synthese`, synthe);
+  }
 }

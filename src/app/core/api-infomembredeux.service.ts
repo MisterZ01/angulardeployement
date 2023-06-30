@@ -6,16 +6,18 @@ import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiVilleService {
+export class ApiInfomembredeuxService {
 
-  private apiUrl = 'http://localhost:3000/ville-quartier';
+  
+  private apiUrl = 'http://localhost:3000/membreequipe';
 
   host = environment.host
 
+
   constructor(private Http: HttpClient) { }
 
-  registerVille(vil: any):Observable<any> {
-    return this.Http.post(`${this.apiUrl}/quatier`, vil);
-}
 
+   registerMembreDeux(membdeux: any):Observable<any> {
+    return this.Http.post(`${this.apiUrl}/membreequipe`, membdeux);
+  }
 }

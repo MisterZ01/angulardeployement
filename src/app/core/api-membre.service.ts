@@ -16,7 +16,7 @@ export class ApiMembreService {
   constructor(private Http: HttpClient) { }
 
 
-   registerMembre(memb: any):Observable<any> {
+   registerMembreUn(memb: any):Observable<any> {
     return this.Http.post(`${this.apiUrl}/membreequipe`, memb);
   }
 }

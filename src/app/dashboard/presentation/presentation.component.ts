@@ -10,14 +10,24 @@ import { ApiMembreService } from 'src/app/core/api-membre.service';
 export class PresentationComponent implements OnInit {
 
   public imageSrc: any;
-  memb: any;
+  membun: any;
+  membdeux: any;
+  membtrois: any;
 
 
-  nom : any;
-  prenom : any;
-  fonction : any;
+  nom1 : any;
+  prenom1 : any;
+  fonction1 : any;
 
-  constructor(private sanitizer: DomSanitizer, private api_memb_s:ApiMembreService) {}
+  nom2 : any;
+  prenom2 : any;
+  fonction2 : any;
+
+  nom3 : any;
+  prenom3 : any;
+  fonction3 : any;
+
+  constructor(private sanitizer: DomSanitizer, private api_memb_s:ApiMembreService, private api_membdeux:ApiMembreService, private api_membtrois:ApiMembreService,) {}
 
   previewImage(event: any) {
     const reader = new FileReader();
@@ -31,15 +41,49 @@ export class PresentationComponent implements OnInit {
     ngOnInit(): void {}
 
     Submited() {
-      let memb = {
+      let memb1 = {
   
-       nom :this.nom,
-       prenom :this.prenom,
-       fonction: this.fonction,
+       nom :this.nom1,
+       prenom :this.prenom1,
+       fonction: this.fonction1,
       }
-      this.api_memb_s.registerMembre(memb).subscribe(
+      this.api_memb_s.registerMembreUn(memb1).subscribe(
         (response: any) => {
-          console.log("les membres d'équipe ont été enregistré avec succès", response);
+          console.log("le premier membre d'équipe a été enregistré avec succès", response);
+          // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+        },
+        (  error: any) => {
+          console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+          // Gérer l'erreur d'inscription
+        }
+      );
+
+      let memb2 = {
+  
+       nom :this.nom2,
+       prenom :this.prenom2,
+       fonction: this.fonction2,
+      }
+      this.api_membdeux.registerMembreUn(memb2).subscribe(
+        (response: any) => {
+          console.log("le deuxième membre d'équipe a été enregistré avec succès", response);
+          // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+        },
+        (  error: any) => {
+          console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+          // Gérer l'erreur d'inscription
+        }
+      );
+
+      let memb3 = {
+  
+       nom :this.nom3,
+       prenom :this.prenom3,
+       fonction: this.fonction3,
+      }
+      this.api_membtrois.registerMembreUn(memb3).subscribe(
+        (response: any) => {
+          console.log("le troisième membre d'équipe a été enregistré avec succès", response);
           // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
         },
         (  error: any) => {

@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-side-bar></app-side-bar>
+<app-side-bar-deux></app-side-bar-deux>
 <!-- right content -->
 <div id="content">
     <h2 class="mt-5">Synthèses et recommandations</h2>
@@ -16,6 +16,11 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [ngModel]="partieconcernee" [ngModelOptions]="{standalone: true}"></textarea></td>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [ngModel]="anormalies" [ngModelOptions]="{standalone: true}"></textarea></td>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [ngModel]="recommandations" [ngModelOptions]="{standalone: true}"></textarea></td>
+                        </tr>
+                        <!-- <tr>
                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
@@ -49,19 +54,15 @@
                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
-                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
-                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
 
-            <div class="button">
-                <button class="prev-btn">Précedent</button>
-                 <button class="next-btn">Suivant</button> 
-             </div>
+            <div class="button mt-5 center verticle_center">
+                <button class="prev-btn" routerLink="/photoenvironnement">Précedent</button>
+                <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
+                <button class="next-btn" routerLink="/conclusion">Suivant</button> 
+            </div>
 
 </div>

@@ -20,7 +20,8 @@ export class InscriptionComponent implements OnInit {
   num : any;
   username : any;
   mdp : any;
-  profil : any
+  profil : any;
+  imageusers : any
 
 
 
@@ -35,6 +36,11 @@ export class InscriptionComponent implements OnInit {
     reader.readAsDataURL(event.target.files[0]);
 
     }
+  // selectedFile !: File ;
+
+  // onFileSelected(event: any): void {
+  //   this.selectedFile = event.target.files[0];
+  //   console.log('Selected File:', this.selectedFile);}
 
   ngOnInit():void{}
 
@@ -49,11 +55,14 @@ export class InscriptionComponent implements OnInit {
       profession :this.profession,
       nom_utilisateur :this.username,
       mdp :this.mdp,
-      profile :this.profil
+      profile :this.profil,
+      image_users :JSON.stringify(this.imageSrc) ,
      }
+     console.log(this.imageSrc);
     this.apiservice.registerUser(user).subscribe(
       (response: any) => {
         console.log('Utilisateur enregistré avec succès', response);
+        
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
       (  error: any) => {
