@@ -22,7 +22,8 @@ export class UsersComponent {
 }
 
  users : any  ;
-
+ imageLink = 'http://localhost:3000/utilisateur/profile-image';
+//  http://localhost:3000/utilisateur/profile-image/1688212197394-586819271received_1233857566751209.jpeg
 
   
 

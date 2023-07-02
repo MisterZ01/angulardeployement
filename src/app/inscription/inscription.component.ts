@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiService } from '../core/api.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-inscription',
@@ -22,46 +23,38 @@ export class InscriptionComponent implements OnInit {
   mdp : any;
   profil : any;
   imageusers : any
-
+  formData = new FormData();
 
 
  
-  constructor(private sanitizer: DomSanitizer, private apiservice:ApiService) {}
+  constructor(private sanitizer: DomSanitizer, private apiservice:ApiService , private router: Router) {}
 
-  previewImage(event: any) {
-    const reader = new FileReader();
-    reader.onload = (e: any) => {
-      this.imageSrc = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
-    };
-    reader.readAsDataURL(event.target.files[0]);
+   
 
-    }
-  // selectedFile !: File ;
-
-  // onFileSelected(event: any): void {
-  //   this.selectedFile = event.target.files[0];
-  //   console.log('Selected File:', this.selectedFile);}
+  onFileChanged(event: any) {
+    // Collecte des informations du formulaire
+    this.imageusers = event.target.files[0];
+    this.formData.append('image_users', this.imageusers, this.imageusers.name);
+    this.formData.append('nom_user', this.nom);
+    this.formData.append('prenom_user', this.prenom);
+    this.formData.append('email', this.mail);
+    this.formData.append('contact', this.num);
+    this.formData.append('profession', this.profession);
+    this.formData.append('nom_utilisateur', this.username);
+    this.formData.append('mdp',this.mdp);
+    this.formData.append('profile',this.profil);
+  }
 
   ngOnInit():void{}
 
 
   Submited() {
-     let user = {
 
-      nom_user :this.nom,
-      prenom_user :this.prenom,
-      email: this.mail,
-      contact :this.num,
-      profession :this.profession,
-      nom_utilisateur :this.username,
-      mdp :this.mdp,
-      profile :this.profil,
-      image_users :JSON.stringify(this.imageSrc) ,
-     }
-     console.log(this.imageSrc);
-    this.apiservice.registerUser(user).subscribe(
+    // Envoie des informations vers le back-end 
+    this.apiservice.registerUser(this.formData).subscribe(
       (response: any) => {
         console.log('Utilisateur enregistré avec succès', response);
+        this.router.navigate(['/']);
         
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
@@ -72,3 +65,19 @@ export class InscriptionComponent implements OnInit {
     );
   }
 }
+
+// ancien code de collecte des informations du formulaire
+    //  let user = {
+
+    //   nom_user :this.nom,
+    //   prenom_user :this.prenom,
+    //   email: this.mail,
+    //   contact :this.num,
+    //   profession :this.profession,
+    //   nom_utilisateur :this.username,
+    //   mdp :this.mdp,
+    //   profile :this.profil,
+    //   image_users :this.imageusers ,
+    //  }
+    //  console.log(this.formData);
+    //  console.log(this.formData.getAll);
