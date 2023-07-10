@@ -13,19 +13,20 @@
 
                         <div class="connecter col-5">
                            <h4>J'ai un compte</h4>
+                           <p class="text-danger">{{message}}</p>
                                 <div class="mb-3">
                                   <label for="exampleInputEmail1" class="form-label">Email ou nom utilisateur</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="nom_utilisateur" [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp" required>
                                 </div>
                                 <div class="mb-3">
                                   <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                                  <input type="password" class="form-control" id="exampleInputPassword1">
+                                  <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="mdp" [ngModelOptions]="{standalone: true} " required>
                                 </div>
                                 <div class="mb-3 form-check">
                                   <label class="form-check-label">Mot de passe oublié ?</label>
                                 </div>
                                 <div class="mb-3">
-                                   <input type="submit" class="form-control bg-primary text-white" value="Se connecter" routerLink="/welcome">
+                                   <input type="submit" (click) = "Submited()" class="form-control bg-primary text-white" value="Se connecter">
                                 </div>
                         </div>
 
