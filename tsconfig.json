@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "skipLibCheck":true, // Code ajouté pour resoudre l'erreur error TS2315: Type 'ModuleWithProviders' is not generic 
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

@@ -22,8 +22,8 @@ export class ConnexionComponent implements OnInit {
     this.formdata.append('email', this.nom_utilisateur)
     this.formdata.append('mdp', this.mdp)
     let user = {
-       email :this.nom_utilisateur,
-       mdp :this.mdp
+       username :this.nom_utilisateur,
+       password :this.mdp
     }
     let userJson = JSON.stringify(this.formdata);
     console.log(user)
