@@ -15,8 +15,97 @@
             <tbody>
                 <tr>
                 <td><input type="text" class="form-control" id="nsite" [(ngModel)]="nom_site" [ngModelOptions]="{standalone: true}"></td>
-                <td><input type="text" class="form-control" id="region"></td>
-                <td><input type="text" class="form-control" id="dpmt"></td>
+                <td><input type="text" class="form-control" id="region" list="reg" [(ngModel)]="nomregion" [ngModelOptions]="{standalone: true}">
+
+                    <datalist id="reg">
+                        <option value="Abidjan">
+                        <option value="Bas-sassandra">
+                        <option value="Comoé">
+                        <option value="Denguélé">
+                        <option value="Gôh-djiboua">
+                        <option value="Lacs">
+                        <option value="Lagunes">
+                        <option value="Montagnes">
+                        <option value="Sassandra-marahoué">
+                        <option value="Savanes">
+                        <option value="Vallée du bandama">
+                        <option value="Woroba">
+                        <option value="Yamoussokro">
+                        <option value="Gbêkê">
+                        <option value="Gontougo">
+                        <option value="Grands-ponts">
+                        <option value="N'zi-comoé">
+                        <option value="Sud-sassandra">
+                        <option value="Zanzan">
+                    </datalist>
+                
+                </td>
+                <td><input type="text" class="form-control" id="dpmt" list="dpt" [(ngModel)]="nomdepartement" [ngModelOptions]="{standalone: true}">
+                    <datalist id="dpt">
+                        <option value="Abengourou">
+                        <option value="Abidjan">
+                        <option value="Aboisso">
+                        <option value="Adiaké">
+                        <option value="Adzopé">
+                        <option value="Agboville">
+                        <option value="Akoupé">
+                        <option value="Alépé">
+                        <option value="Bangolo">
+                        <option value="Béoumi">
+                        <option value="Biankouma">
+                        <option value="Bingerville">
+                        <option value="Bloléquin">
+                        <option value="Bocanda">
+                        <option value="Bondoukou">
+                        <option value="Bongouanou">
+                        <option value="Botro">
+                        <option value="Bouaflé">
+                        <option value="Bouaké">
+                        <option value="Bouna">
+                        <option value="Boundiali">
+                        <option value="Dabakala">
+                        <option value="Dabou">
+                        <option value="Daloa">
+                        <option value="Danané">
+                        <option value="Daoukro">
+                        <option value="Dimbokro">
+                        <option value="Divo">
+                        <option value="Duékoué">
+                        <option value="Ferkessédougou">
+                        <option value="Gagnoa">
+                        <option value="Grand-Bassam">
+                        <option value="Grand-Lahou">
+                        <option value="Guiglo">
+                        <option value="Issia">
+                        <option value="Jacqueville">
+                        <option value="Katiola">
+                        <option value="Korhogo">
+                        <option value="Lakota">
+                        <option value="Man">
+                        <option value="Mankono">
+                        <option value="Minignan">
+                        <option value="Nassian">
+                        <option value="Odienné">
+                        <option value="Oumé">
+                        <option value="Sakassou">
+                        <option value="San-Pedro">
+                        <option value="Sassandra">
+                        <option value="Séguéla">
+                        <option value="Sinfra">
+                        <option value="Soubré">
+                        <option value="Tanda">
+                        <option value="Tiassalé">
+                        <option value="Tingréla">
+                        <option value="Touba">
+                        <option value="Toulepleu">
+                        <option value="Toumodi">
+                        <option value="Vavoua">
+                        <option value="Yamoussoukro">
+                        <option value="Zouan-Hounien">
+                        <option value="Zuénoula">
+                    </datalist>
+                
+                </td>
                 </tr>
             </tbody>
         </table> 
@@ -30,7 +119,31 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="commune"></td>
+                    <td><input type="text" class="form-control" id="commune" list="com" [(ngModel)]="nomcommune" [ngModelOptions]="{standalone: true}">
+                        <datalist id="com">
+                            <option value="Abengourou">
+                            <option value="Abidjan">
+                            <option value="Aboisso">
+                            <option value="Adiaké">
+                            <option value="Adzopé">
+                            <option value="Agboville">
+                            <option value="Akoupé">
+                            <option value="Alépé">
+                            <option value="Anyama">
+                            <option value="Bingerville">
+                            <option value="Bondoukou">
+                            <option value="Bouaflé">
+                            <option value="Bouna">
+                            <option value="Boundiali">
+                            <option value="Dabakala">
+                            <option value="Dabou">
+                            <option value="Daloa">
+                            <option value="Danané">
+                            <option value="Daoukro">
+                            <option value="Dimbokro">
+                        </datalist>
+                    
+                    </td>
                     <td><input type="text" class="form-control" id="ville"></td>
                     <td><input type="text" class="form-control" id="env" list="suggestions" [(ngModel)]="typenvir" [ngModelOptions]="{standalone: true}">
                         <datalist id="suggestions">
