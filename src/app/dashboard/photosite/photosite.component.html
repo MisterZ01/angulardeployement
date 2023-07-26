@@ -16,26 +16,26 @@
                  <tr>
                      <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
                          <br>
-                         <img [src]="imageSrc" alt="" width="200"></td>
-                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         <img [src]="imagesiteUn" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_un" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
                  <tr>
-                     <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                     <td><input type="file" id="file-imge" name="image" (change)="reviewImage($event)">
                          <br>
-                         <img [src]="imageSrc" alt="" width="200"></td>
-                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         <img [src]="imagesiteDeux" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_deux" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
                  <tr>
-                     <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                     <td><input type="file" id="file-img" name="image" (change)="eviewImage($event)">
                          <br>
-                         <img [src]="imageSrc" alt="" width="200"></td>
-                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         <img [src]="imagesiteTrois" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_trois" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
                  <tr>
-                     <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                     <td><input type="file" id="file-im" name="image" (change)="viewImage($event)">
                          <br>
-                         <img [src]="imageSrc" alt="" width="200"></td>
-                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         <img [src]="imagesiteQuatre" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_quatre" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
              </tbody>
          </table>
