@@ -30,8 +30,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import{RichTextEditorModule, ToolbarService, LinkService, ImageService,HtmlEditorService, TableService, QuickToolbarService} from '@syncfusion/ej2-angular-richtexteditor'
-
-
+import { AuthService } from './shared/userInfos/auth.service';
 
 
 @NgModule({
@@ -39,9 +38,7 @@ import{RichTextEditorModule, ToolbarService, LinkService, ImageService,HtmlEdito
     AppComponent,
     ConnexionComponent,
     InscriptionComponent,
-   
-
-    
+       
   ],
   imports: [
     RichTextEditorModule,
@@ -77,7 +74,13 @@ import{RichTextEditorModule, ToolbarService, LinkService, ImageService,HtmlEdito
     ])
 
   ],
-  providers: [ToolbarService, LinkService, ImageService,HtmlEditorService, TableService, QuickToolbarService],
+  providers: [ToolbarService, 
+    LinkService, 
+    ImageService,
+    HtmlEditorService, 
+    TableService, 
+    QuickToolbarService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -26,9 +26,11 @@
     "bootstrap": "^5.2.3",
     "html-to-pdfmake": "^2.4.20",
     "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
     "jquery": "^3.6.4",
     "jspdf": "^2.5.1",
     "pdfmake": "^0.2.7",
+    "pdfmake-utils": "^0.5.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
