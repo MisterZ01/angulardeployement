@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SideBarUnComponent } from './side-bar-un/side-bar-un.component';
+import { AuthService } from './userInfos/auth.service'
+import { UserStoreService } from './userInfos/userStore.service' 
 
 
 
@@ -12,9 +14,7 @@ import { SideBarUnComponent } from './side-bar-un/side-bar-un.component';
   declarations: [
  
     SideBarUnComponent,
-    SideBarDeuxComponent
-   
-    
+    SideBarDeuxComponent,
 
   ],
   imports: [

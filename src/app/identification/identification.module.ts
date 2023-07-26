@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { IdentificationRoutingModule } from './identification-routing.module';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { RouterModule } from '@angular/router';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
+import { AuthService } from '../shared/userInfos/auth.service';
 
 
 @NgModule({
@@ -16,6 +16,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
     RouterModule,
     IdentificationRoutingModule
   ],
+  providers: [AuthService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class IdentificationModule { }
