@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { ApiCommuneService } from 'src/app/core/api-commune.service';
-import { ApiDepartementService } from 'src/app/core/api-departement.service';
 import { ApiEnvService } from 'src/app/core/api-env.service';
 import { ApiInfositeService } from 'src/app/core/api-infosite.service';
-import { ApiRegionService } from 'src/app/core/api-region.service';
-import { ApiVilleqService } from 'src/app/core/api-villeq.service';
 
 
 
@@ -60,7 +56,7 @@ export class InfositeComponent implements OnInit{
   htmlContent: string;
   config: AngularEditorConfig;
 
-  constructor(private sanitizer: DomSanitizer, private api_site:ApiInfositeService, private api_envmt:ApiEnvService,  private api_city:ApiVilleqService, private api_comm:ApiCommuneService, private api_depmt:ApiDepartementService, private api_region:ApiRegionService) {
+  constructor(private sanitizer: DomSanitizer, private api_site:ApiInfositeService) {
     this.htmlContent = ''; 
     this.config  = {
  
@@ -118,6 +114,10 @@ export class InfositeComponent implements OnInit{
       societegardiennagevigile : this.societe_gardient,
       typstation: this.typestation,
       observation : this.commentaire,
+      nom_ville_quartier :this.nom_city,
+      nom_commune :this.nomcommune,
+      nom_departement :this.nomdepartement,
+      nom_region :this.nomregion,
     }
     this.api_site.registerSite(sit).subscribe(
       (response: any) => {
@@ -130,79 +130,79 @@ export class InfositeComponent implements OnInit{
       }
     );
 
-    let control_env = {
+    // let control_env = {
 
-      datecontrole :this.date_controle,
-     heuredebutcontrole :this.heure_debut,
-     heurefincontrole: this.heure_fin,
-    }
-    this.api_envmt.registerEnvironnement(control_env).subscribe(
-      (response: any) => {
-        console.log("les infos du controle environnement ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-    let ville_quartier = {
+    //   datecontrole :this.date_controle,
+    //  heuredebutcontrole :this.heure_debut,
+    //  heurefincontrole: this.heure_fin,
+    // }
+    // this.api_envmt.registerEnvironnement(control_env).subscribe(
+    //   (response: any) => {
+    //     console.log("les infos du controle environnement ont été enregistré avec succès", response);
+    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+    //   },
+    //   (  error: any) => {
+    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+    //     // Gérer l'erreur d'inscription
+    //   }
+    // );
+    // let ville_quartier = {
 
-      nom_ville_quartier :this.nom_city,
+    //   nom_ville_quartier :this.nom_city,
     
-    }
-    this.api_city.registerVilleQuartier(ville_quartier).subscribe(
-      (response: any) => {
-        console.log("les infos sur le quartier ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-    let commune = {
+    // }
+    // this.api_city.registerVilleQuartier(ville_quartier).subscribe(
+    //   (response: any) => {
+    //     console.log("les infos sur le quartier ont été enregistré avec succès", response);
+    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+    //   },
+    //   (  error: any) => {
+    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+    //     // Gérer l'erreur d'inscription
+    //   }
+    // );
+    // let commune = {
 
-      nom_commune :this.nomcommune,
-    }
-    this.api_comm.registerCommune(commune).subscribe(
-      (response: any) => {
-        console.log("les infos sur la commune ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-    let dpartment = {
+    //   nom_commune :this.nomcommune,
+    // }
+    // this.api_comm.registerCommune(commune).subscribe(
+    //   (response: any) => {
+    //     console.log("les infos sur la commune ont été enregistré avec succès", response);
+    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+    //   },
+    //   (  error: any) => {
+    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+    //     // Gérer l'erreur d'inscription
+    //   }
+    // );
+    // let dpartment = {
 
-      nom_departement :this.nomdepartement,
-    }
-    this.api_depmt.registerDepartement(dpartment).subscribe(
-      (response: any) => {
-        console.log("les infos sur le departement  ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
-    let region = {
+    //   nom_departement :this.nomdepartement,
+    // }
+    // this.api_depmt.registerDepartement(dpartment).subscribe(
+    //   (response: any) => {
+    //     console.log("les infos sur le departement  ont été enregistré avec succès", response);
+    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+    //   },
+    //   (  error: any) => {
+    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+    //     // Gérer l'erreur d'inscription
+    //   }
+    // );
+    // let region = {
 
-      nom_region :this.nomregion,
-    }
-    this.api_region.registerRegion(region).subscribe(
-      (response: any) => {
-        console.log("les infos sur la region ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-      },
-      (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-        // Gérer l'erreur d'inscription
-      }
-    );
+    //   nom_region :this.nomregion,
+    // }
+    // this.api_region.registerRegion(region).subscribe(
+    //   (response: any) => {
+    //     console.log("les infos sur la region ont été enregistré avec succès", response);
+    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+    //   },
+    //   (  error: any) => {
+    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+    //     // Gérer l'erreur d'inscription
+    //   }
+    // );
 
 
   }

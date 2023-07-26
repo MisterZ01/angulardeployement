@@ -2,7 +2,7 @@
     <div class="sidebar_blog_1">
        <div class="sidebar-header">
           <div class="logo_section">
-             <a href="index.html"><img class="logo_icon img-responsive" src="assets/images/logo/logo_icon.png" alt="#" /></a>
+             <a href="index.html"><img class="logo_icon img-responsive" src="assets/images/logo/icon.png" alt="#" /></a>
           </div>
        </div>
        <div class="sidebar_user_info">
@@ -22,12 +22,14 @@
         <li class="active">
             <a [routerLink]="['/welcome']"><i class="fa fa-home blue1_color"></i> <span>ACCEUIL</span></a>
         </li>
+
+        <li class="active">
+            <a [routerLink]="['/presentation']"><i class="fa fa-clock-o grey_color"></i><span>PRESENTATIONS</span></a>
+        </li>
         <li>
-            <a href="#presentation" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clock-o yellow_color"></i><span>PRESENTATIONS</span></a>
+            <a href="#presentation" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i  class="fa fa-clone yellow_color"></i><span>INFORMATIONS DU SITE</span></a>
 
             <ul class="collapse list-unstyled" id="presentation">
-                <li><a routerLink="/presentation">><span>Composition de l'équipe</span></a></li>
-                <li><a routerLink="/infosite">> <span>Informations sur le site</span></a></li>
                 <li><a routerLink="/photosite">> <span>Illustration photos</span></a></li>
             </ul>
         </li>
@@ -38,7 +40,7 @@
                     <li><a routerLink="/photoenvironnement">> <span>Illustration photos</span></a></li>
                 </ul>
         </li>
-        <li>
+        <!-- <li>
             <a href="#structure" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-table blue2_color"></i> <span>STRUCTURE</span></a>
             <ul class="collapse list-unstyled" id="structure">
                 <li><a href="descripsrtucture.html">> <span>Contrôle et description</span></a></li>
@@ -82,7 +84,7 @@
                 <li><a href="technologies.html">> <span>Vues panoramiques par secteurs et technologies déployées</span></a></li>
                 <li><a href="elevation.html">> <span> Plan d’élévation</span></a></li>
             </ul>
-        </li>
+        </li> -->
         <li>
             <a href="#synthese" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-map green_color"></i><span>RECOMMANDATIONS</span></a>
                 <ul class="collapse list-unstyled" id="synthese">

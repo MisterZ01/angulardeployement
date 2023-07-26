@@ -291,25 +291,6 @@
 
         </table>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Date de début du contrôle</th>
-                    <th scope="col">Heure de début du contrôle</th>
-                    <th scope="col">Heure de fin du contrôle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="date" class="form-control" id="date" [(ngModel)]="date_controle" [ngModelOptions]="{standalone: true}"></td>
-                    <td><input type="text" class="form-control" id="debut" [(ngModel)]="heure_debut" [ngModelOptions]="{standalone: true}"></td>
-                    <td><input type="text" class="form-control" id="fin" [(ngModel)]="heure_fin" [ngModelOptions]="{standalone: true}"></td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
             <h5>Observation</h5>
             <angular-editor class="bg-black" [ngModel]="commentaire" [ngModelOptions]="{standalone: true}" [config]="config"></angular-editor>
             <div class="html">

@@ -16,7 +16,7 @@ export class ApiEnvService {
   constructor(private Http: HttpClient) { }
 
 
-   registerEnvironnement(env: any):Observable<any> {
+   registerEnv(env: any):Observable<any> {
     return this.Http.post(`${this.apiUrl}/controle`, env);
   }
  
