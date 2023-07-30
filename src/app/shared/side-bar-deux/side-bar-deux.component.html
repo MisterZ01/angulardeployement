@@ -8,9 +8,9 @@
        <div class="sidebar_user_info">
           <div class="icon_setting"></div>
           <div class="user_profle_side">
-             <div class="user_img"><img class="img-responsive" src="assets/images/layout_img/user_img.jpg" alt="#" /></div>
+             <div class="user_img"><img class="img-responsive" src="{{imageLink}}/{{user.image_users }}" alt="#" /></div>
              <div class="user_info">
-                <h6>John David</h6>
+                <h6>{{user.nom_user}}</h6>
                 <p><span class="online_animation"></span> Online</p>
              </div>
           </div>
@@ -40,7 +40,7 @@
                     <li><a routerLink="/photoenvironnement">> <span>Illustration photos</span></a></li>
                 </ul>
         </li>
-        <!-- <li>
+        <li>
             <a href="#structure" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-table blue2_color"></i> <span>STRUCTURE</span></a>
             <ul class="collapse list-unstyled" id="structure">
                 <li><a href="descripsrtucture.html">> <span>Contrôle et description</span></a></li>
@@ -84,7 +84,7 @@
                 <li><a href="technologies.html">> <span>Vues panoramiques par secteurs et technologies déployées</span></a></li>
                 <li><a href="elevation.html">> <span> Plan d’élévation</span></a></li>
             </ul>
-        </li> -->
+        </li>
         <li>
             <a href="#synthese" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-map green_color"></i><span>RECOMMANDATIONS</span></a>
                 <ul class="collapse list-unstyled" id="synthese">

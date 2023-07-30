@@ -25,8 +25,9 @@
         <li>
             <a href="#presentation" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-file yellow_color"></i> <span>Rapport</span></a>
 
-            <ul class="collapse list-unstyled" id="presentation">
-                <li><a routerLink="/presentation">> <span>Ecrire un nouveau rapport</span></a></li>
+           
+            <ul class="collapse list-unstyled " id="presentation">
+                <li><a [routerLink]="['/presentation']" data-toggle="collapse" aria-expanded="false" (click)="CreerRapport()">> <span>Ecrire un nouveau rapport</span></a></li>
                 <li><a routerLink="/listerapports">> <span>Liste des rapports</span></a></li>
             </ul>
         </li>
@@ -42,6 +43,8 @@
         <li>
             <a href="#enviprotection" data-toggle="collapse" aria-expanded="false" (click) = "Deconnexion()"><i class="fa fa-sign-out green_color"></i><span>Deconnexion</span></a>
         </li>
+        <button type="button" class="btn btn-primary-outline pull-right" (click)="CreerRapport();"><i class="fa fa-plus"></i> Add</button>    
+
     </ul>
     </div>
  </nav>

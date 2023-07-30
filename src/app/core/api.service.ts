@@ -14,6 +14,7 @@ export class ApiService {
   constructor(private Http: HttpClient) { }
 
   private apiUrl = 'http://localhost:3000/utilisateur';
+  private apiRap = 'http://localhost:3000/rapport';
   private connexionapiUrl = 'http://localhost:3000/auth';
   //token = this.auth.getToken()
   host = environment.host
@@ -33,6 +34,10 @@ export class ApiService {
   }
   registerUser(user: any):Observable<any> {
     return this.Http.post(`${this.apiUrl}/inscription`, user);
+  }
+  //creer un rapport apres click
+  CreateReport(rapport: any):Observable<any> {
+    return this.Http.post(`${this.apiRap}/rapport`, rapport);
   }
 
   getUser(){

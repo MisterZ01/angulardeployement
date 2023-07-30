@@ -33,14 +33,20 @@ export class RapportComponent implements OnInit{
   // remplir le rapport
   // nommer le rapport
   // telechager le Rapport
+// http.get;;;;http://localhost:4200/listerapports/1( respo => 
 
 
-  ngOnInit() {  
-    const element = this.myElementRef.nativeElement;
-    html2pdf().set({
-      filename: 'Rapport-nom-utilisateur.pdf',
-    }).from(element).save();
-  }
+// titre rapport = respo.titre
+
+
+titrerapport : any 
+ngOnInit() {  
+  this.titrerapport = "mon titre id 3"
+  const element = this.myElementRef.nativeElement;
+  html2pdf().set({
+    filename: 'Rapport-nom-utilisateur.pdf',
+  }).from(element).save();
+}
 
   
 
