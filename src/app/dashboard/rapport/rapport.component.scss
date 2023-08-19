@@ -111,5 +111,42 @@
     display: flex;
     justify-content: center;
   }
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .checkbox-label {
+    margin-right: 10px;
+  }
+
+  .option-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-wrapper {
+    margin-top: -10px; /* Vous pouvez ajuster la valeur selon vos besoins */
+  }
+
+  .observ{
+    display: flex;
+    justify-content: center;
+  }
+
+  .access{
+    display: flex;
+    justify-content: center;
+  }
+
+  .partUn{
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  
+  
   
   

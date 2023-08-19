@@ -65,7 +65,7 @@
     </div>
     <div class="contenant-interieur-4 mt-5">
 
-       <h3>1.PREAMBULE {{ titrerapport}}</h3> 
+       <h3>1.PREAMBULE</h3> 
 
 <p class="mt-5">
     Créée par l’ordonnance n°2012-293 du 21 Mars 2012 relative aux Télécommunications et aux Technologies de l’Information et de la Communication, l’Agence Ivoirienne de Gestion des Fréquences Radioélectriques (AIGF) assure les fonctions de planification, d’attribution, de contrôle des fréquences radioélectriques, de validation de l’implantation des stations radioélectriques de toute nature sur le territoire national et en assure la conformité à la réglementation nationale et internationale.
@@ -218,13 +218,300 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
             </tr>
             </tbody>
         </table>
-        
+
+        <div class="checkbox-container mt-5">
+           <p class="mr-2">Environnement du site :</p> 
+            <label *ngFor="let option of optionsun" class="checkbox-label">
+              <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+              {{ option.label }}
+            </label>
+          </div>
+
+        <div class="checkbox-container mt-2">
+           <p class="mr-2">Situation géographique du site:</p> 
+            <label *ngFor="let option of optionsdeux" class="checkbox-label">
+              <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+              {{ option.label }}
+            </label>
+          </div>   
     </div>
     <div class="contenant-interieur-7 mt-5">
+
+        <div class="checkbox-container mt-2">
+            <p class="mr-2">Densité de population :</p> 
+             <label *ngFor="let option of optionstrois" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+ 
+         <div class="checkbox-container mt-2">
+            <p class="mr-2">Typologie du site :</p> 
+             <label *ngFor="let option of optionsquatre" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+ 
+         <div class="checkbox-container mt-2">
+            <p class="mr-2">station:</p> 
+             <label *ngFor="let option of optionscinq" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+ 
+         <div class="checkbox-container mt-2">
+            <p class="mr-2">Type de station:</p> 
+             <label *ngFor="let option of optionssix" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+ 
+         <div class="checkbox-container mt-2">
+            <p class="mr-2">Local technique :</p> 
+             <label *ngFor="let option of optionssept" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+
+         <div class="checkbox-container mt-2">
+            <p class="mr-2">Présence de plaque d'identification du site :</p> 
+             <label *ngFor="let option of optionshuit" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+
+           <div class="checkbox-container mt-2">
+            <p class="mr-2">Date de mise en service du site  :</p> 
+            <div *ngFor="let option of optionsneuf" class="option-container">
+              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
+              <label class="checkbox-label">
+                <input type="checkbox" [(ngModel)]="option.na" (change)="onNAChecked(option)">
+                N/A
+              </label>
+            </div>
+          </div>
+
+           <div class="checkbox-container mt-2">
+            <p class="mr-2">Hauteur du bâtiment   :</p> 
+            <div *ngFor="let option of optionsdix" class="option-container">
+              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
+              <label class="checkbox-label">
+                <input type="checkbox" [(ngModel)]="option.na" (change)="onNAChecked(option)">
+                N/A
+              </label>
+            </div>
+          </div>
+
+          <div class="checkbox-container mt-2">
+            <p class="mr-2">Surveillance du site:</p> 
+             <label *ngFor="let option of optionsonze" class="checkbox-label">
+               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+               {{ option.label }}
+             </label>
+           </div>
+
+           <div class="checkbox-container mt-2">
+            <p class="mr-2">Nombre de vigile:</p> 
+            <div *ngFor="let option of optionsdouze" class="option-container">
+              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
+              <label class="checkbox-label">
+                <input type="checkbox" [(ngModel)]="option.na" (change)="onNAChecked(option)">
+                N/A
+              </label>
+            </div>
+          </div>
+
+          <table class="table table table-bordered table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col" class="observ">Obsevation</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h1 class="mt-5">3.2.3. Plan de masse</h1>
+          
     </div>
     <div class="contenant-interieur-7 mt-5"> 
+
+        <table class="table table table-bordered table-striped mt-5 plan">
+            <thead>
+            <tr>
+                <th class="plan">Plan</th>
+                <th class="descrip">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h1 class="mt-5">3.3. Illustration photos</h1>
+
+        <table class="table table table-bordered table-striped mt-5 plan">
+            <thead>
+            <tr>
+                <th >Odre</th>
+                <th >Photos</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+
     <div class="contenant-interieur-7 mt-5">
+       <h5 class="partUn mt-5">PARTIE 1 : CONTROLE INFRASTRUCTURE ET ENVIRONNEMENT</h5> 
+    </div>
+
+    <div class="contenant-interieur-7 mt-5">
+
+        <h1 class="mt-5">4. GESTION DE L’ENVIRONNEMENT ET PROTECTION COLLECTIVE</h1>
+        <h4 class="mt-5">4.1 Contrôle de l’environnement</h4>
+
+        <table class="table table table-bordered table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col" class="access">ACCESSIBILITE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Chemin d'accès:</p> 
+                        <label *ngFor="let option of optionstreize" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Portail d'accès :</p> 
+                        <label *ngFor="let option of optionsquatorze" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat du portail:</p> 
+                        <label *ngFor="let option of optionsquinze" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Type du portail:</p> 
+                        <label *ngFor="let option of optionsseize" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Serrure :</p> 
+                        <label *ngFor="let option of optionsdix_sept" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de la serrure:</p> 
+                        <label *ngFor="let option of optionsdix_huit" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Télémétrie :</p> 
+                        <label *ngFor="let option of optionsdix_neuf" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Clôture  :</p> 
+                        <label *ngFor="let option of options_vingt" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de la clôture :</p> 
+                        <label *ngFor="let option of options_vingtun" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Type de la clôture :</p> 
+                        <label *ngFor="let option of options_vingtdeux" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Plaque Signalétique :</p> 
+                        <label *ngFor="let option of options_vingttrois" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de la plaque signalétique :</p> 
+                        <label *ngFor="let option of options_vingtquatre" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <div class="contenant-interieur-7 mt-5">
     </div>
