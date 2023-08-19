@@ -1,16 +1,17 @@
-
-import * as pdfMake from 'pdfmake/build/pdfmake.js';
-import * as pdfFonts from 'pdfmake/build/vfs_fonts.js';
+import * as pdfMake from 'pdfmake/build/pdfmake.js'
+import * as pdfFonts from 'pdfmake/build/vfs_fonts.js'
 // @ts-ignore
-import * as html2pdf from 'html2pdf.js';
+import * as html2pdf from 'html2pdf.js'
 
 import { Component, OnInit } from '@angular/core';
-import * as jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 import { ViewChild, ElementRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/core/api.service';
 
 
-// (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
+
+
+ (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
 
 @Component({
@@ -18,7 +19,9 @@ import { ViewChild, ElementRef } from '@angular/core';
   templateUrl: './rapport.component.html',
   styleUrls: ['./rapport.component.scss']
 })
-export class RapportComponent{
+export class RapportComponent implements OnInit{
+  constructor(private route: ActivatedRoute, private apiservice : ApiService) {}
+
 
   optionsun = [
     { id: 1, label: 'Classique', checked: false },
@@ -175,35 +178,41 @@ export class RapportComponent{
    
     // ... ajoutez d'autres options ici
   ];
-  // @ViewChild('myElement', { static: true }) myElementRef!: ElementRef;
   
-  // dans le component de la page d'affichage de la liste :
   
-  // recuperer le id du rapport,
-  // le chercher dans la bd et envoyer ses infos
-  // rediriger la route vers ce document et ajouter les infos de du rapport au lien
+  
 
-  // ici :
+  @ViewChild('myElement', { static: true }) myElementRef!: ElementRef;
+  
+rapportComplet:any;
+id_rapport : any 
+titrerapport : any 
+ngOnInit() {  
+  //recuperation de l'ID du rapport
+  this.route.params.subscribe(params => {
+    this.id_rapport  = params['id']; 
+  });
+// Envoie des informations vers le back-end 
+this.apiservice.InfoReport(this.id_rapport).subscribe(
+  (response: any) => {
+    console.log('Info du rapport ramenées avec succès', response);
+    this.rapportComplet = response;
+    this.titrerapport = this.rapportComplet.titre_rapport;
 
-  // on recuperer les infos envoyees a travers le lien, 
-  // remplir le rapport
-  // nommer le rapport
-  // telechager le Rapport
-// http.get;;;;http://localhost:4200/listerapports/1( respo => 
+  },
+  (  error: any) => {
+    console.error('Une erreur s\'est produite lors de la recherche du rapport', error);
+    // Gérer l'erreur d'inscription
+  }
+);
 
 
-// titre rapport = respo.titre
-
-
-// titrerapport : any 
-// ngOnInit() {  
-//   this.titrerapport = "mon titre id 3"
-//   const element = this.myElementRef.nativeElement;
-//   html2pdf().set({
-//     filename: 'Rapport-nom-utilisateur.pdf',
-//   }).from(element).save();
-// }
-
+     const element = this.myElementRef.nativeElement;
+     html2pdf().set({
+         filename: 'Rapport-nom-utilisateur.pdf',
+       }).from(element).save();
+     }
+    
   
 
 }

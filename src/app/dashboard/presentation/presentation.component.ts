@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiMembreService } from 'src/app/core/api-membre.service';
+import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
   selector: 'app-presentation',
@@ -27,7 +28,12 @@ export class PresentationComponent implements OnInit {
   prenom3 : any;
   fonction3 : any;
 
-  constructor(private sanitizer: DomSanitizer, private api_memb_s:ApiMembreService, private api_membdeux:ApiMembreService, private api_membtrois:ApiMembreService,) {}
+  constructor(
+    private sanitizer: DomSanitizer, 
+    private api_memb_s:ApiMembreService, 
+    private api_membdeux:ApiMembreService, 
+    private api_membtrois:ApiMembreService,
+    private auth: AuthService ) {}
 
   previewImage(event: any) {
     const reader = new FileReader();
@@ -46,6 +52,7 @@ export class PresentationComponent implements OnInit {
        nom :this.nom1,
        prenom :this.prenom1,
        fonction: this.fonction1,
+       id_rapport: this.auth.getReportId()
       }
       this.api_memb_s.registerMembreUn(memb1).subscribe(
         (response: any) => {
@@ -63,6 +70,7 @@ export class PresentationComponent implements OnInit {
        nom :this.nom2,
        prenom :this.prenom2,
        fonction: this.fonction2,
+       id_rapport: this.auth.getReportId()
       }
       this.api_membdeux.registerMembreUn(memb2).subscribe(
         (response: any) => {
@@ -80,6 +88,7 @@ export class PresentationComponent implements OnInit {
        nom :this.nom3,
        prenom :this.prenom3,
        fonction: this.fonction3,
+       id_rapport: this.auth.getReportId()
       }
       this.api_membtrois.registerMembreUn(memb3).subscribe(
         (response: any) => {

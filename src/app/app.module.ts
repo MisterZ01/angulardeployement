@@ -15,6 +15,7 @@ import { NavigationComponent } from './dashboard/navigation/navigation.component
 import { ElectriciteComponent } from './dashboard/electricite/electricite.component';
 import { ProtectionComponent } from './dashboard/protection/protection.component';
 import { AntennaireComponent } from './dashboard/antennaire/antennaire.component';
+import { InforapportComponent } from './dashboard/inforapport/inforapport.component';
 import { SyntheseComponent } from './dashboard/synthese/synthese.component';
 import { ConclusionComponent } from './dashboard/conclusion/conclusion.component';
 import { ListerapportsComponent } from './dashboard/listerapports/listerapports.component';
@@ -65,12 +66,13 @@ import { AuthService } from './shared/userInfos/auth.service';
       {path:'users', component: UsersComponent},
       {path:'equipes', component: EquipesComponent},
       {path:'admin', component: AdminComponent},
-      {path:'rapport', component: RapportComponent},
+      {path:'rapport/:id', component: RapportComponent},
       {path:'inscription', component: InscriptionComponent},
       {path:'infosite', component: InfositeComponent},
       {path:'photosite', component: PhotositeComponent},
       {path:'photoenvironnement', component: PhotoenvironnementComponent},
       {path:'annexes', component: AnnexesComponent},
+      {path:'inforapport', component: InforapportComponent},
     ])
 
   ],
