@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/core/api.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
