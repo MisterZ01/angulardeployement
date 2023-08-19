@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { ApiEnvService } from 'src/app/core/api-env.service';
 import { ApiInfositeService } from 'src/app/core/api-infosite.service';
+import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 
 
@@ -56,7 +57,10 @@ export class InfositeComponent implements OnInit{
   htmlContent: string;
   config: AngularEditorConfig;
 
-  constructor(private sanitizer: DomSanitizer, private api_site:ApiInfositeService) {
+  constructor(
+    private sanitizer: DomSanitizer, 
+    private api_site:ApiInfositeService,
+    private auth: AuthService ) {
     this.htmlContent = ''; 
     this.config  = {
  
@@ -118,6 +122,7 @@ export class InfositeComponent implements OnInit{
       nom_commune :this.nomcommune,
       nom_departement :this.nomdepartement,
       nom_region :this.nomregion,
+      id_rapport: this.auth.getReportId()
     }
     this.api_site.registerSite(sit).subscribe(
       (response: any) => {

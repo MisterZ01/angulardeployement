@@ -27,7 +27,7 @@
 
            
             <ul class="collapse list-unstyled " id="presentation">
-                <li><a [routerLink]="['/presentation']" data-toggle="collapse" aria-expanded="false" (click)="CreerRapport()">> <span>Ecrire un nouveau rapport</span></a></li>
+                <li><a routerLink="/inforapport">> <span>Ecrire un nouveau rapport</span></a></li>
                 <li><a routerLink="/listerapports">> <span>Liste des rapports</span></a></li>
             </ul>
         </li>
@@ -42,7 +42,8 @@
 
         <li>
             <a href="#enviprotection" data-toggle="collapse" aria-expanded="false" (click) = "Deconnexion()"><i class="fa fa-sign-out green_color"></i><span>Deconnexion</span></a>
-        </li>   
+        </li>
+
     </ul>
     </div>
  </nav>

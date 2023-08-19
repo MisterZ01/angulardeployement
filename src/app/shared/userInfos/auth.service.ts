@@ -62,13 +62,27 @@ export class  AuthService {
     return this.userPayload.role;
   }
 
-  // les infos du user
+  // enregistrer les infos du user
 
   setNom(nom: string){
     localStorage.setItem('nom', nom)
   }
+  setUserId(id: string){
+    localStorage.setItem('id', id)
+  }
+  setReportId(idRapport: string){
+    localStorage.setItem('idRapport', idRapport)
+  }
+  // recuperer les infos du user
+
   getNom(){
     return localStorage.getItem('nom')
+  }
+  getUserId(){
+    return localStorage.getItem('id')
+  }
+  getReportId(){
+    return localStorage.getItem('idRapport')
   }
 
 

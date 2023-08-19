@@ -29,6 +29,7 @@ import { SideBarDeuxComponent } from '../shared/side-bar-deux/side-bar-deux.comp
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InforapportComponent } from './inforapport/inforapport.component';
 
  
 
@@ -58,6 +59,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PhotositeComponent,
     PhotoenvironnementComponent,
     AnnexesComponent,
+    InforapportComponent,
     
   ],
   imports: [

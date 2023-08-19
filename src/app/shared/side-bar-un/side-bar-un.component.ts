@@ -38,9 +38,7 @@ export class SideBarUnComponent implements OnInit{
         // Envoie des informations vers le back-end 
         this.apiservice.CreateReport(rapport).subscribe(
           (response: any) => {
-            console.log('rapport creer avec succes', response);
-            this.router.navigate(['/presentation']);
-            
+            console.log('rapport creer avec succes', response);            
             // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
           },
           (  error: any) => {
@@ -60,11 +58,13 @@ export class SideBarUnComponent implements OnInit{
   CreerRapport(){
     const id_utilisateur = this.user.id;
     this.statut =0;
-    this.formData.append('statut', this.statut);
-    this.formData.append('id_utilisateur', id_utilisateur );
+    let rapport = {
+      id_utilisateur : id_utilisateur,
+      statut : this.statut
+    }
 
       // Envoie des informations vers le back-end 
-      this.apiservice.CreateReport(this.formData).subscribe(
+      this.apiservice.CreateReport(rapport).subscribe(
         (response: any) => {
           console.log('rapport creer avec succes', response);
           this.router.navigate(['/presentation']);
