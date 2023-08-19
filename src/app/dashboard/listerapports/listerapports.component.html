@@ -10,52 +10,33 @@
               <tr>
                 <th scope="col">Id_Rapports</th>
                 <th scope="col">Titre_Rapports</th>
-                <th scope="col">Date_debut</th>
                 <th scope="col">Statut</th>
+                <th scope="col">Date_debut</th>
                 <th scope="col">Date_fin</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
-            <tbody>
+
+            <tbody *ngFor="let rapport of rapports">
               <tr>
-                <td>01</td>
-                <td>Otto</td>
-                <td>12/03/2023</td>
-                <td>En cours</td>
-                <td></td>
+                <td>{{ rapport.id }}</td>
+                <td>{{ rapport.titre_rapport }}</td>
+                <div *ngIf="getStatus(rapport.statut) ; else elseBlock">
+                  <td>Terminé</td>
+                </div>
+                <ng-template #elseBlock>
+                  <td>En cours</td>
+                </ng-template>
+                <td>{{ rapport.createdAt }}</td>
+                <td>{{ rapport.updatedAt }}</td>
                 <div class="icon">
                     <a routerLink="/presentation"><i class="fa fa-edit blue1_color"></i></a>
                     <i class="fa fa-trash red_color"></i>
-                   <a routerLink="/rapport"><i class="fa fa-folder-open purple_color2"></i></a> 
+                   <a routerLink="/rapport/{{ rapport.id }}"><i class="fa fa-eye purple_color2"></i></a> 
                     <i class="fa fa-download green_color"></i>
                 </div>
               </tr>
-              <tr>
-                <td>02</td>
-                <td>tata</td>
-                <td>18/04/2022</td>
-                <td>Fini</td>
-                <td>29/07/2022</td>
-                <div class="icon">
-                    <a routerLink="/presentation"><i class="fa fa-edit blue1_color"></i></a>
-                    <i class="fa fa-trash red_color"></i>
-                    <a routerLink="/rapport"><i class="fa fa-folder-open purple_color2"></i></a> 
-                    <i class="fa fa-download green_color"></i>
-                </div>
-              </tr>
-              <tr>
-                <td>03</td>
-                <td>@twitter</td>
-                <td>02/05/2023</td>
-                <td>Fini</td>
-                <td>05/09/2023</td>
-                <div class="icon">
-                    <a routerLink="/presentation"><i class="fa fa-edit blue1_color"></i></a>
-                    <i class="fa fa-trash red_color"></i>
-                    <a routerLink="/rapport"><i class="fa fa-folder-open purple_color2"></i></a>
-                    <i class="fa fa-download green_color"></i>
-                </div>
-              </tr>
+
             </tbody>
           </table>
 

@@ -1,0 +1,25 @@
+<app-header></app-header>
+<app-side-bar-deux></app-side-bar-deux>
+<!-- right content -->
+<div id="content">
+        <div class="midde_cont mt-5">
+            <h4>Informations du rapport</h4>
+            <table class="table mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">Titre du rapport</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" [(ngModel)]="titreRapport" [ngModelOptions]="{standalone: true}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="button center verticle_center">
+            <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
+            <button class="next-btn" routerLink="/presentation">Suivant</button> 
+        </div>
+</div>

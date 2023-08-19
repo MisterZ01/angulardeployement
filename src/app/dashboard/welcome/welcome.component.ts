@@ -21,7 +21,9 @@ user:any;
   this.api.addHeader(localStorage.getItem('token'))
   this.api.getUser().subscribe((response: any) => {
     this.user = response;
-    this.auth.setNom(this.user.nom_user)
+    console.log(response);
+    this.auth.setNom(this.user.nom_user);
+    this.auth.setUserId(this.user.id);
   })
 }
 
