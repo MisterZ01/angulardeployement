@@ -6,7 +6,7 @@
 
     </div>
     <div class="contenant-interieur-2 mt-5">
-                <h2>Table des matières </h2>
+                <h2>Table des matières {{titrerapport}}</h2>
 
         <p class="mt-5">      
             1.PREAMBULE.....................................................3<br>
@@ -160,21 +160,11 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
                 <th scope="col">Fonction</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody *ngFor="let membre of Membreequipe">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{membre.nom }}</td>
+                <td>{{membre.prenom }}</td>
+                <td>{{membre.fonction }}</td>
             </tr>
             </tbody>
         </table>

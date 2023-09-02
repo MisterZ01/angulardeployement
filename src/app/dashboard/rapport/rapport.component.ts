@@ -3,7 +3,7 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts.js'
 // @ts-ignore
 import * as html2pdf from 'html2pdf.js'
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/core/api.service';
@@ -19,8 +19,8 @@ import { ApiService } from 'src/app/core/api.service';
   templateUrl: './rapport.component.html',
   styleUrls: ['./rapport.component.scss']
 })
-export class RapportComponent implements OnInit{
-  constructor(private route: ActivatedRoute, private apiservice : ApiService) {}
+export class RapportComponent implements OnInit, AfterViewInit{
+  constructor(private route: ActivatedRoute, private apiservice : ApiService, private changeDetectorRef: ChangeDetectorRef) {}
 
 
   optionsun = [
@@ -187,17 +187,19 @@ export class RapportComponent implements OnInit{
 rapportComplet:any;
 id_rapport : any 
 titrerapport : any 
-ngOnInit() {  
+Membreequipe : any
+  async ngOnInit() {  
   //recuperation de l'ID du rapport
   this.route.params.subscribe(params => {
     this.id_rapport  = params['id']; 
   });
 // Envoie des informations vers le back-end 
-this.apiservice.InfoReport(this.id_rapport).subscribe(
+await this.apiservice.InfoReport(this.id_rapport).subscribe(
   (response: any) => {
     console.log('Info du rapport ramenées avec succès', response);
     this.rapportComplet = response;
-    this.titrerapport = this.rapportComplet.titre_rapport;
+    this.titrerapport = this.rapportComplet[0].titre_rapport;
+    this.Membreequipe = this.rapportComplet[1];
 
   },
   (  error: any) => {
@@ -205,10 +207,13 @@ this.apiservice.InfoReport(this.id_rapport).subscribe(
     // Gérer l'erreur d'inscription
   }
 );
+    // Déclenchez manuellement la détection des changements
+    this.changeDetectorRef.detectChanges();
+}
 
-
+ngAfterViewInit() {
      const element = this.myElementRef.nativeElement;
-     html2pdf().set({
+      html2pdf().set({
          filename: 'Rapport-nom-utilisateur.pdf',
        }).from(element).save();
      }
