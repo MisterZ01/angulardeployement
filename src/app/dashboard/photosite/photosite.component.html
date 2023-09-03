@@ -14,25 +14,25 @@
              </thead>
              <tbody>
                  <tr>
-                     <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                     <td><input type="file" id="file-input" name="image" (change)="previewImage($event)" >
                          <br>
                          <img [src]="imagesiteUn" alt="" width="200"></td>
                      <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_un" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
                  <tr>
-                     <td><input type="file" id="file-imge" name="image" (change)="reviewImage($event)">
+                     <td><input type="file" id="file-imge" name="image" (change)="reviewImage($event)" >
                          <br>
                          <img [src]="imagesiteDeux" alt="" width="200"></td>
                      <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_deux" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
                  <tr>
-                     <td><input type="file" id="file-img" name="image" (change)="eviewImage($event)">
+                     <td><input type="file" id="file-img" name="image" (change)="eviewImage($event)"  >
                          <br>
                          <img [src]="imagesiteTrois" alt="" width="200"></td>
                      <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_trois" [ngModelOptions]="{standalone: true}"></textarea></td>
                  </tr>
                  <tr>
-                     <td><input type="file" id="file-im" name="image" (change)="viewImage($event)">
+                     <td><input type="file" id="file-im" name="image" (change)="viewImage($event)"  >
                          <br>
                          <img [src]="imagesiteQuatre" alt="" width="200"></td>
                      <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_quatre" [ngModelOptions]="{standalone: true}"></textarea></td>
@@ -42,7 +42,7 @@
     
          <div class="button center verticle_center">
              <button class="prev-btn" routerLink="/infosite">Précedent</button> 
-             <button class="save-btn" type="submit">Enregistrer</button> 
+             <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
              <button class="next-btn" routerLink="/environnement">Suivant</button> 
          </div>
     </div>

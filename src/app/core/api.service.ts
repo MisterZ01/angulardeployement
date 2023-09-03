@@ -62,5 +62,11 @@ export class ApiService {
 
   delete(){}
 
-
+// statistique de la base de données
+countUser(){
+  return this.Http.get(`${this.apiUrl}/stat/count`)
+}
+countReport(){
+  return this.Http.get(`${this.apiRap}/stat/count`)
+}
 }

@@ -292,7 +292,7 @@
         </table>
 
             <h5>Observation</h5>
-            <angular-editor class="bg-black" [ngModel]="commentaire" [ngModelOptions]="{standalone: true}" [config]="config"></angular-editor>
+            <angular-editor class="bg-black" ngModel="commentaire" [ngModelOptions]="{standalone: true}" [config]="config" #editor></angular-editor>
             <div class="html">
                {{ htmlContent }}
             </div>

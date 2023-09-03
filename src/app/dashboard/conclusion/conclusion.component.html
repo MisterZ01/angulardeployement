@@ -13,8 +13,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" id="operateur"></td>
-                    <td><input type="text" class="form-control" id="infr&env" list="choisir-cinquante-quatre">
+                    <td><input type="text" class="form-control" id="operateur" [(ngModel)]="operateur"></td>
+                    <td><input type="text" class="form-control" id="infr&env" list="choisir-cinquante-quatre" [(ngModel)]="conformite">
                         <datalist id="choisir-cinquante-quatre">
                             <option value="Conforme">
                             <option value="Non conforme">
@@ -27,7 +27,7 @@
 
     <div class="button mt-5 center verticle_center">
         <button class="prev-btn" routerLink="/synthese">Précedent</button>
-        <button class="save-btn" type="submit">Enregistrer</button> 
+        <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
         <button class="next-btn" routerLink="/annexes">Suivant</button> 
     </div>
 

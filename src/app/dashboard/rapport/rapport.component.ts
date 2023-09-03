@@ -19,7 +19,7 @@ import { ApiService } from 'src/app/core/api.service';
   templateUrl: './rapport.component.html',
   styleUrls: ['./rapport.component.scss']
 })
-export class RapportComponent implements OnInit, AfterViewInit{
+export class RapportComponent implements OnInit {
   constructor(private route: ActivatedRoute, private apiservice : ApiService, private changeDetectorRef: ChangeDetectorRef) {}
 
 
@@ -188,35 +188,40 @@ rapportComplet:any;
 id_rapport : any 
 titrerapport : any 
 Membreequipe : any
-  async ngOnInit() {  
-  //recuperation de l'ID du rapport
-  this.route.params.subscribe(params => {
-    this.id_rapport  = params['id']; 
+dataFetched = false; // Add a flag to track data fetching
+
+async ngOnInit() {
+  // Recuperation de l'ID du rapport
+  this.route.params.subscribe((params) => {
+    this.id_rapport = params['id'];
   });
-// Envoie des informations vers le back-end 
-await this.apiservice.InfoReport(this.id_rapport).subscribe(
-  (response: any) => {
+
+  try {
+    // Envoie des informations vers le back-end
+    const response: any = await this.apiservice.InfoReport(this.id_rapport).toPromise();
     console.log('Info du rapport ramenées avec succès', response);
     this.rapportComplet = response;
     this.titrerapport = this.rapportComplet[0].titre_rapport;
     this.Membreequipe = this.rapportComplet[1];
 
-  },
-  (  error: any) => {
+    // Set the dataFetched flag to true
+    this.generatePDF();
+  } catch (error) {
     console.error('Une erreur s\'est produite lors de la recherche du rapport', error);
-    // Gérer l'erreur d'inscription
+    // Handle the error
   }
-);
-    // Déclenchez manuellement la détection des changements
-    this.changeDetectorRef.detectChanges();
 }
 
-ngAfterViewInit() {
-     const element = this.myElementRef.nativeElement;
-      html2pdf().set({
-         filename: 'Rapport-nom-utilisateur.pdf',
-       }).from(element).save();
-     }
+
+generatePDF() {
+  const element = this.myElementRef.nativeElement;
+  html2pdf()
+    .set({
+      filename: 'Rapport-nom-utilisateur.pdf',
+    })
+    .from(element)
+    .save();
+}
     
   
 
