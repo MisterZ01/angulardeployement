@@ -145,6 +145,47 @@
     justify-content: center;
   }
 
+
+
+  body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+    margin-left: 20px;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    margin-left: 40px;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.reference {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.reference li {
+  margin-bottom: 10px;
+}
+
+.preambule{
+  color: #000;
+}
+.conclusion{
+  color: #000;
+}
+
+
+
   
   
   

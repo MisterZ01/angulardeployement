@@ -100,6 +100,7 @@ export class PresentationComponent implements OnInit {
           // Gérer l'erreur d'inscription
         }
       );
+
     }  
   
 }
