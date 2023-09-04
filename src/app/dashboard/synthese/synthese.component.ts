@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiInfosyntheseService } from 'src/app/core/api-infosynthese.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class SyntheseComponent implements OnInit{
   constructor(
     private sanitizer: DomSanitizer, 
     private api_synthese:ApiInfosyntheseService,
-    private auth: AuthService
+    private auth: AuthService,
+    private alert: ApiNotificationService
     ) {}
 
   previewImage(event: any) {
@@ -43,12 +45,12 @@ export class SyntheseComponent implements OnInit{
     }
     this.api_synthese.registerSynthese(synt).subscribe(
       (response: any) => {
-        console.log("les infos de la synthese ont été enregistré avec succès", response);
+        this.alert.syntheseStiteCreer();
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
       (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
         // Gérer l'erreur d'inscription
+        this.alert.erreur();
       }
     );
   }

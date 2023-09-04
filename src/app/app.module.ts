@@ -32,6 +32,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import{RichTextEditorModule, ToolbarService, LinkService, ImageService,HtmlEditorService, TableService, QuickToolbarService} from '@syncfusion/ej2-angular-richtexteditor'
 import { AuthService } from './shared/userInfos/auth.service';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 
@@ -51,6 +52,7 @@ import { AuthService } from './shared/userInfos/auth.service';
     ReactiveFormsModule,
     HttpClientModule,
     AngularEditorModule,
+    SweetAlert2Module,
     RouterModule.forRoot([
       {path:'', component:ConnexionComponent},
       {path:'presentation', component: PresentationComponent},

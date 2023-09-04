@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiInfosyntheseService } from 'src/app/core/api-infosynthese.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class ConclusionComponent {
   conformite: any;
   constructor(
     private api_synthese:ApiInfosyntheseService,
-    private auth: AuthService
+    private auth: AuthService,
+    private alert: ApiNotificationService
     ) {}
 
   Submited() {
@@ -26,11 +28,11 @@ export class ConclusionComponent {
     }
     this.api_synthese.registerConclusion(conclusion).subscribe(
       (response: any) => {
-        console.log("les infos de la conclusion ont été enregistré avec succès", response);
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+        this.alert.conclusionStiteCreer()
       },
       (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
+        this.alert.erreur()
         // Gérer l'erreur d'inscription
       }
     );
