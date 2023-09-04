@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { ApiEnvService } from 'src/app/core/api-env.service';
+import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
   selector: 'app-environnement',
@@ -100,16 +101,14 @@ export class EnvironnementComponent implements OnInit {
   presencegrille: any;
   etatgrille: any;
   observation: any;
-
-
-
-
-
   
   htmlContent: string;
   config: AngularEditorConfig;
 
-  constructor(private sanitizer: DomSanitizer, private api_infoenv:ApiEnvService) {
+  constructor(
+    private sanitizer: DomSanitizer, 
+    private api_infoenv:ApiEnvService, 
+    private auth: AuthService ) {
     this.htmlContent = ''; 
     this.config  = {
  
@@ -194,7 +193,10 @@ export class EnvironnementComponent implements OnInit {
       presence_grille : this.presencegrille,
       etat_grille : this.etatgrille,
       observation : this.observation,
+      id_rapport: this.auth.getReportId()
+
     }
+
     this.api_infoenv.registerEnv(control_env).subscribe(
       (response: any) => {
         console.log("les infos de l'environnement ont été enregistré avec succès", response);

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiInfosyntheseService } from 'src/app/core/api-infosynthese.service';
+import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
   selector: 'app-synthese',
@@ -15,7 +16,11 @@ export class SyntheseComponent implements OnInit{
   recommandations: any;
 
 
-  constructor(private sanitizer: DomSanitizer, private api_synthese:ApiInfosyntheseService) {}
+  constructor(
+    private sanitizer: DomSanitizer, 
+    private api_synthese:ApiInfosyntheseService,
+    private auth: AuthService
+    ) {}
 
   previewImage(event: any) {
     const reader = new FileReader();
@@ -33,6 +38,8 @@ export class SyntheseComponent implements OnInit{
       partieconcernee : this.partieconcernee,
       anormalies : this.anormalies,
       recommandations : this.recommandations,
+      id_rapport: this.auth.getReportId()
+
     }
     this.api_synthese.registerSynthese(synt).subscribe(
       (response: any) => {
