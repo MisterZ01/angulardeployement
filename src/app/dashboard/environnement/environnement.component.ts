@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { ApiEnvService } from 'src/app/core/api-env.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
@@ -108,7 +109,8 @@ export class EnvironnementComponent implements OnInit {
   constructor(
     private sanitizer: DomSanitizer, 
     private api_infoenv:ApiEnvService, 
-    private auth: AuthService ) {
+    private auth: AuthService , 
+    private alert: ApiNotificationService) {
     this.htmlContent = ''; 
     this.config  = {
  
@@ -199,12 +201,12 @@ export class EnvironnementComponent implements OnInit {
 
     this.api_infoenv.registerEnv(control_env).subscribe(
       (response: any) => {
-        console.log("les infos de l'environnement ont été enregistré avec succès", response);
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+        this.alert.environnementiteCreer();
       },
       (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
         // Gérer l'erreur d'inscription
+        this.alert.erreur();
       }
     );
 

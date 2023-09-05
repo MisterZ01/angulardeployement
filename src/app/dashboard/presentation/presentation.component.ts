@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiMembreService } from 'src/app/core/api-membre.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
@@ -33,7 +34,8 @@ export class PresentationComponent implements OnInit {
     private api_memb_s:ApiMembreService, 
     private api_membdeux:ApiMembreService, 
     private api_membtrois:ApiMembreService,
-    private auth: AuthService ) {}
+    private auth: AuthService ,
+    private alert: ApiNotificationService) {}
 
   previewImage(event: any) {
     const reader = new FileReader();
@@ -56,12 +58,12 @@ export class PresentationComponent implements OnInit {
       }
       this.api_memb_s.registerMembreUn(memb1).subscribe(
         (response: any) => {
-          console.log("le premier membre d'équipe a été enregistré avec succès", response);
           // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+          this.alert.membreEquipeCreer();
         },
         (  error: any) => {
-          console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
           // Gérer l'erreur d'inscription
+          this.alert.erreur();
         }
       );
 

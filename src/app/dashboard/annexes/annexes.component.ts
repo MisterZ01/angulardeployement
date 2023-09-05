@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiImagesService } from 'src/app/core/api-images.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
@@ -10,8 +11,11 @@ import { AuthService } from 'src/app/shared/userInfos/auth.service';
   styleUrls: ['./annexes.component.scss']
 })
 export class AnnexesComponent {
-  constructor(private sanitizer: DomSanitizer,     private auth: AuthService,
-    private http: HttpClient, private api_imge_sit:ApiImagesService,) {}
+  constructor(private sanitizer: DomSanitizer,
+    private auth: AuthService,
+    private http: HttpClient,
+    private api_imge_sit:ApiImagesService,
+    private alert: ApiNotificationService) {}
   
   public imageSrc: any;
   photosite_un: any;
@@ -63,16 +67,19 @@ export class AnnexesComponent {
   
   
      // envoi de données 
-  
+      let reponseun : any = true;
+      let reponsedeux : any = true;
+      let reponsetrois : any = true;
+      let reponsequatre : any = true;
+
      this.api_imge_sit.registerAnnexeImage(premiereImage,idRapport)
      .subscribe(
        (response) => {
          // Traitez la réponse du serveur ici
-         console.log('Téléchargement réussi', response);
        },
        (error) => {
          // Gérez les erreurs ici
-         console.error('Erreur lors du téléchargement', error);
+         reponseun = false;
        }
      );
      
@@ -80,11 +87,10 @@ export class AnnexesComponent {
      .subscribe(
        (response) => {
          // Traitez la réponse du serveur ici
-         console.log('Téléchargement réussi', response);
        },
        (error) => {
          // Gérez les erreurs ici
-         console.error('Erreur lors du téléchargement', error);
+         reponsedeux = false;
        }
      );
      
@@ -92,11 +98,10 @@ export class AnnexesComponent {
      .subscribe(
        (response) => {
          // Traitez la réponse du serveur ici
-         console.log('Téléchargement réussi', response);
        },
        (error) => {
          // Gérez les erreurs ici
-         console.error('Erreur lors du téléchargement', error);
+         reponsetrois = false;
        }
      );
      
@@ -104,14 +109,20 @@ export class AnnexesComponent {
      .subscribe(
        (response) => {
          // Traitez la réponse du serveur ici
-         console.log('Téléchargement réussi', response);
-       },
-       (error) => {
-         // Gérez les erreurs ici
-         console.error('Erreur lors du téléchargement', error);
-       }
-     );
-     
+        },
+        (error) => {
+          // Gérez les erreurs ici
+          reponsequatre = false;
+        }
+        );
+        
+        //envoie de l'allerte
+        if ( reponseun && reponsedeux &&reponsetrois && reponsequatre){
+          
+          this.alert.annexeStiteCreer()
+        }else {
+          this.alert.erreur()
+        }
   
     }
 
