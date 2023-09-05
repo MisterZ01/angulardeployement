@@ -6,6 +6,7 @@ import { ApiImagesDService } from 'src/app/core/api-images-d.service';
 import { ApiImagesQService } from 'src/app/core/api-images-q.service';
 import { ApiImagesTService } from 'src/app/core/api-images-t.service';
 import { ApiImagesService } from 'src/app/core/api-images.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 @Component({
@@ -47,7 +48,8 @@ export class PhotositeComponent {
     private api_imge_sitquatre:ApiImagesQService ,
     private router: Router,
     private auth: AuthService,
-    private http: HttpClient) {}
+    private http: HttpClient,
+    private alert: ApiNotificationService) {}
 
 previewImage(event: any) {
   const reader = new FileReader();
@@ -140,16 +142,19 @@ viewImage(event: any) {
 
 
    // envoi de données 
+   let reponseun : any = true;
+   let reponsedeux : any = true;
+   let reponsetrois : any = true;
+   let reponsequatre : any = true;
 
    this.api_imge_sit.registerImage(premiereImage, descriptionImageun, idRapport)
    .subscribe(
      (response) => {
        // Traitez la réponse du serveur ici
-       console.log('Téléchargement réussi', response);
-     },
-     (error) => {
-       // Gérez les erreurs ici
-       console.error('Erreur lors du téléchargement', error);
+      },
+      (error) => {
+        // Gérez les erreurs ici
+        reponseun = false ;
      }
    );
    
@@ -157,11 +162,10 @@ viewImage(event: any) {
    .subscribe(
      (response) => {
        // Traitez la réponse du serveur ici
-       console.log('Téléchargement réussi', response);
-     },
+      },
      (error) => {
        // Gérez les erreurs ici
-       console.error('Erreur lors du téléchargement', error);
+        reponsedeux = false ;
      }
    );
    
@@ -169,11 +173,10 @@ viewImage(event: any) {
    .subscribe(
      (response) => {
        // Traitez la réponse du serveur ici
-       console.log('Téléchargement réussi', response);
      },
      (error) => {
        // Gérez les erreurs ici
-       console.error('Erreur lors du téléchargement', error);
+       reponsetrois = false ;
      }
    );
    
@@ -181,14 +184,19 @@ viewImage(event: any) {
    .subscribe(
      (response) => {
        // Traitez la réponse du serveur ici
-       console.log('Téléchargement réussi', response);
      },
      (error) => {
        // Gérez les erreurs ici
-       console.error('Erreur lors du téléchargement', error);
+       reponsequatre = false ;
      }
    );
    
+   //envoie de l'alerte
+   if ( reponseun && reponsedeux &&reponsetrois && reponsequatre){
+    this.alert.photoSiteCreer();
+  }else {
+    this.alert.erreur()
+  }
 
 
 

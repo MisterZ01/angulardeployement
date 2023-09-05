@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiService } from '../core/api.service';
 import { Router } from '@angular/router'
+import { ApiNotificationService } from '../core/api-notification.service';
 
 @Component({
   selector: 'app-inscription',
@@ -27,7 +28,10 @@ export class InscriptionComponent implements OnInit {
 
 
  
-  constructor(private sanitizer: DomSanitizer, private apiservice:ApiService , private router: Router) {}
+  constructor(private sanitizer: DomSanitizer,
+    private apiservice:ApiService,
+    private router: Router,
+    private alert: ApiNotificationService) {}
 
    
 
@@ -53,14 +57,14 @@ export class InscriptionComponent implements OnInit {
     // Envoie des informations vers le back-end 
     this.apiservice.registerUser(this.formData).subscribe(
       (response: any) => {
-        console.log('Utilisateur enregistré avec succès', response);
-        this.router.navigate(['/']);
+        this.alert.inscriptionReussie();
         
         // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
       (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'inscription', error);
-        // Gérer l'erreur d'inscription
+        this.alert.erreur();
+
+
       }
     );
   }
