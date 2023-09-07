@@ -178,6 +178,187 @@ export class RapportComponent implements OnInit {
    
     // ... ajoutez d'autres options ici
   ];
+  options_vingtcinq = [
+    { id: 1, label: 'Nom', checked: false },
+    { id: 2, label: 'Oui', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_vingtsix = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Dégradé', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_vingtsept = [
+    { id: 1, label: 'Nom', checked: false },
+    { id: 2, label: 'Oui', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_vingthuit = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Dégradé', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_vingtneuf = [
+    { id: 1, label: 'Inexistant', checked: false },
+    { id: 2, label: 'Existant', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trente = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trenteun = [
+    { id: 1, label: '< 1', checked: false },
+    { id: 2, label: '> 1', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentedeux = [
+    { id: 1, label: 'Propre', checked: false },
+    { id: 2, label: 'Encombré', checked: false },
+    { id: 2, label: 'Fissuré', checked: false },
+    { id: 2, label: 'Humide', checked: false },
+    { id: 2, label: 'Sale', checked: false },
+    { id: 2, label: 'À nettoyer', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentetrois = [
+    { id: 1, label: 'Nom', checked: false },
+    { id: 2, label: 'Oui', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentequatre = [
+    { id: 1, label: 'Ligne électrique', checked: false },
+    { id: 2, label: 'Voirie', checked: false },
+    { id: 2, label: 'Cour d’eau', checked: false },
+    { id: 2, label: 'Etablissement scolaire', checked: false },
+    { id: 2, label: 'Etablissement sanitaire', checked: false },
+    { id: 2, label: 'supermarché', checked: false },
+    { id: 2, label: 'Immeuble', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentecinq = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentesix = [
+    { id: 1, label: 'Gazon', checked: false },
+    { id: 2, label: 'Dalle', checked: false },
+    { id: 2, label: 'Gravier concassé', checked: false },
+    { id: 2, label: 'Autre', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentesept = [
+    { id: 1, label: 'Inexistant', checked: false },
+    { id: 2, label: 'Existant', checked: false },
+   
+    // ... ajoutez d'autres options ici
+  ];
+  options_trentehuit = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_trenteneuf = [
+    { id: 1, label: 'Shelter', checked: false },
+    { id: 2, label: 'Bâtiment', checked: false }, 
+    { id: 2, label: 'Abri', checked: false }, 
+    { id: 2, label: 'Autre', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarante = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Dégradé', checked: false }, 
+    { id: 2, label: 'À réhabiliter', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quaranteun = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantedeux = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantetrois = [
+    { id: 1, label: 'Inexistant', checked: false },
+    { id: 2, label: 'Existant', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantequatre = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantecinq = [
+    { id: 1, label: 'Inexistant', checked: false },
+    { id: 2, label: 'Existant', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantesix = [
+    { id: 1, label: 'en cours', checked: false },
+    { id: 2, label: 'Périmé', checked: false }, 
+    { id: 2, label: 'NA (étiquette illisible)', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantesept = [
+    { id: 1, label: 'Inexistant', checked: false },
+    { id: 2, label: 'Existant', checked: false },  
+    // ... ajoutez d'autres options ici
+  ];
+  options_quarantehuit = [
+    { id: 1, label: 'en cours', checked: false },
+    { id: 2, label: 'Périmé', checked: false }, 
+    { id: 2, label: 'NA (étiquette illisible)', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_quaranteneuf = [
+    { id: 1, label: 'Split', checked: false },
+    { id: 2, label: 'Windows', checked: false },  
+    // ... ajoutez d'autres options ici
+  ];
+  options_cinquante = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Dégradé', checked: false }, 
+    { id: 2, label: 'Oxydé', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_cinquanteun = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Dégradé', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_cinquantedeux = [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_cinquantetrois = [
+    { id: 1, label: 'Existante', checked: false },
+    { id: 2, label: 'Inexistante', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
+  options_cinquantequatre= [
+    { id: 1, label: 'Bon', checked: false },
+    { id: 2, label: 'Mauvais', checked: false }, 
+    { id: 2, label: 'Verrouillée', checked: false }, 
+    // ... ajoutez d'autres options ici
+  ];
   
   
   
@@ -193,7 +374,7 @@ dataFetched = false; // Add a flag to track data fetching
 async ngOnInit() {
   // Recuperation de l'ID du rapport
   this.route.params.subscribe((params) => {
-    this.id_rapport = params['id'];
+  this.id_rapport = params['id'];
   });
 
   try {
@@ -222,7 +403,4 @@ generatePDF() {
     .from(element)
     .save();
 }
-    
-  
-
 }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ApiMembreService } from 'src/app/core/api-membre.service';
 import { ApiService } from 'src/app/core/api.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 
 @Component({
   selector: 'app-inforapport',
@@ -23,7 +24,10 @@ export class InforapportComponent {
     private sanitizer: DomSanitizer, 
     private apiservice:ApiService, 
     private router:Router,
-    private auth: AuthService,  ) {}
+    private auth: AuthService, 
+    private alert: ApiNotificationService, 
+    
+    ) {}
 
 
 
@@ -39,15 +43,17 @@ export class InforapportComponent {
       // Envoie des informations vers le back-end 
       this.apiservice.CreateReport(rapport).subscribe(
         (response: any) => {
-          console.log('rapport creer avec succes', response);
           // recuperation id du rapport
           this.auth.setReportId(response);
+          this.alert.rapportCreer();
           
         },
         (  error: any) => {
-          console.error('Une erreur s\'est produite lors de la creation du rapport', error);
           // Gérer l'erreur d'inscription
+          this.alert.erreur();
         }
       );
   }  
+
+
 }

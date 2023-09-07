@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { ApiEnvService } from 'src/app/core/api-env.service';
 import { ApiInfositeService } from 'src/app/core/api-infosite.service';
+import { ApiNotificationService } from 'src/app/core/api-notification.service';
 import { AuthService } from 'src/app/shared/userInfos/auth.service';
 
 
@@ -60,7 +61,8 @@ export class InfositeComponent implements OnInit{
   constructor(
     private sanitizer: DomSanitizer, 
     private api_site:ApiInfositeService,
-    private auth: AuthService ) {
+    private auth: AuthService,
+    private alert: ApiNotificationService) {
     this.htmlContent = ''; 
     this.config  = {
  
@@ -126,12 +128,11 @@ export class InfositeComponent implements OnInit{
     }
     this.api_site.registerSite(sit).subscribe(
       (response: any) => {
-        console.log("les infos du site ont été enregistré avec succès", response);
-        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+        this.alert.infoSiteCreer();        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
       },
       (  error: any) => {
-        console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
         // Gérer l'erreur d'inscription
+        this.alert.erreur();    
       }
     );
 

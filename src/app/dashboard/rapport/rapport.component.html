@@ -1,156 +1,169 @@
 
 
 <div class="contenant-exterieur" #myElement id="pdfTable" #pdfTable>
-    <!-- Contenu de votre contenant ici -->
-    <div class="contenant-interieur-1">
+  <table class="table table table-bordered table-striped mt-2 plan">
+    <thead>
+    <tr>
+        <th><img class="img-responsive" src="assets/images/logo/armoirie.png" alt="#" width="200" height="110"/></th>
+        <th><img class="img-responsive" src="assets/images/logo/aigf.png" alt="#" width="200" height="100"/></th>
+        <th><img class="img-responsive" src="assets/images/logo/Valsch.png" alt="#" width="200" height="100"/></th>
+    </tr>
+    </thead>
+</table>
+<div class="contenant-exterieur mt-5">
+    <p>{{titrerapport}}</p>
+</div>
 
-    </div>
-    <div class="contenant-interieur-2 mt-5">
-                <h2>Table des matières {{titrerapport}}</h2>
+<div class="contenant-exterieur mt-5">
+    <p>image du site</p>
+</div>
+<div class="contenant-exterieur mt-5">
+    <p>Nom du site - Nom de l'opérateur"le logo"</p>
+    <p>La date du jour</p>
+</div>
+                <h1 class="mt-5">Table des Matières</h1>
+                <ul>
+                    <li><a href="#section1">1. PREAMBULE</a></li>
+                    <li><a href="#section2">2. REFERENCES NORMATIVES</a></li>
+                    <li><a href="#section3">3. PRESENTATIONS GENERALES</a>
+                        <ul>
+                            <li><a href="#section3.1">3.1. Composition de l'équipe</a></li>
+                            <li><a href="#section3.2">3.2. Informations générales sur le site</a>
+                                <ul>
+                                    <li><a href="#section3.2.1">3.2.1. Localisation du site</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#section3.3">3.3. Illustration photos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section4">4. GESTION DE L’ENVIRONNEMENT ET PROTECTION COLLECTIVE</a>
+                        <ul>
+                            <li><a href="#section4.1">4.1. Contrôle de l’environnement.</a></li>
+                            <li><a href="#section4.2">4.2. Illustration photo.</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section5">5. STRUCTURE PRINCIPALE</a>
+                      <ul>
+                          <li><a href="#section5.1">5.1. Contrôle et description de la structure principale</a></li>
+                          <li><a href="#section5.2">5.2. Contrôle de la verticalité (Méthode au choix)</a></li>
+                          <li><a href="#section5.3">5.3. Mesure des tensions mécaniques des haubans</a></li>
+                          <li><a href="#section5.4">5.4. Illustration photos</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#section6">6. SYSTEME DE NAVIGATION AERIENNE</a>
+                      <ul>
+                          <li><a href="#section6.1">6.1. Contrôle du système de navigation aérienne</a></li>
+                          <li><a href="#section6.2">6.2. Illustration photos</a></li>
+                      </ul>
+                  </li>
+          
+                  <li><a href="#section7">7. INSTALLATIONS ELECTRIQUES</a>
+                      <ul>
+                          <li><a href="#section7.1">7.1. Contrôle des installations électriques</a></li>
+                          <li><a href="#section7.2">7.2. Illustration photos</a></li>
+                      </ul>
+                  </li>
+          
+                  <li><a href="#section8">8. SYSTEME DE PROTECTION ANTI-FOUDRE</a>
+                      <ul>
+                          <li><a href="#section8.1">8.1. Contrôle du système anti-foudre</a></li>
+                          <li><a href="#section8.2">8.2. Mesure de terre</a></li>
+                          <li><a href="#section8.3">8.3. Illustration photos</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#section9">9. SYSTEME ANTENNAIRE</a>
+                    <ul>
+                        <li><a href="#section9.1">9.1. Contrôle du système antennaire</a></li>
+                        <li><a href="#section9.2">9.2. Equipements radioélectriques</a>
+                            <ul>
+                                <li><a href="#section9.2.1">9.2.1. Configuration radio</a></li>
+                                <li><a href="#section9.2.2">9.2.2. Configuration transmission</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section9.3">9.3. Illustrations photos</a></li>
+                        <li><a href="#section9.4">9.4. Vues panoramiques par secteurs et technologies déployées</a></li>
+                        <li><a href="#section9.5">9.5. Plan d’élévation</a></li>
+                    </ul>
+                </li>
+        
+                <li><a href="#section10">10. SYNTHESE ET RECOMMANDATIONS</a>
+                    <ul>
+                        <li><a href="#section10.1">10.1. Tableau de synthèses et recommandations</a></li>
+                    </ul>
+                </li>
+        
+                <li><a href="#section11">CONCLUSION DE L’AUDIT</a></li>
+                <li><a href="#section12">ANNEXES</a></li>
+                </ul>
 
-        <p class="mt-5">      
-            1.PREAMBULE.....................................................3<br>
-            2.REFERENCES NORMATIVES.........................................4<br>
-            3.PRESENTATIONS GENERALES.......................................7<br>
-            3.1. Composition de l'équipe....................................7<br>
-            3.2. Informations générales sur le site.........................7<br>
-            3.2.1. Localisation du site.....................................7<br>
-            3.3. Illustration photos........................................10<br>
-        </p>
 
-          <p class="mt-5">      
-            PARTIE 1 : CONTROLE INFRASTRUCTURE ET ENVIRONNEMENT.............11<br>
-            4.GESTION DE L’ENVIRONNEMENT ET PROTECTION COLLECTIVE...........12<br>
-            4.1. Contrôle de l’environnement................................12<br>
-            4.2. Illustration photo.........................................14<br>
-            5. STRUCTURE PRINCIPALE.........................................15<br>
-            5.1. Contrôle et description de la structure principale.........15<br>
-            5.2. Contrôle de la verticalité (Méthode au choix)..............17<br>
-            5.3. Mesure des tensions mécaniques des haubans.................20<br>
-            5.4. Illustration photos........................................21<br>
-            6. SYSTEME DE NAVIGATION AERIENNE...............................22<br>
-            6.1. Contrôle du système de navigation aérienne.................22<br>
-            6.2. Illustration photos........................................23<br>
-            7.INSTALLATIONS ELECTRIQUES.....................................24<br>
-            7.1. Contrôle des installations électriques.....................24<br>
-            7.2. Illustration photos........................................25<br>
-            8. SYSTEME DE PROTECTION ANTI-FOUDRE............................26<br>
-            8.1. Contrôle du système anti-foudre............................26<br>
-            8.2. Mesure de terre............................................27<br>
-            Valeur de la résistance de terre isolée :.......................27<br>
-            8.3. Illustration photos........................................28<br>
-          <p>      
-
-    </div>
-    <div class="contenant-interieur-3 mt-5">
-        <p>  
-            PARTIE 2 : CONTROLE RADIO.......................................29<br>
-            9.SYSTEME ANTENNAIRE............................................30<br>
-            9.1. Contrôle du système antennaire.............................30<br>
-            9.2. Equipements radioélectriques...............................31<br>
-            9.2.1. Configuration radio......................................31<br>
-            9.2.2. Configuration transmission...............................32<br>
-            9.3. Illustrations photos.......................................33<br>
-            9.4. Vues panoramiques par secteurs et technologies déployées...34<br>
-            9.5. Plan d’élévation...........................................35<br>
-            10.SYNTHESE ET RECOMMANDATIONS..................................36<br>
-            10.1. Tableau de synthèses et recommandations...................36<br>
-            CONCLUSION DE L’AUDIT...........................................37<br>
-        </p>
-        <p class="mt-5">  
-            ANNEXES.........................................................38 <p>  
-        </p> 
-
-    </div>
-    <div class="contenant-interieur-4 mt-5">
-
-       <h3>1.PREAMBULE</h3> 
-
-<p class="mt-5">
+<h2 id="section1">1. PREAMBULE</h2>
+<p class="preambule">
     Créée par l’ordonnance n°2012-293 du 21 Mars 2012 relative aux Télécommunications et aux Technologies de l’Information et de la Communication, l’Agence Ivoirienne de Gestion des Fréquences Radioélectriques (AIGF) assure les fonctions de planification, d’attribution, de contrôle des fréquences radioélectriques, de validation de l’implantation des stations radioélectriques de toute nature sur le territoire national et en assure la conformité à la réglementation nationale et internationale.
-Cette mission s’inscrit dans la mise en œuvre des Directives (EHS) et dans le respect des engagements d’écocitoyenneté et de gestion durable des infrastructures applicables au secteur des télécommunications / TIC.
+    Cette mission s’inscrit dans la mise en œuvre des Directives (EHS) et dans le respect des engagements d’écocitoyenneté et de gestion durable des infrastructures applicables au secteur des télécommunications / TIC.
+    C’est dans ce cadre que l’AIGF a sélectionné l’entreprise VALSCH CONSULTING, expert en contrôle de conformité pour la réalisation d’une campagne d’audit de conformité des sites radioélectriques des opérateurs de télécommunications (ORANGE CÔTE D’IVOIRE (OCI), MTN-CI, ETISALAT (MOOV AFRICA CI) sur le territoire ivoirien. 
+    Le présent rapport traite des contrôles in situ de l’aspect radio, environnement et infrastructure physique du site radioélectrique CI00124 SEPTTRANCHE2 CI00124 SEPTTRANCHE2  de l’opérateur MTN-CI.
+</p> 
 
-C’est dans ce cadre que l’AIGF a sélectionné l’entreprise VALSCH CONSULTING, expert en contrôle de conformité pour la réalisation d’une campagne d’audit de conformité des sites radioélectriques des opérateurs de télécommunications (ORANGE CÔTE D’IVOIRE (OCI), MTN-CI, ETISALAT (MOOV AFRICA CI) sur le territoire ivoirien. 
-Le présent rapport traite des contrôles in situ de l’aspect radio, environnement et infrastructure physique du site radioélectrique nomsite  de l’opérateur nomoperateur.
+<h2 id="section2">2. REFERENCES NORMATIVES</h2>
+<h2>FONDATION ET STRUCTURE METALLIQUE (PYLONE)</h2>
+    <ul class="refence">
+        <li>EN 1991-1 à 4 : Bases de calcul et actions sur les structures</li>
+        <li>EN 1992-1-1 : Calcul des structures en béton</li>
+        <li>EN 1993-1-1 : Calcul des structures en acier – Partie 1-1 : règles générales et règles pour les bâtiments</li>
+        <li>EN 1993-1-8 : Calcul des structures en acier – Partie 1-8 : calcul des assemblages</li>
+        <li>EN 1993-1-9 : Calcul des structures en acier – Partie 1-9 : fatigue</li>
+        <li>EN 1993-1-10 : Calcul des structures en acier – Partie 1-10 : choix des qualités d’acier</li>
+        <li>EN 1993-3-1 : Calcul des structures en acier - Partie 3-1 : Pylône et mât haubané</li>
+        <li>EN 13411-5 : Terminaisons pour câbles en acier –Sécurité-partie 5 : Serre-câbles à étrier en U.</li>
+        <li>DTU P 18.702 : Règles françaises BAEL 91 - règles de conception et de calcul des ouvrages en béton armé suivant la méthode des états limites.</li>
+        <li>DTU 13.12 : Règles françaises de calcul des fondations superficielles.</li>
+        <li>DTU P 06.002 : Règles françaises NV 65 - règles définissant les effets de la neige et du vent sur les constructions / Eurocode I.</li>
+        <li>DTU P 22.701 : Règles françaises CM 66 et additif 80 - règles de calcul des constructions en acier / Eurocode III.</li>
+        <li>DTU P 22.703 : Justification par le calcul de la sécurité des constructions - règles de calculs des constructions à parois minces en acier.</li>
+        <li>NFP22- 430, NFP22- 460 à 469 : (assemblages métalliques).</li>
+    </ul>
 
-</p>
+<h2>SYSTEME DE SIGNALISATION AERIENNE (BALISAGE)</h2>
+    <ul>
+        <li>Recommandations de l’Organisation de l’Aviation Civile Internationale, OACI annexe 14 chapitres 6 (11/1999).</li>
+    </ul>
 
+<h2>SYSTEME DE PROTECTION ANTI-FOUDRE</h2>
+    <ul>
+        <li>Recommandation UIT-T K56 : 2021 : SERIE K : Protection contre les perturbations : Protection des stations de base radioélectriques contre la foudre.</li>
+        <li>Recommandation UIT-T K27 : 2015 : SERIE K : Protection contre les perturbations : Configuration équipotentielle et mise à la terre dans les bâtiments de télécommunications.</li>
+        <li>Recommandation UIT-T K39 : 2019 : SERIE K : Protection contre les perturbations : Evaluation des risques d’endommagement des installations de télécommunication par la foudre.</li>
+        <li>Norme CEI 62305-1 : 2010 : Protection contre la foudre – Partie 1 : Principes généraux.</li>
+        <li>Norme CEI 62305-2 : 2010 : Protection contre la foudre –Partie 2 : Evaluation du risque.</li>
+        <li>Norme CEI 62305-3 : 2010 : Protection contre la foudre - Partie 3 : Dommages physiques sur les structures et risques humains.</li>
+        <li>Norme CEI 62305-4 : 2010 : Protection contre la foudre – Partie 4 : Réseaux de puissance et de communication dans les structures.</li>
+        <li>Norme NF EN 62305-1 : 2012 : Protection contre la foudre - Partie 1 : Principes généraux.</li>
+        <li>Norme NF EN 62305-2 : 2012 : Protection contre la foudre - Partie 2 : Evaluation du risque foudre.</li>
+        <li>Norme NF EN 62305-3 : 2012 : Protection contre la foudre - Partie 3 : Dommages physiques sur les structures et risques humains.</li>
+        <li>Norme NF EN 62305-4 : 2012 : Protection contre la foudre – Partie 4 : Réseaux de puissance et de communication dans les structures.</li>
+        <li>Norme NF C 15-100 : 2012 : Installations et câblages électriques.</li>
+    </ul>
 
+<h2>ENVIRONNEMENT</h2>
+    <ul>
+        <li>Directives (EHS) Télécommunications : Directives environnementales, sanitaires et sécuritaires du Groupement de la Société Financière internationale et de la Banque Mondiale (du 30 Avril 2007).</li>
+        <li>UIT-T Série L1400 (02/2011) : Aperçu et principes généraux des méthodes d'évaluation de l'impact des TIC sur l'environnement.</li>
+    </ul>
 
+<h2>Groupe Electrogène et nuisance sonore</h2>
+    <ul>
+        <li>Depuis Octobre 2016, le gouvernement de la Côte d’Ivoire a pris un décret qui limite les niveaux d’émission des engins et autres équipements qui produisent des bruits en fonction de la zone (résidentielle, industrielle, marché etc.)</li>
+        <li>DECRET N°2016-791 portant réglementation des émissions de bruits de voisinage.</li>
+        <li>La directive européenne 2002/49/CE du 25 juin 2002 :  bases communautaires de la lutte contre le bruit dans l'environnement. Elle impose aux Etats membres la réalisation de cartes stratégiques de bruit et de plans d'actions destinés à lutter contre les nuisances sonores et à protéger les zones calmes.</li>
+        <li>Directive 2000/14/CE :  Niveau d’émission de bruit avec certification conforme à la directive 2000/14/CE.</li>
+        <li>DIRECTIVE 2003/10/CE : Prescriptions minimales de sécurité et de santé relatives à l'exposition des travailleurs aux risques dus aux agents physiques (bruit).</li>
+        <li>DIRECTIVE 85/408/CEE : Relative au niveau de puissance acoustique admissible des groupes électrogènes de puissance.</li>
+    </ul>
+    
 
-
-    </div>
-    <div class="contenant-interieur-5 mt-5">
-            <h3> 2.REFERENCES NORMATIVES</h3>
-        <p class="mt-5">
-            •	FONDATION ET STRUCTURE METALLIQUE (PYLONE)
-            EN 1991-1 à 4 : Bases de calcul et actions sur les structures ;
-            EN 1992-1-1 : Calcul des structures en béton ;
-            EN  1993-1-1 : Calcul des structures en acier – Partie 1-1 : règles générales et règles pour les bâtiments ;
-            EN 1993-1-8 : Calcul des structures en acier – Partie 1-8 : calcul des assemblages ;
-            EN 1993-1-9 : Calcul des structures en acier – Partie 1-9 : fatigue ;
-            EN 1993-1-10 : Calcul des structures en acier – Partie 1-10 : choix des qualités d’acier ;
-            EN 1993-3-1 : Calcul des structures en acier - Partie 3-1 : Pylône et mât haubané ;
-            EN 13411-5 : Terminaisons pour câbles en acier –Sécurité-partie 5 : Serre-câbles à étrier en U.
-            DTU P 18.702 : Règles françaises BAEL 91 - règles de conception et de calcul des ouvrages en béton armé suivant la méthode des états limites.
-            DTU 13.12 : Règles françaises de calcul des fondations superficielles.
-            DTU P 06.002 : Règles françaises NV 65 - règles définissant les effets de la neige et du vent sur les constructions / Eurocode I.
-            DTU P 22.701 : Règles françaises CM 66 et additif 80 - règles de calcul des constructions en acier / Eurocode III.
-            DTU P 22.703 : Justification par le calcul de la sécurité des constructions - règles de calculs des constructions à parois minces en acier.
-            NFP22- 430, NFP22- 460 à 469 : (assemblages métalliques).
-        </p>  
-           <p class="mt-3">   
-                •	SYSTEME DE SIGNALISATION AERIENNE (BALISAGE)
-                Recommandations de l’Organisation de l’Aviation Civile Internationale, OACI annexe 14 chapitres 6 (11/1999).
-          </p> 
-          <p class="mt-3">
-
-            •	SYSTEME DE PROTECTION ANTI-FOUDRE
-            Recommandation UIT-T K56 : 2021 : SERIE K : Protection contre les perturbations : Protection des stations de base radioélectriques contre la foudre ;
-            Recommandation UIT-T K27 : 2015 : SERIE K : Protection contre les perturbations : Configuration équipotentielle et mise à la terre dans les bâtiments de télécommunications.
-            Recommandation UIT-T K39 : 2019 : SERIE K : Protection contre les perturbations : Evaluation des risques d’endommagement des installations de télécommunication par la foudre.
-            Norme CEI 62305-1 : 2010 : Protection contre la foudre – Partie 1 : Principes généraux 
-            Norme CEI 62305-2 : 2010 : Protection contre la foudre –Partie 2 : Evaluation du risque 
-            Norme CEI 62305-3 : 2010 : Protection contre la foudre - Partie 3 : Dommages physiques sur les structures et risques humains ;
-            Norme CEI 62305-4 : 2010 : Protection contre la foudre – Partie 4 : Réseaux de puissance et de communication dans les structures.
-            Norme NF EN 62305-1 : 2012 : Protection contre la foudre - Partie 1 : Principes généraux ;
-            Norme NF EN 62305-2 : 2012 : Protection contre la foudre - Partie 2 : Evaluation du risque foudre ;
-            Norme NF EN 62305-3 : 2012 : Protection contre la foudre - Partie 3 : Dommages physiques sur les structures et risques humains ;
-            Norme NF EN 62305-4 : 2012 : Protection contre la foudre – Partie 4 : Réseaux de puissance et de communication dans les structures.
-            Norme NF C 15-100 : 2012 : Installations et câblages électriques.
-            
-          </p>
-
-          <p class="mt-3">
-            •	ENVIRONNEMENT
-            Directives (EHS) Télécommunications : Directives environnementales, sanitaires et sécuritaires du Groupement de la Société Financière internationale et de la Banque Mondiale (du 30 Avril 2007).
-            UIT-T Série L1400 (02/2011) : Aperçu et principes généraux des méthodes d'évaluation de l'impact des TIC sur l'environnement.
-            
-          </p>
-
-    </div>
-    <div class="contenant-interieur-6 mt-5">
-        <p class="mt-5">
-            •	Groupe Electrogène et nuisance sonore
-
-            Depuis Octobre 2016, le gouvernement de la Côte d’Ivoire a pris un décret qui limite les niveaux d’émission des engins et autres équipements qui produisent des bruits en fonction de la zone (résidentielle, industrielle, marché etc.)
-            DECRET N°2016-791 portant réglementation des émissions de bruits de voisinage.
-            
-            La directive européenne 2002/49/CE du 25 juin 2002 :  bases communautaires de la lutte contre le bruit dans l'environnement. Elle impose aux Etats membres la réalisation de cartes stratégiques de bruit et de plans d'actions destinés à lutter contre les nuisances sonores et à protéger les zones calmes.
-            
-            Directive 2000/14/CE :  Niveau d’émission de bruit avec certification conforme à la directive 2000/14/CE.
-            
-            DIRECTIVE 2003/10/CE : Prescriptions minimales de sécurité et de santé relatives à l'exposition des travailleurs aux risques dus aux agents physiques (bruit).
-            
-            DIRECTIVE 85/408/CEE : Relative au niveau de puissance acoustique admissible des groupes électrogènes de puissance
-            
-        </p>
-
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-
-       <h3>3.PRESENTATIONS GENERALES </h3>
-        <h1 class="mt-2">3.1. Composition de l'équipe</h1> 
+      <h3>3. PRESENTATIONS GENERALES</h3>
+      <h2>3.1. Composition de l'équipe</h2>
 
         <table class="table table table-bordered table-striped mt-5">
             <thead>
@@ -160,17 +173,17 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
                 <th scope="col">Fonction</th>
             </tr>
             </thead>
-            <tbody *ngFor="let membre of Membreequipe">
+            <tbody>
             <tr>
-                <td>{{membre.nom }}</td>
-                <td>{{membre.prenom }}</td>
-                <td>{{membre.fonction }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             </tbody>
         </table>
 
-        <h3 class="mt-5">3.2. Informations générales sur le site</h3>
-        <h1 class="mt-2">3.2.1. Localisation du site</h1>
+        <h3>3.2.Informations générales sur le site</h3>
+        <h2>3.2.1.Localisation du site</h2>
         
         <table class="table table table-bordered table-striped mt-5">
             <thead>
@@ -188,7 +201,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
             </tr>
             </tbody>
         </table>
-        <h1 class="mt-5">3.2.2. Identification du site</h1>
+        <h2>3.2.2. Identification du site</h2>
 
         <table class="table table table-bordered table-striped mt-5">
             <thead>
@@ -209,7 +222,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
         </table>
 
         <div class="checkbox-container mt-5">
-           <p class="mr-2">Environnement du site :</p> 
+           <p class="mr-2">Environnement du site:</p> 
             <label *ngFor="let option of optionsun" class="checkbox-label">
               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
               {{ option.label }}
@@ -222,12 +235,10 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
               <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
               {{ option.label }}
             </label>
-          </div>   
-    </div>
-    <div class="contenant-interieur-7 mt-5">
+        </div>   
 
         <div class="checkbox-container mt-2">
-            <p class="mr-2">Densité de population :</p> 
+            <p class="mr-2">Densité de population:</p> 
              <label *ngFor="let option of optionstrois" class="checkbox-label">
                <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
                {{ option.label }}
@@ -235,7 +246,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
            </div>
  
          <div class="checkbox-container mt-2">
-            <p class="mr-2">Typologie du site :</p> 
+            <p class="mr-2">Typologie du site:</p> 
              <label *ngFor="let option of optionsquatre" class="checkbox-label">
                <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
                {{ option.label }}
@@ -259,7 +270,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
            </div>
  
          <div class="checkbox-container mt-2">
-            <p class="mr-2">Local technique :</p> 
+            <p class="mr-2">Local technique:</p> 
              <label *ngFor="let option of optionssept" class="checkbox-label">
                <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
                {{ option.label }}
@@ -267,7 +278,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
            </div>
 
          <div class="checkbox-container mt-2">
-            <p class="mr-2">Présence de plaque d'identification du site :</p> 
+            <p class="mr-2">Présence de plaque d'identification du site:</p> 
              <label *ngFor="let option of optionshuit" class="checkbox-label">
                <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
                {{ option.label }}
@@ -275,7 +286,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
            </div>
 
            <div class="checkbox-container mt-2">
-            <p class="mr-2">Date de mise en service du site  :</p> 
+            <p class="mr-2">Date de mise en service du site:</p> 
             <div *ngFor="let option of optionsneuf" class="option-container">
               <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
               <label class="checkbox-label">
@@ -286,7 +297,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
           </div>
 
            <div class="checkbox-container mt-2">
-            <p class="mr-2">Hauteur du bâtiment   :</p> 
+            <p class="mr-2">Hauteur du bâtiment:</p> 
             <div *ngFor="let option of optionsdix" class="option-container">
               <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
               <label class="checkbox-label">
@@ -328,10 +339,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
             </tbody>
         </table>
 
-        <h1 class="mt-5">3.2.3. Plan de masse</h1>
-          
-    </div>
-    <div class="contenant-interieur-7 mt-5"> 
+        <h2 class="mt-2">3.2.3.Plan de masse</h2>
 
         <table class="table table table-bordered table-striped mt-5 plan">
             <thead>
@@ -348,7 +356,7 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
             </tbody>
         </table>
 
-        <h1 class="mt-5">3.3. Illustration photos</h1>
+        <h2>3.3. Illustration photos</h2>
 
         <table class="table table table-bordered table-striped mt-5 plan">
             <thead>
@@ -381,16 +389,10 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
             </tr>
             </tbody>
         </table>
-    </div>
+       <h4 class="partUn mt-5">PARTIE 1 : CONTROLE INFRASTRUCTURE ET ENVIRONNEMENT</h4> 
 
-    <div class="contenant-interieur-7 mt-5">
-       <h5 class="partUn mt-5">PARTIE 1 : CONTROLE INFRASTRUCTURE ET ENVIRONNEMENT</h5> 
-    </div>
-
-    <div class="contenant-interieur-7 mt-5">
-
-        <h1 class="mt-5">4. GESTION DE L’ENVIRONNEMENT ET PROTECTION COLLECTIVE</h1>
-        <h4 class="mt-5">4.1 Contrôle de l’environnement</h4>
+        <h3 class="mt-5">4. GESTION DE L’ENVIRONNEMENT ET PROTECTION COLLECTIVE</h3>
+        <h2>4.1 Contrôle de l’environnement</h2>
 
         <table class="table table table-bordered table-striped mt-5">
             <thead>
@@ -500,21 +502,365 @@ Le présent rapport traite des contrôles in situ de l’aspect radio, environne
                 </td>
             </tr>
             </tbody>
+            <thead>
+              <tr>
+                <th scope="col" class="access">TERRASSE/SOL</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Présence d'étanchéité sur le site:</p> 
+                        <label *ngFor="let option of options_vingtcinq" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de l'étanchéité sur le site:</p> 
+                        <label *ngFor="let option of options_vingtsix" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Présence d'étanchéité sur les massifs:</p> 
+                        <label *ngFor="let option of options_vingtsept" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de l'étanchéité sur les massifs:</p> 
+                        <label *ngFor="let option of options_vingthuit" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Garde-corps:</p> 
+                        <label *ngFor="let option of options_vingtneuf" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat du garde-corps:</p> 
+                        <label *ngFor="let option of options_trente" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Hauteur de la terrasse:</p> 
+                        <label *ngFor="let option of options_trenteun" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat du site:</p> 
+                        <label *ngFor="let option of options_trentedeux" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Site à proximité d’une emprise:</p> 
+                        <label *ngFor="let option of options_trentetrois" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Précision de l’emprise:</p> 
+                        <label *ngFor="let option of options_trentequatre" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Distance Site_ Emprise:</p> 
+                        <label *ngFor="let option of options_trentecinq" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Revêtement _espace site:</p> 
+                        <label *ngFor="let option of options_trentesix" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Système d’évacuation d’eau:</p> 
+                        <label *ngFor="let option of options_trentesept" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2"> Etat du système d’évacuation d’eau:</p> 
+                        <label *ngFor="let option of options_trentesix" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th scope="col" class="access">LOCAL TECHNIQUE</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Type de local:</p> 
+                        <label *ngFor="let option of options_trenteneuf" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat du local:</p> 
+                        <label *ngFor="let option of options_quarante" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de la boulonnerie de fixation des platines:</p> 
+                        <label *ngFor="let option of options_quaranteun" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat des Accessoires d’assemblages de la charpente métallique:</p> 
+                        <label *ngFor="let option of options_quarantedeux" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Système de verrouillage de la porte du local technique:</p> 
+                        <label *ngFor="let option of options_quarantetrois" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat Système de verrouillage de la porte du local technique:</p> 
+                        <label *ngFor="let option of options_quarantequatre" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Extincteur:</p> 
+                        <label *ngFor="let option of options_quarantecinq" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Validité:</p> 
+                        <label *ngFor="let option of options_quarantesix" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th scope="col" class="access">CLIMATISATION</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Système climatisation:</p> 
+                        <label *ngFor="let option of options_quarantesept" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Nombre de climatisation:</p> 
+                        <label *ngFor="let option of options_quarantehuit" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Type de climatisation:</p> 
+                        <label *ngFor="let option of options_quaranteneuf" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat Condenseur:</p> 
+                        <label *ngFor="let option of options_cinquante" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etanchéité connexion (Condo-évapo):</p> 
+                        <label *ngFor="let option of options_cinquanteun" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Tuyauterie du système de climatisation:</p> 
+                        <label *ngFor="let option of options_cinquantedeux" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Grille de protection:</p> 
+                        <label *ngFor="let option of options_cinquantetrois" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+
+                    <div class="checkbox-container mt-2">
+                        <p class="mr-2">Etat de la grille de protection :</p> 
+                        <label *ngFor="let option of options_cinquantequatre" class="checkbox-label">
+                        <input type="checkbox" [value]="option.id" [(ngModel)]="option.checked">
+                        {{ option.label }}
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th scope="col" class="access">OBSERVATIONS</th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
         </table>
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
-    <div class="contenant-interieur-7 mt-5">
-    </div>
+        <h2 class="mt-5">4.2. Illustration photo</h2>
+        <table class="table table table-bordered table-striped mt-2 plan">
+          <thead>
+          <tr>
+              <th >Odre</th>
+              <th >Photos</th>
+              <th>Description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          </tbody>
+      </table>
+      <h3 class="mt-2">5. SYNTHESE ET RECOMMANDATIONS</h3>
+      <h2 class="mt-2">5.1 Tableau de synthèses et recommandations</h2>
+      <table class="table table table-bordered table-striped mt-2 plan">
+        <thead>
+        <tr>
+            <th>Odre</th>
+            <th>Parties Concernées</th>
+            <th>Anomalies</th>
+            <th>Recommandations</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <h3 class="mt-2">CONCLUSION DE L’AUDIT</h3>
+    <p class="conclusion">Au regard du référentiel AIGF, le site radioélectrique "Nom du site" de l’opérateur "Nom de l'opérateur" est déclaré :<br>
+      "Decision de conformité" en contrôle infrastructure et environnement.
+    </p>
+    <h3 class="mt-5">ANNEXES</h3>
+    <table class="table table table-bordered table-striped mt-2 plan">
+      <thead>
+      <tr>
+          <th>Référentiel National de non-conformité des Sites et Stations Radioélectriques</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td></td>
+      </tr>
+      </tbody>
+      <thead>
+      <tr>
+          <th>TABLE DE DONNEES DE CHARGE  ANTENNAIRE</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td></td>
+      </tr>
+      </tbody>
+  </table>
   </div>
   
