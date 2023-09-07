@@ -217,7 +217,7 @@ generatePDF() {
   const element = this.myElementRef.nativeElement;
   html2pdf()
     .set({
-      filename: 'Rapport-nom-utilisateur.pdf',
+      filename: 'Rapport-'+this.titrerapport+'.pdf',
     })
     .from(element)
     .save();
