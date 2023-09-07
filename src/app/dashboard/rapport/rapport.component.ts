@@ -374,7 +374,7 @@ dataFetched = false; // Add a flag to track data fetching
 async ngOnInit() {
   // Recuperation de l'ID du rapport
   this.route.params.subscribe((params) => {
-    this.id_rapport = params['id'];
+  this.id_rapport = params['id'];
   });
 
   try {
@@ -403,7 +403,4 @@ generatePDF() {
     .from(element)
     .save();
 }
-    
-  
-
 }

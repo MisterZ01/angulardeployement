@@ -17,7 +17,11 @@ export class AnnexesComponent {
     private api_imge_sit:ApiImagesService,
     private alert: ApiNotificationService) {}
   
-  public imageSrc: any;
+  public imageanexUn: any;
+  public imageanexDeux: any;
+  public imageanexTrois: any;
+  public imageanexQuatre: any;
+  
   photosite_un: any;
   descriptionsite_un: any;
 
@@ -36,7 +40,31 @@ export class AnnexesComponent {
   previewImage(event: any) {
     const reader = new FileReader();
     reader.onload = (e: any) => {
-      this.imageSrc = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
+      this.imageanexUn = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
+
+    }
+  reviewImage(event: any) {
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.imageanexDeux = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
+
+    }
+  eviewImage(event: any) {
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.imageanexTrois = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
+
+    }
+  viewImage(event: any) {
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.imageanexQuatre = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
     };
     reader.readAsDataURL(event.target.files[0]);
 
