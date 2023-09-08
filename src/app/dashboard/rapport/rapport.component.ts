@@ -367,7 +367,42 @@ export class RapportComponent implements OnInit {
   
 rapportComplet:any;
 id_rapport : any 
-titrerapport : any 
+titrerapport : any
+imagesite: any
+imagesite0:any
+imagesite1:any
+imagesite2:any
+imagesite3:any
+description_site0:any 
+description_site1:any 
+description_site2:any 
+description_site3:any 
+nomsite:any
+nomoperateur:any
+created_At:any
+nom_membre0:any
+prenom_membre0: any
+fonction_membre0: any
+nom_membre1:any
+prenom_membre1: any
+fonction_membre1: any
+nom_membre2:any
+prenom_membre2: any
+fonction_membre2: any
+longitude:any
+latitude:any
+altitude:any
+ville:any
+commune:any
+departement:any
+region:any
+date_service:any
+hauteur_batiment:any
+nbre_vigile:any
+commentaire:any
+plansite:any
+description_plan:any
+imageLink = 'http://localhost:3000/rapport/image-site';
 Membreequipe : any
 dataFetched = false; // Add a flag to track data fetching
 
@@ -384,6 +419,40 @@ async ngOnInit() {
     this.rapportComplet = response;
     this.titrerapport = this.rapportComplet[0].titre_rapport;
     this.Membreequipe = this.rapportComplet[1];
+    this.imagesite = this.rapportComplet[5][2].image_site;
+    this.nomsite = this.rapportComplet[4][0].nomsite;
+    this.nomoperateur = this.rapportComplet[0].nom_operateur;
+    this.created_At = this.rapportComplet[4][0].createdAt;
+    this.nom_membre0 = this.rapportComplet[1][0].nom;
+    this.prenom_membre0 = this.rapportComplet[1][0].prenom;
+    this.fonction_membre0 = this.rapportComplet[1][0].fonction;
+    this.nom_membre1 = this.rapportComplet[1][1].nom;
+    this.prenom_membre1 = this.rapportComplet[1][1].prenom;
+    this.fonction_membre1 = this.rapportComplet[1][1].fonction;
+    this.nom_membre2 = this.rapportComplet[1][2].nom;
+    this.prenom_membre2 = this.rapportComplet[1][2].prenom;
+    this.fonction_membre2 = this.rapportComplet[1][2].fonction;
+    this.longitude = this.rapportComplet[4][0].longitude;
+    this.latitude = this.rapportComplet[4][0].latitude;
+    this.altitude = this.rapportComplet[4][0].altitude;
+    this.ville = this.rapportComplet[4][0].nom_ville_quartier;
+    this.commune = this.rapportComplet[4][0].nom_commune;
+    this.departement = this.rapportComplet[4][0].nom_departement;
+    this.region = this.rapportComplet[4][0].nom_region;
+    this.date_service = this.rapportComplet[4][0].datemiseservice;
+    this.hauteur_batiment = this.rapportComplet[4][0].hauteurbatiment;
+    this.nbre_vigile = this.rapportComplet[4][0].nbrevigile;
+    this.commentaire = this.rapportComplet[4][0].observation;
+    this.plansite = this.rapportComplet[5][3].image_site;
+    this.description_plan = this.rapportComplet[5][3].description_site;
+    this.imagesite0 = this.rapportComplet[5][0].image_site;
+    this.description_site0 = this.rapportComplet[5][0].description_site;
+    this.imagesite1 = this.rapportComplet[5][1].image_site;
+    this.description_site1 = this.rapportComplet[5][1].description_site;
+    this.imagesite2 = this.rapportComplet[5][2].image_site;
+    this.description_site2 = this.rapportComplet[5][2].description_site;
+    this.imagesite3 = this.rapportComplet[5][3].image_site;
+    this.description_site3 = this.rapportComplet[5][3].description_site;
 
     // Set the dataFetched flag to true
     this.generatePDF();

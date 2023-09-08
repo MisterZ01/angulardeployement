@@ -8,11 +8,18 @@
                 <thead>
                 <tr>
                     <th scope="col">Titre du rapport</th>
+                    <th scope="col">Nom de l'opérateur</th>
+                    <th scope="col">logo de l'opérateur</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td><input type="text" class="form-control" [(ngModel)]="titreRapport" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="nomoperateur" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                        <br>
+                        <img [src]="imagesrc" alt="" width="200">
+                   </td>
                 </tr>
                 </tbody>
             </table>

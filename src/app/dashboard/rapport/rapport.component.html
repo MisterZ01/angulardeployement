@@ -15,11 +15,11 @@
 </div>
 
 <div class="contenant-exterieur mt-5">
-    <p>image du site</p>
+    <img src="{{imageLink}}/{{imagesite}}"/>
 </div>
 <div class="contenant-exterieur mt-5">
-    <p>Nom du site - Nom de l'opérateur"le logo"</p>
-    <p>La date du jour</p>
+    <p>{{nomsite}} - {{nomoperateur}}"le logo"</p>
+    <p>{{created_At}}</p>
 </div>
                 <h1 class="mt-5">Table des Matières</h1>
                 <ul>
@@ -102,7 +102,7 @@
     Créée par l’ordonnance n°2012-293 du 21 Mars 2012 relative aux Télécommunications et aux Technologies de l’Information et de la Communication, l’Agence Ivoirienne de Gestion des Fréquences Radioélectriques (AIGF) assure les fonctions de planification, d’attribution, de contrôle des fréquences radioélectriques, de validation de l’implantation des stations radioélectriques de toute nature sur le territoire national et en assure la conformité à la réglementation nationale et internationale.
     Cette mission s’inscrit dans la mise en œuvre des Directives (EHS) et dans le respect des engagements d’écocitoyenneté et de gestion durable des infrastructures applicables au secteur des télécommunications / TIC.
     C’est dans ce cadre que l’AIGF a sélectionné l’entreprise VALSCH CONSULTING, expert en contrôle de conformité pour la réalisation d’une campagne d’audit de conformité des sites radioélectriques des opérateurs de télécommunications (ORANGE CÔTE D’IVOIRE (OCI), MTN-CI, ETISALAT (MOOV AFRICA CI) sur le territoire ivoirien. 
-    Le présent rapport traite des contrôles in situ de l’aspect radio, environnement et infrastructure physique du site radioélectrique CI00124 SEPTTRANCHE2 CI00124 SEPTTRANCHE2  de l’opérateur MTN-CI.
+    Le présent rapport traite des contrôles in situ de l’aspect radio, environnement et infrastructure physique du site radioélectrique CI00124 {{nomsite}}  de l’opérateur {{nomoperateur}}.
 </p> 
 
 <h2 id="section2">2. REFERENCES NORMATIVES</h2>
@@ -175,9 +175,19 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{nom_membre0}}</td>
+                <td>{{prenom_membre0}}</td>
+                <td>{{fonction_membre0}}</td>
+            </tr>
+            <tr>
+                <td>{{nom_membre1}}</td>
+                <td>{{prenom_membre1}}</td>
+                <td>{{fonction_membre1}}</td>
+            </tr>
+            <tr>
+                <td>{{nom_membre2}}</td>
+                <td>{{prenom_membre2}}</td>
+                <td>{{fonction_membre2}}</td>
             </tr>
             </tbody>
         </table>
@@ -195,9 +205,9 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{latitude}}</td>
+                <td>{{longitude}}</td>
+                <td>{{altitude}}</td>
             </tr>
             </tbody>
         </table>
@@ -214,9 +224,10 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{region}}</td>
+                <td>{{departement}}</td>
+                <td>{{commune}}</td>
+                <td>{{ville}}</td>
             </tr>
             </tbody>
         </table>
@@ -288,7 +299,7 @@
            <div class="checkbox-container mt-2">
             <p class="mr-2">Date de mise en service du site:</p> 
             <div *ngFor="let option of optionsneuf" class="option-container">
-              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
+              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" value="{{date_service}}" >
               <label class="checkbox-label">
                 <input type="checkbox" [(ngModel)]="option.na" (change)="onNAChecked(option)">
                 N/A
@@ -299,7 +310,7 @@
            <div class="checkbox-container mt-2">
             <p class="mr-2">Hauteur du bâtiment:</p> 
             <div *ngFor="let option of optionsdix" class="option-container">
-              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
+              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" value="{{hauteur_batiment}}" >
               <label class="checkbox-label">
                 <input type="checkbox" [(ngModel)]="option.na" (change)="onNAChecked(option)">
                 N/A
@@ -318,7 +329,7 @@
            <div class="checkbox-container mt-2">
             <p class="mr-2">Nombre de vigile:</p> 
             <div *ngFor="let option of optionsdouze" class="option-container">
-              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" >
+              <input type="text" [(ngModel)]="option.value" [disabled]="option.na" class="input-wrapper mr-3" value="{{nbre_vigile}}">
               <label class="checkbox-label">
                 <input type="checkbox" [(ngModel)]="option.na" (change)="onNAChecked(option)">
                 N/A
@@ -334,7 +345,7 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
+                <td>{{commentaire}}</td>
             </tr>
             </tbody>
         </table>
@@ -350,8 +361,8 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
-                <td></td>
+                <td><img src="{{imageLink}}/{{plansite}}"/></td>
+                <td>{{description_plan}}</td>
             </tr>
             </tbody>
         </table>
@@ -362,30 +373,30 @@
             <thead>
             <tr>
                 <th >Odre</th>
-                <th >Photos</th>
-                <th>Description</th>
+                <th >Photosite</th>
+                <th>Description des photos</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td><img src="{{imageLink}}/{{imagesite0}}"/></td>
+                <td>{{description_site0}}</td>
             </tr>
             <tr>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td><img src="{{imageLink}}/{{imagesite1}}"/></td>
+                <td>{{description_site1}}</td>
             </tr>
             <tr>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td><img src="{{imageLink}}/{{imagesite2}}"/></td>
+                <td>{{description_site2}}</td>
             </tr>
             <tr>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td><img src="{{imageLink}}/{{imagesite3}}"/></td>
+                <td>{{description_site3}}</td>
             </tr>
             </tbody>
         </table>
