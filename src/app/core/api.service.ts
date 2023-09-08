@@ -39,9 +39,17 @@ export class ApiService {
   CreateReport(rapport: any):Observable<any> {
     return this.Http.post(`${this.apiRap}/Creerrapport`, rapport);
   }
+  //Mertre a jour un rapport apres click
+  UpdateReport(rapport: any):Observable<any> {
+    return this.Http.post(`${this.apiRap}/updaterapport`, rapport);
+  }
   //Voir/telecharger un rapport apres click
   InfoReport(idrapport:string){
     return this.Http.get(`${this.apiRap}/${idrapport}`);
+  }
+  //Voir/telecharger un rapport apres click
+  InfoUniqueReport(idrapport:string){
+    return this.Http.get(`${this.apiRap}/unique/${idrapport}`);
   }
 
   getUser(){

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { ApiEnvService } from 'src/app/core/api-env.service';
 import { ApiInfositeService } from 'src/app/core/api-infosite.service';
@@ -16,6 +17,10 @@ import { AuthService } from 'src/app/shared/userInfos/auth.service';
 })
 export class InfositeComponent implements OnInit{ 
   public imageSrc: any;
+  //les variables de la modification
+  editMode: boolean = false;
+  id_rapport_a_modifier : any;
+
   sit: any;
   env: any;
   vil: any;
@@ -42,6 +47,7 @@ export class InfositeComponent implements OnInit{
   societe_gardient : any;
   typestation: any;
   commentaire : any;
+  nom_ville_quartier:any
 
   date_controle : any;
   heure_debut : any;
@@ -62,8 +68,11 @@ export class InfositeComponent implements OnInit{
     private sanitizer: DomSanitizer, 
     private api_site:ApiInfositeService,
     private auth: AuthService,
+    private router: Router,
+    private route: ActivatedRoute, // ActivatedRoute for getting route parameters
     private alert: ApiNotificationService) {
     this.htmlContent = ''; 
+    //debut de la configuration
     this.config  = {
  
        editable: true,
@@ -85,19 +94,22 @@ export class InfositeComponent implements OnInit{
         },
       ],
     };
+    //fin de la configuration
+
+
   }
 
-  previewImage(event: any) {
-    const reader = new FileReader();
-    reader.onload = (e: any) => {
-      this.imageSrc = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
-    };
-    reader.readAsDataURL(event.target.files[0]);
+  ngOnInit(): void {
+    // Check if we are in edit mode based on a route parameter or some other criterion
+    this.editMode = this.route.snapshot.url[1].path === 'edit';
+    // Récupérer l'identifiant depuis la route
+    this.id_rapport_a_modifier = this.route.snapshot.paramMap.get('id');
 
+    // If in edit mode, fetch and populate the existing data
+    if (this.editMode) {
+      this.fetchExistingData(); // Implement this method to fetch existing data
     }
-
-
-  ngOnInit(): void {}
+  }
 
   Submited() {
     let sit = {
@@ -126,91 +138,82 @@ export class InfositeComponent implements OnInit{
       nom_region :this.nomregion,
       id_rapport: this.auth.getReportId()
     }
+    if (this.editMode) {
+      // Update existing data here
+      this.updateInfoSite(sit);
+    } else {
+      // Create new data here
+      this.createInfoSite(sit);
+    }
+
+
+
+  }
+
+  createInfoSite(sit:any) {
     this.api_site.registerSite(sit).subscribe(
       (response: any) => {
-        this.alert.infoSiteCreer();        // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
+        this.alert.infoSiteCreer();        
       },
-      (  error: any) => {
+      (error: any) => {
         // Gérer l'erreur d'inscription
         this.alert.erreur();    
       }
     );
+  }
 
-    // let control_env = {
+  updateInfoSite(sit:any,) {
+    this.api_site.updateSite(sit, this.id_rapport_a_modifier).subscribe(
+      (response: any) => {
+        console.log(response);
+        this.alert.Modificationreussie();
+      },
+      (error: any) => {
+        this.alert.erreur();
+      }
+    );
+  }
 
-    //   datecontrole :this.date_controle,
-    //  heuredebutcontrole :this.heure_debut,
-    //  heurefincontrole: this.heure_fin,
-    // }
-    // this.api_envmt.registerEnvironnement(control_env).subscribe(
-    //   (response: any) => {
-    //     console.log("les infos du controle environnement ont été enregistré avec succès", response);
-    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-    //   },
-    //   (  error: any) => {
-    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-    //     // Gérer l'erreur d'inscription
-    //   }
-    // );
-    // let ville_quartier = {
-
-    //   nom_ville_quartier :this.nom_city,
-    
-    // }
-    // this.api_city.registerVilleQuartier(ville_quartier).subscribe(
-    //   (response: any) => {
-    //     console.log("les infos sur le quartier ont été enregistré avec succès", response);
-    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-    //   },
-    //   (  error: any) => {
-    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-    //     // Gérer l'erreur d'inscription
-    //   }
-    // );
-    // let commune = {
-
-    //   nom_commune :this.nomcommune,
-    // }
-    // this.api_comm.registerCommune(commune).subscribe(
-    //   (response: any) => {
-    //     console.log("les infos sur la commune ont été enregistré avec succès", response);
-    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-    //   },
-    //   (  error: any) => {
-    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-    //     // Gérer l'erreur d'inscription
-    //   }
-    // );
-    // let dpartment = {
-
-    //   nom_departement :this.nomdepartement,
-    // }
-    // this.api_depmt.registerDepartement(dpartment).subscribe(
-    //   (response: any) => {
-    //     console.log("les infos sur le departement  ont été enregistré avec succès", response);
-    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-    //   },
-    //   (  error: any) => {
-    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-    //     // Gérer l'erreur d'inscription
-    //   }
-    // );
-    // let region = {
-
-    //   nom_region :this.nomregion,
-    // }
-    // this.api_region.registerRegion(region).subscribe(
-    //   (response: any) => {
-    //     console.log("les infos sur la region ont été enregistré avec succès", response);
-    //     // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-    //   },
-    //   (  error: any) => {
-    //     console.error('Une erreur s\'est produite lors de l\'enregistrement', error);
-    //     // Gérer l'erreur d'inscription
-    //   }
-    // );
+  fetchExistingData() {
+    try {
+      // Envoie des informations vers le back-end
+      this.api_site.findSite(this.id_rapport_a_modifier).subscribe(
+        (response: any) => {
+          
+          this.typenvir = response.typenvir,
+          this.nom_site = response.nomsite,
+          this.situation_geo = response.situationgeo,
+          this.densite = response.densite,
+          this.typologie = response.typologie,
+          this.station = response.station,
+          this.localtec = response.localtec,
+          this.plaque_ident = response.plaqueident,
+          this.date_de_ms = response.datemiseservice,
+          this.hauteur_bat = response.hauteurbatiment,
+          this.latitude = response.latitude,
+          this.longitude = response.longitude,
+          this.altitude = response.altitude,
+          this.gardient = response.vigile,
+          this.nbre_gardient = response.nbrevigile,
+          this.societe_gardient = response.societegardiennagevigile,
+          this.typestation = response.typstation,
+          this.commentaire = response.observation,
+          this.nom_ville_quartier = response.nom_city,
+          this.nomcommune = response.nom_commune,
+          this.nomdepartement = response.nomdepartement,
+          this.nomregion = response.nom_region
 
 
+        },
+        (error: any) => {
+          this.alert.erreur();
+        }
+        );
+
+    } catch (error) {
+      console.error('Une erreur s\'est produite lors de la recherche du rapport', error);
+      // Handle the error
+    }
   }
   
 

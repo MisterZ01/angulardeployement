@@ -56,6 +56,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     RouterModule.forRoot([
       {path:'', component:ConnexionComponent},
       {path:'presentation', component: PresentationComponent},
+      {path:'presentation/edit/:id', component: PresentationComponent}, //le lien de la modification
       {path:'welcome', component: WelcomeComponent},
       {path:'environnement', component: EnvironnementComponent},
       {path:'structure', component: StructureComponent},
@@ -73,10 +74,12 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
       {path:'rapport/:id', component: RapportComponent},
       {path:'inscription', component: InscriptionComponent},
       {path:'infosite', component: InfositeComponent},
+      {path:'infosite/edit/:id', component: InfositeComponent}, //le lien de la modification
       {path:'photosite', component: PhotositeComponent},
       {path:'photoenvironnement', component: PhotoenvironnementComponent},
       {path:'annexes', component: AnnexesComponent},
       {path:'inforapport', component: InforapportComponent},
+      {path:'inforapport/edit/:id', component: InforapportComponent},//le lien de la modification
     ])
 
   ],

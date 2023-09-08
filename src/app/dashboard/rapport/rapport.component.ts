@@ -369,6 +369,7 @@ rapportComplet:any;
 id_rapport : any 
 titrerapport : any 
 Membreequipe : any
+syntheses: any
 dataFetched = false; // Add a flag to track data fetching
 
 async ngOnInit() {
@@ -382,8 +383,9 @@ async ngOnInit() {
     const response: any = await this.apiservice.InfoReport(this.id_rapport).toPromise();
     console.log('Info du rapport ramenées avec succès', response);
     this.rapportComplet = response;
-    this.titrerapport = this.rapportComplet[0].titre_rapport;
-    this.Membreequipe = this.rapportComplet[1];
+    this.titrerapport = this.rapportComplet[0].titre_rapport; // recuperer le titre du rapport dans le rapport complet
+    this.Membreequipe = this.rapportComplet[1]; // recuperer les membres d'equipe dans le rapport complet
+    this.syntheses = this.rapportComplet[3][0]; // recuperer la synthèse dans le rapport complet
 
     // Set the dataFetched flag to true
     this.generatePDF();

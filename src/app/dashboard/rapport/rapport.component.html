@@ -11,7 +11,7 @@
     </thead>
 </table>
 <div class="contenant-exterieur mt-5">
-    <p>{{titrerapport}}</p>
+    <h1> <strong>{{titrerapport}}</strong> </h1>
 </div>
 
 <div class="contenant-exterieur mt-5">
@@ -174,10 +174,10 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor='let membre of Membreequipe'>
+                <td>{{ membre.nom}}</td>
+                <td>{{ membre.prenom}}</td>
+                <td>{{ membre.fonction}}</td>
             </tr>
             </tbody>
         </table>
@@ -830,8 +830,10 @@
         <tbody>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ syntheses.partieconcernee}}</td>
+            <td>{{ syntheses.anormalies}}</td>
+            <td>{{ syntheses.recommandations}}</td>
+
         </tr>
         </tbody>
     </table>
