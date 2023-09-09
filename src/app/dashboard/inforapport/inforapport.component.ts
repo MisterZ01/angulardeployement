@@ -15,11 +15,15 @@ import { ApiNotificationService } from 'src/app/core/api-notification.service';
 
 export class InforapportComponent implements OnInit {
 
-  // les variables du rapport collectées
-  titreRapport: string = ''; // Initialize with an empty string
+
   //les variables de la modification
   editMode: boolean = false;
   id_rapport_a_modifier : any;
+  // les variables du rapport collectées
+  imagesrc:any
+  titreRapport : any;
+  nomoperateur:any;
+  logoperateur: any;
   // les variables du rapport a envoyer
   statut : any;
   titre_rapport : any;
@@ -45,19 +49,30 @@ export class InforapportComponent implements OnInit {
       this.fetchExistingData(); // Implement this method to fetch existing data
     }
   }
+  previewImage(event: any) {
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.imagesrc = this.sanitizer.bypassSecurityTrustUrl(e.target.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
 
+    }
   Submited() {
     const id_utilisateur = this.auth.getUserId();
     this.statut = 0;
-
     let rapport = {
-      id_utilisateur: id_utilisateur,
-      statut: this.statut,
-      titre_rapport: this.titreRapport
+      id_utilisateur : id_utilisateur,
+      statut : this.statut,
+      titre_rapport : this.titreRapport,
+      nom_operateur : this.nomoperateur,
+      logo_operateur : this.logoperateur
     }
+
     let rapportAjour = {
       id_utilisateur: id_utilisateur,
       titre_rapport: this.titreRapport,
+      nom_operateur : this.nomoperateur,
+      logo_operateur : this.logoperateur,
       id_rapport: this.id_rapport_a_modifier
     }
     if (this.editMode) {
