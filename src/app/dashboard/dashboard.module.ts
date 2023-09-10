@@ -71,6 +71,7 @@ import { InforapportComponent } from './inforapport/inforapport.component';
     HttpClientModule,
     AngularEditorModule,
 
+
   ],
   exports: [
     AdminComponent,

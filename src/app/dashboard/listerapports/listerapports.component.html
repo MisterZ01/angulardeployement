@@ -30,9 +30,9 @@
                 <td>{{ rapport.createdAt }}</td>
                 <td>{{ rapport.updatedAt }}</td>
                 <div class="icon">
-                    <a routerLink="/presentation"><i class="fa fa-edit blue1_color"></i></a>
+                    <a routerLink="/inforapport/edit/{{rapport.id}} " ><i class="fa fa-edit blue1_color"></i></a>
                     <i class="fa fa-trash red_color"></i>
-                   <a routerLink="/rapport/{{ rapport.id }}"><i class="fa fa-eye purple_color2"></i></a> 
+                   <a routerLink="/rapport/{{ rapport.id }}" target="_blank"><i class="fa fa-eye purple_color2"></i></a> 
                     <i class="fa fa-download green_color"></i>
                 </div>
               </tr>
