@@ -414,6 +414,10 @@ obsevation_env:any
 partie_concernee:any
 anormalies:any
 recommandations:any
+annexe_zero:any
+annexe_un:any
+annexe_deux:any
+annexe_trois:any
 imageLink = 'http://localhost:3000/rapport/image-site';
 Membreequipe : any
 dataFetched = false; // Add a flag to track data fetching
@@ -477,6 +481,10 @@ async ngOnInit() {
     this.partie_concernee = this.rapportComplet[3][0].partieconcernee;
     this.anormalies = this.rapportComplet[3][0].anormalies;
     this.recommandations = this.rapportComplet[3][0].recommandations;
+    this.annexe_zero = this.rapportComplet[8][0].image_annexe;
+    this.annexe_un = this.rapportComplet[8][0].image_annexe;
+    this.annexe_deux = this.rapportComplet[8][0].image_annexe;
+    this.annexe_trois = this.rapportComplet[8][0].image_annexe;
 
     // Set the dataFetched flag to true
     this.generatePDF();
