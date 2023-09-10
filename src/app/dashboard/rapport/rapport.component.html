@@ -373,7 +373,7 @@
             <thead>
             <tr>
                 <th >Odre</th>
-                <th >Photosite</th>
+                <th >Photos</th>
                 <th>Description des photos</th>
             </tr>
             </thead>
@@ -791,7 +791,7 @@
             </thead>
             <tbody>
               <tr>
-                <td></td>
+                <td>{{obsevation_env}}</td>
               </tr>
             </tbody>
         </table>
@@ -807,23 +807,23 @@
           <tbody>
           <tr>
               <td></td>
-              <td></td>
-              <td></td>
+              <td><img src="{{imageLink}}/{{image_env0}}"/></td>
+                <td>{{description_env0}}</td>
           </tr>
           <tr>
               <td></td>
-              <td></td>
-              <td></td>
+              <td><img src="{{imageLink}}/{{image_env1}}"/></td>
+              <td>{{description_env1}}</td>
           </tr>
           <tr>
               <td></td>
-              <td></td>
-              <td></td>
+              <td><img src="{{imageLink}}/{{image_env2}}"/></td>
+              <td>{{description_env2}}</td>
           </tr>
           <tr>
               <td></td>
-              <td></td>
-              <td></td>
+              <td><img src="{{imageLink}}/{{image_env3}}"/></td>
+              <td>{{description_env3}}</td>
           </tr>
           </tbody>
       </table>
@@ -841,13 +841,14 @@
         <tbody>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>{{partie_concernee}}</td>
+            <td>{{anormalies}}</td>
+            <td>{{recommandations}}</td>
         </tr>
         </tbody>
     </table>
     <h3 class="mt-2">CONCLUSION DE L’AUDIT</h3>
-    <p class="conclusion">Au regard du référentiel AIGF, le site radioélectrique "Nom du site" de l’opérateur "Nom de l'opérateur" est déclaré :<br>
+    <p class="conclusion">Au regard du référentiel AIGF, le site radioélectrique {{nomsite}} de l’opérateur {{nomoperateur}} est déclaré :<br>
       "Decision de conformité" en contrôle infrastructure et environnement.
     </p>
     <h3 class="mt-5">ANNEXES</h3>
