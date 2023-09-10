@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ApiImagesDService } from 'src/app/core/api-images-d.service';
 import { ApiImagesQService } from 'src/app/core/api-images-q.service';
 import { ApiImagesTService } from 'src/app/core/api-images-t.service';
@@ -15,11 +15,20 @@ import { AuthService } from 'src/app/shared/userInfos/auth.service';
   styleUrls: ['./photosite.component.scss']
 })
 export class PhotositeComponent {
+  //les variables de la modification
+  editMode: boolean = false;
+  id_rapport_a_modifier : any;
+  id_image_un : any ;
+  id_image_deux : any ;
+  id_image_trois : any ;
+  id_image_quatre : any ;
+  image_link : any = "http://localhost:3000/imagesite/image/update/oldname"; //lien pour recuperer une image unique
 
-  public imagesiteUn: any;
-  public imagesiteDeux: any;
-  public imagesiteTrois: any;
-  public imagesiteQuatre: any;
+  //autres variables
+  imagesiteUn: any;
+  imagesiteDeux: any;
+  imagesiteTrois: any;
+  imagesiteQuatre: any;
 
   photosite_un: any;
   descriptionsite_un: any;
@@ -47,6 +56,7 @@ export class PhotositeComponent {
     private api_imge_sittrois:ApiImagesTService ,
     private api_imge_sitquatre:ApiImagesQService ,
     private router: Router,
+    private route: ActivatedRoute, // ActivatedRoute for getting route parameters
     private auth: AuthService,
     private http: HttpClient,
     private alert: ApiNotificationService) {}
@@ -113,13 +123,19 @@ viewImage(event: any) {
 
   // }
 
-  ngOnInit():void{}
+  ngOnInit(): void {
+    // Check if we are in edit mode based on a route parameter or some other criterion
+    this.editMode = this.route.snapshot.url[1].path === 'edit';
+    // Récupérer l'identifiant depuis la route
+    this.id_rapport_a_modifier = this.route.snapshot.paramMap.get('id');
 
-  
-  Submited() {
+    // If in edit mode, fetch and populate the existing data
+    if (this.editMode) {
+      this.fetchExistingData(); // Implement this method to fetch existing data
+    }
+  }
 
-    const idRapport = this.id_rapport; // Récupérez l'ID du rapport
-    
+  Submited() { 
     // image un 
     const fileInputun:any = document.getElementById('file-input') as HTMLInputElement;
     const premiereImage = fileInputun.files[0];
@@ -141,6 +157,34 @@ viewImage(event: any) {
    const descriptionImagequatre = this.descriptionsite_quatre; // Récupérez la description de l'image
 
 
+
+  if (this.editMode) {
+    const idRapport = this.id_rapport_a_modifier; // Récupérez l'ID du rapport lors de la modification
+    // Update existing data here
+    this.updatePhotoSite(premiereImage, descriptionImageun,
+      deuxiemeImage, descriptionImagedeux, 
+      troisiemeImage, descriptionImagetrois,
+      quatriemeImage, descriptionImagequatre,
+      idRapport);
+  } else {
+    const idRapport = this.id_rapport; // Récupérez l'ID du rapport
+    // Create new data here
+    this.createPhotoSite(premiereImage, descriptionImageun,
+      deuxiemeImage, descriptionImagedeux, 
+      troisiemeImage, descriptionImagetrois,
+      quatriemeImage, descriptionImagequatre,
+      idRapport);
+  }
+  
+
+  }
+
+
+  createPhotoSite(premiereImage : any, descriptionImageun : any,
+                deuxiemeImage : any, descriptionImagedeux : any, 
+                troisiemeImage : any, descriptionImagetrois : any,
+                quatriemeImage : any, descriptionImagequatre : any,
+                idRapport : any) {
    // envoi de données 
    let reponseun : any = true;
    let reponsedeux : any = true;
@@ -198,92 +242,109 @@ viewImage(event: any) {
     this.alert.erreur()
   }
 
+  }
 
+  updatePhotoSite(premiereImage : any, descriptionImageun : any,
+    deuxiemeImage : any, descriptionImagedeux : any, 
+    troisiemeImage : any, descriptionImagetrois : any,
+    quatriemeImage : any, descriptionImagequatre : any,
+    idRapport : any) {
+      // envoi de données 
+      let reponseun : any = true;
+      let reponsedeux : any = true;
+      let reponsetrois : any = true;
+      let reponsequatre : any = true;
+      // id des images à modifiées
+      let id_image_un = this.id_image_un
+      let id_image_deux = this.id_image_deux
+      let id_image_trois = this.id_image_trois
+      let id_image_quatre = this.id_image_quatre
+   
+      this.api_imge_sit.updateImage(premiereImage, descriptionImageun, idRapport, id_image_un)
+      .subscribe(
+        (response) => {
+          // Traitez la réponse du serveur ici
+         },
+         (error) => {
+           // Gérez les erreurs ici
+           reponseun = false ;
+        }
+      );
+      
+      this.api_imge_sit.updateImage(deuxiemeImage, descriptionImagedeux, idRapport, id_image_deux)
+      .subscribe(
+        (response) => {
+          // Traitez la réponse du serveur ici
+         },
+        (error) => {
+          // Gérez les erreurs ici
+           reponsedeux = false ;
+        }
+      );
+      
+      this.api_imge_sit.updateImage(troisiemeImage, descriptionImagetrois, idRapport, id_image_trois)
+      .subscribe(
+        (response) => {
+          // Traitez la réponse du serveur ici
+        },
+        (error) => {
+          // Gérez les erreurs ici
+          reponsetrois = false ;
+        }
+      );
+      
+      this.api_imge_sit.updateImage(quatriemeImage, descriptionImagequatre,  idRapport, id_image_quatre)
+      .subscribe(
+        (response) => {
+          // Traitez la réponse du serveur ici
+        },
+        (error) => {
+          // Gérez les erreurs ici
+          reponsequatre = false ;
+        }
+      );
+      
+      //envoie de l'alerte
+      if ( reponseun && reponsedeux &&reponsetrois && reponsequatre){
+       this.alert.Modificationreussie();
+     }else {
+       this.alert.erreur()
+     }
+   
+  }
 
+  fetchExistingData() {
+    try {
+      // Envoie des informations vers le back-end
+      this.api_imge_sit.findImage(this.id_rapport_a_modifier).subscribe(
+        (response: any) => {
+          console.log(response);
+          this.id_image_un = response[0].id;
+          this.imagesiteUn = response[0].image_site;
+          this.descriptionsite_un = response[0].description_site;
 
+          this.id_image_deux = response[1].id;
+          this.imagesiteDeux = response[1].image_site;
+          this.descriptionsite_deux = response[1].description_site;
 
+          this.id_image_trois = response[2].id;
+          this.imagesiteTrois = response[2].image_site;
+          this.descriptionsite_trois = response[2].description_site;
 
+          this.id_image_quatre = response[3].id;
+          this.imagesiteQuatre = response[3].image_site;
+          this.descriptionsite_quatre = response[3].description_site;
 
+        },
+        (error: any) => {
+          this.alert.erreur();
+        }
+        );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    // console.log('premiereImage, descriptionImage, idRapport')
-    // console.log(premiereImage, descriptionImage, idRapport)
-  
-
-
-
-  //   let formData ={
-  //     id_rapport : this.id_rapport,
-  //     description_image : this.descriptionsite_un,
-  //     image_site :  this.photosite_un
-
-  //   }
-
-  //   console.log('formData')
-  //   console.log(formData)
-  //   // Envoie des informations vers le back-end 
-  //   this.api_imge_sit.registerImage(formData).subscribe(
-  //     (response: any) => {
-  //       console.log('la prémière image de infosite a été enregistrée avec succès', response);
-  //       this.router.navigate(['/']);
-        
-  //       // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-  //     },
-  //     (  error: any) => {
-  //       console.error('Une erreur s\'est produite lors de l\'inscription', error);
-  //       // Gérer l'erreur d'inscription
-  //     }
-  //   );
-
-  //   this.api_imge_sit.registerImage(this.formData2).subscribe(
-  //     (response: any) => {
-  //       console.log('la deuxième image de infosite a été enregistrée avec succès', response);
-  //       this.router.navigate(['/']);
-        
-  //       // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-  //     },
-  //     (  error: any) => {
-  //       console.error('Une erreur s\'est produite lors de l\'inscription', error);
-  //       // Gérer l'erreur d'inscription
-  //     }
-  //   );
-  //   this.api_imge_sit.registerImage(this.formData3).subscribe(
-  //     (response: any) => {
-  //       console.log('la troisième image de infosite a été enregistrée avec succès', response);
-  //       this.router.navigate(['/']);
-        
-  //       // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-  //     },
-  //     (  error: any) => {
-  //       console.error('Une erreur s\'est produite lors de l\'inscription', error);
-  //       // Gérer l'erreur d'inscription
-  //     }
-  //   );
-  //   this.api_imge_sit.registerImage(this.formData4).subscribe(
-  //     (response: any) => {
-  //       console.log('la quatrième image de infosite a été enregistrée avec succès', response);
-  //       this.router.navigate(['/']);
-        
-  //       // Réinitialiser le formulaire ou effectuer d'autres actions après l'inscription réussie
-  //     },
-  //     (  error: any) => {
-  //       console.error('Une erreur s\'est produite lors de l\'inscription', error);
-  //       // Gérer l'erreur d'inscription
-  //     }
-  //   );
+    } catch (error) {
+      console.error('Une erreur s\'est produite lors de la recherche du rapport', error);
+      // Handle the error
+    }
   }
 }
 
