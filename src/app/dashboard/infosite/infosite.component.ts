@@ -111,32 +111,32 @@ export class InfositeComponent implements OnInit{
     }
   }
 
-  Submited() {
-    let sit = {
+  async Submited() {
+    let sit =  {
 
-      typenv : this.typenvir,
-      nomsite : this.nom_site,
-      situationgeo : this.situation_geo,
-      densite : this.densite,
-      typologie: this.typologie,
-      station: this.station,
-      localtec: this.localtec,
-      plaqueident: this.plaque_ident,
-      datemiseservice : this.date_de_ms,
-      hauteurbatiment : this.hauteur_bat,
-      latitude : this.latitude,
-      longitude : this.longitude,
-      altitude : this.altitude,
-      vigile : this.gardient,
-      nbrevigile : this.nbre_gardient,
-      societegardiennagevigile : this.societe_gardient,
-      typstation: this.typestation,
-      observation : this.commentaire,
-      nom_ville_quartier :this.nom_city,
-      nom_commune :this.nomcommune,
-      nom_departement :this.nomdepartement,
-      nom_region :this.nomregion,
-      id_rapport: this.auth.getReportId()
+      typenv : await this.typenvir,
+      nomsite : await this.nom_site,
+      situationgeo : await this.situation_geo,
+      densite : await this.densite,
+      typologie: await this.typologie,
+      station: await this.station,
+      localtec: await this.localtec,
+      plaqueident: await this.plaque_ident,
+      datemiseservice : await this.date_de_ms,
+      hauteurbatiment : await this.hauteur_bat,
+      latitude : await this.latitude,
+      longitude : await this.longitude,
+      altitude : await this.altitude,
+      vigile : await this.gardient,
+      nbrevigile : await this.nbre_gardient,
+      societegardiennagevigile : await this.societe_gardient,
+      typstation: await this.typestation,
+      observation : await this.commentaire,
+      nom_ville_quartier : await this.nom_city,
+      nom_commune : await this.nomcommune,
+      nom_departement : await this.nomdepartement,
+      nom_region : await this.nomregion,
+      id_rapport: await this.auth.getReportId()
     }
     if (this.editMode) {
       // Update existing data here

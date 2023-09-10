@@ -119,6 +119,7 @@ export class InforapportComponent implements OnInit {
           console.log('response');
           console.log(response);
           this.titreRapport = response.titre_rapport; // recuperer le titre du rapport dans le rapport complet
+          this.nomoperateur = response.nom_operateur; // recuperer le titre du rapport dans le rapport complet
 
         },
         (error: any) => {
