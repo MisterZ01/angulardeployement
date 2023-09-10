@@ -59,25 +59,31 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
       {path:'presentation/edit/:id', component: PresentationComponent}, //le lien de la modification
       {path:'welcome', component: WelcomeComponent},
       {path:'environnement', component: EnvironnementComponent},
+      {path:'environnement/edit/:id', component: EnvironnementComponent},//le lien de la modification
       {path:'structure', component: StructureComponent},
       {path:'navigation', component: NavigationComponent},
       {path:'electricite', component: ElectriciteComponent},
       {path:'protection', component: ProtectionComponent},
       {path:'antennaire', component: AntennaireComponent},
       {path:'synthese', component: SyntheseComponent},
+      {path:'synthese/edit/:id', component: SyntheseComponent},//le lien de la modification
       {path:'conclusion', component: ConclusionComponent},
+      {path:'conclusion/edit/:id', component: ConclusionComponent},//le lien de la modification
       {path:'listerapports', component: ListerapportsComponent},
       {path:'profil', component: ProfilComponent},
       {path:'users', component: UsersComponent},
       {path:'equipes', component: EquipesComponent},
       {path:'admin', component: AdminComponent},
-      {path:'rapport/:id', component: RapportComponent},
+      {path:'rapport/:id', component: RapportComponent}, //le lien de la modification
       {path:'inscription', component: InscriptionComponent},
       {path:'infosite', component: InfositeComponent},
       {path:'infosite/edit/:id', component: InfositeComponent}, //le lien de la modification
-      {path:'photosite', component: PhotositeComponent},
+      {path:'photosite', component: PhotositeComponent}, 
+      {path:'photosite/edit/:id', component: PhotositeComponent},//le lien de la modification
       {path:'photoenvironnement', component: PhotoenvironnementComponent},
+      {path:'photoenvironnement/edit/:id', component: PhotoenvironnementComponent},//le lien de la modification
       {path:'annexes', component: AnnexesComponent},
+      {path:'annexes/edit/:id', component: AnnexesComponent},//le lien de la modification
       {path:'inforapport', component: InforapportComponent},
       {path:'inforapport/edit/:id', component: InforapportComponent},//le lien de la modification
     ])
