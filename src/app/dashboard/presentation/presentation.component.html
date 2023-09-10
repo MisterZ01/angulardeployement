@@ -33,8 +33,9 @@
         </div>
         
         <div class="button center verticle_center">
-            <button class="prev-btn" routerLink="/inforapport">Précedent</button>
-            <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
-            <button class="next-btn" routerLink="/infosite">Suivant</button> 
+            <button class="prev-btn" [routerLink]="editMode ? '/inforapport/edit/'+id_rapport_a_modifier : '/inforapport'">Precedent</button>
+            <button class="save-btn" type="submit" (click)="Submited()">{{ editMode ? 'Modifier' : 'Enregistrer' }}</button> 
+            <button class="next-btn" [routerLink]="editMode ? '/infosite/edit/'+id_rapport_a_modifier : '/infosite'">Suivant</button>
+        
         </div>
 </div>

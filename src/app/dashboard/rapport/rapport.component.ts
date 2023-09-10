@@ -404,6 +404,7 @@ plansite:any
 description_plan:any
 imageLink = 'http://localhost:3000/rapport/image-site';
 Membreequipe : any
+syntheses: any
 dataFetched = false; // Add a flag to track data fetching
 
 async ngOnInit() {
@@ -417,8 +418,9 @@ async ngOnInit() {
     const response: any = await this.apiservice.InfoReport(this.id_rapport).toPromise();
     console.log('Info du rapport ramenées avec succès', response);
     this.rapportComplet = response;
-    this.titrerapport = this.rapportComplet[0].titre_rapport;
-    this.Membreequipe = this.rapportComplet[1];
+    this.titrerapport = this.rapportComplet[0].titre_rapport; // recuperer le titre du rapport dans le rapport complet
+    this.Membreequipe = this.rapportComplet[1]; // recuperer les membres d'equipe dans le rapport complet
+    this.syntheses = this.rapportComplet[3][0]; // recuperer la synthèse dans le rapport complet
     this.imagesite = this.rapportComplet[5][2].image_site;
     this.nomsite = this.rapportComplet[4][0].nomsite;
     this.nomoperateur = this.rapportComplet[0].nom_operateur;
@@ -467,7 +469,7 @@ generatePDF() {
   const element = this.myElementRef.nativeElement;
   html2pdf()
     .set({
-      filename: 'Rapport-nom-utilisateur.pdf',
+      filename: 'Rapport-'+this.titrerapport+'.pdf',
     })
     .from(element)
     .save();

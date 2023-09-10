@@ -32,6 +32,17 @@ export class ApiNotificationService {
       }
     })
   }
+  //MODIFICATION DU RAPPORT
+  Modificationreussie(){
+    Swal.fire({
+      icon: 'success',
+      text: 'La modification est un succès!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //rediriger vers la route de la page suivante
+      }
+    })
+  }
   //MEMBRES EQUIPE
   membreEquipeCreer(){
     Swal.fire({
