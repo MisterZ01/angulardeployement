@@ -33,7 +33,7 @@
                     <a routerLink="/inforapport/edit/{{rapport.id}} " ><i class="fa fa-edit blue1_color"></i></a>
                     <i class="fa fa-trash red_color" (click)="SupprimerRapport(rapport.id)"></i>
                    <a routerLink="/rapport/{{ rapport.id }}" target="_blank"><i class="fa fa-eye purple_color2"></i></a> 
-                    <i class="fa fa-download green_color" (click)="downloadTemplate()"></i>
+                    <i class="fa fa-download green_color" (click)="downloadTemplate(rapport.id)"></i>
                 </div>
               </tr>
 

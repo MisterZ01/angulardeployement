@@ -30,15 +30,15 @@ export class ListerapportsComponent {
    }
   // telechager un rapport
 
-  downloadTemplate(): void {
+  downloadTemplate(id:any): void {
     // Navigate to the new route
-    this.router.navigate(['/rapport/1']).then(() => {
+    this.router.navigate(['/rapport/'+id]).then(() => {
       // After navigating to the new route, you can navigate back to the previous route
       // using location.back() or any other method you prefer.
       // For example, to navigate back after a delay, you can use a setTimeout.
       setTimeout(() => {
         this.router.navigate(['/listerapports']);
-      }, 200); // 3000 milliseconds (3 seconds) delay before coming back
+      }, 600); // 3000 milliseconds (3 seconds) delay before coming back
     });
   }
 
