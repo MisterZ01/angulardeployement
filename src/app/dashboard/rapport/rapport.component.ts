@@ -379,6 +379,14 @@ description_site0:any
 description_site1:any 
 description_site2:any 
 description_site3:any 
+image_env0:any
+image_env1:any
+image_env2:any
+image_env3:any
+description_env0:any 
+description_env1:any 
+description_env2:any 
+description_env3:any 
 nomsite:any
 nomoperateur:any
 created_At:any
@@ -404,6 +412,14 @@ nbre_vigile:any
 commentaire:any
 plansite:any
 description_plan:any
+obsevation_env:any
+partie_concernee:any
+anormalies:any
+recommandations:any
+annexe_zero:any
+annexe_un:any
+annexe_deux:any
+annexe_trois:any
 imageLink = 'http://localhost:3000/rapport/image-site';
 Membreequipe : any
 syntheses: any
@@ -457,6 +473,22 @@ async ngOnInit() {
     this.description_site2 = this.rapportComplet[5][2].description_site;
     this.imagesite3 = this.rapportComplet[5][3].image_site;
     this.description_site3 = this.rapportComplet[5][3].description_site;
+    this.obsevation_env = this.rapportComplet[6][0].observation;
+    this.image_env0 = this.rapportComplet[5][0].image_site;
+    this.description_env0 = this.rapportComplet[5][0].description_site;
+    this.image_env1 = this.rapportComplet[5][1].image_site;
+    this.description_env1 = this.rapportComplet[5][1].description_site;
+    this.image_env2 = this.rapportComplet[5][2].image_site;
+    this.description_env2 = this.rapportComplet[5][2].description_site;
+    this.image_env3 = this.rapportComplet[5][3].image_site;
+    this.description_env3 = this.rapportComplet[5][3].description_site;
+    this.partie_concernee = this.rapportComplet[3][0].partieconcernee;
+    this.anormalies = this.rapportComplet[3][0].anormalies;
+    this.recommandations = this.rapportComplet[3][0].recommandations;
+    this.annexe_zero = this.rapportComplet[8][0].image_annexe;
+    this.annexe_un = this.rapportComplet[8][0].image_annexe;
+    this.annexe_deux = this.rapportComplet[8][0].image_annexe;
+    this.annexe_trois = this.rapportComplet[8][0].image_annexe;
 
     // Set the dataFetched flag to true
     this.generatePDF();
