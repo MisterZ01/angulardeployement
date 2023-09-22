@@ -1,13 +1,68 @@
 {
+<<<<<<< HEAD
+  "name": "projet-soutenance",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+=======
   "name": "angular-template",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+<<<<<<< HEAD
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.2.5",
+    "@angular/cli": "^16.2.2",
+    "@angular/common": "^15.2.0",
+    "@angular/compiler": "^15.2.0",
+    "@angular/core": "^15.0.0",
+    "@angular/forms": "^15.2.0",
+    "@angular/http": "^7.2.16",
+    "@angular/platform-browser": "^15.2.0",
+    "@angular/platform-browser-dynamic": "^15.2.0",
+    "@angular/router": "^15.2.0",
+    "@auth0/angular-jwt": "^5.1.2",
+    "@kolkov/angular-editor": "^3.0.0-beta.0",
+    "@sweetalert2/ngx-sweetalert2": "^12.2.0",
+    "@syncfusion/ej2-angular-richtexteditor": "^21.2.6",
+    "angular2-jwt": "^0.2.3",
+    "bootstrap": "^5.2.3",
+    "file-saver": "^2.0.5",
+    "html-to-pdfmake": "^2.4.20",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
+    "jquery": "^3.6.4",
+    "jspdf": "^2.5.1",
+    "pdfmake": "^0.2.7",
+    "pdfmake-utils": "^0.5.1",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.6.13",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.2.4",
+    "@angular/compiler-cli": "^15.2.0",
+    "@types/file-saver": "^2.0.5",
+    "@types/html-to-pdfmake": "^2.4.1",
+    "@types/jasmine": "~4.3.0",
+    "@types/pdfmake": "^0.2.2",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.9.4"
+=======
   "dependencies": {
     "@angular/animations": "^16.1.8",
     "@angular/common": "^16.1.8",
@@ -33,5 +88,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.1.6"
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
   }
 }

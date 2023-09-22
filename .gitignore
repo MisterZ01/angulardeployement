@@ -6,9 +6,12 @@
 /out-tsc
 /bazel-out
 
+<<<<<<< HEAD
+=======
 # Angular cache
 .angular/
 
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
 # Node
 /node_modules
 npm-debug.log
@@ -43,4 +46,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
+=======
 *.bat
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3

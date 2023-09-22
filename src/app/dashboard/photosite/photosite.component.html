@@ -1,0 +1,53 @@
+<app-header></app-header>
+<app-side-bar-un></app-side-bar-un>
+<!-- right content -->
+<div id="content">
+
+    <div class=" midde_cont mt-3">
+        <h4>Illustration Site</h4>
+          <table class="table table-bordered border-primary">
+             <thead>
+                 <tr>
+                     <th scope="col-6">Photo</th>
+                     <th scope="col-6">Description</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td><input type="file" id="file-input" name="image" (change)="previewImage($event)" >
+                         <br>
+                         <img [src]="editMode ? 'http://localhost:3000/imagesite/image/update/oldname/'+imagesiteUn : 'imagesiteUn'" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_un" [ngModelOptions]="{standalone: true}"></textarea></td>
+                 </tr>
+                 <tr>
+                     <td><input type="file" id="file-imge" name="image" (change)="reviewImage($event)">
+                         <br>
+                         <img [src]="editMode ? 'http://localhost:3000/imagesite/image/update/oldname/'+imagesiteDeux : 'imagesiteUn'" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_deux" [ngModelOptions]="{standalone: true}"></textarea></td>
+                 </tr>
+                 <tr>
+                     <td><input type="file" id="file-img" name="image" (change)="eviewImage($event)"  >
+                         <br>
+                         <img [src]="editMode ? 'http://localhost:3000/imagesite/image/update/oldname/'+imagesiteTrois : 'imagesiteUn'" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_trois" [ngModelOptions]="{standalone: true}"></textarea></td>
+                 </tr>
+                 <tr>
+                     <td><input type="file" id="file-im" name="image" (change)="viewImage($event)"  >
+                         <br>
+                         <img [src]="editMode ? 'http://localhost:3000/imagesite/image/update/oldname/'+imagesiteQuatre : 'imagesiteUn'" alt="" width="200"></td>
+                     <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;" [(ngModel)]="descriptionsite_quatre" [ngModelOptions]="{standalone: true}"></textarea></td>
+                 </tr>
+             </tbody>
+         </table>
+    
+         <div class="button center verticle_center">
+             <button class="prev-btn" [routerLink]="editMode ? '/infosite/edit/'+id_rapport_a_modifier : '/infosite'">Précedent</button>
+             <button class="save-btn" type="submit" (click)="Submited()">{{ editMode ? 'Modifier' : 'Enregistrer' }}</button> 
+             <button class="next-btn" [routerLink]="editMode ? '/environnement/edit/'+id_rapport_a_modifier : '/environnement'">Suivant</button>
+         </div>
+    </div>
+
+</div>
+
+
+

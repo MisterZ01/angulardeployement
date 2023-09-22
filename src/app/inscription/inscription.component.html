@@ -1,0 +1,86 @@
+     <div class="full_container">
+        <div class="container mt-5">
+           <div class="center verticle_center">
+              <div class="login_section">
+                 <div class="logo_login">
+                    <div class="center">
+                       <img width="210" src="assets/images/logo/Valsch.png" height="100" alt="#" />
+                    </div>
+                 </div>
+                 <div class="login_form">
+                    <form>
+                        <h2>Présentation</h2>
+                       <fieldset class="mt-5">
+                          <div class="field">
+                             <label class="label_field">Nom</label>
+                             <input type="text" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Prenom</label>
+                             <input type="text" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Email</label>
+                             <input type="email" [(ngModel)]="mail" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Contact</label>
+                             <input type="number" [(ngModel)]="num" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Profession</label>
+                             <input type="text" [(ngModel)]="profession" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Nom Utilisateur</label>
+                             <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <div class="field">
+                             <label class="label_field">Mot de passe</label>
+                             <input type="password" [(ngModel)]="mdp" [ngModelOptions]="{standalone: true}">
+                          </div>
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="profil">Profil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px" type="text" [(ngModel)]="profil" [ngModelOptions]="{standalone: true}"></textarea></td>
+                                </tr>
+                
+                            </tbody>
+                
+                          </table>
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="profil">Entrez une photo de vous</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                       <input type="file" name="image" id="image" (change)="onFileChanged($event)">
+                                    </td>
+                                    <br>
+                                     
+                                </tr>
+                
+                            </tbody>
+                
+                          </table>
+                          <div class="button center verticle_center">
+                           <a routerLink="/"><button class="next-btn" type="submit" (click) = "Submited()">Soumettre</button></a>  
+                        </div>
+                        </fieldset>
+                    </form>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+
+
+     

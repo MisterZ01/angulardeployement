@@ -1,0 +1,32 @@
+<app-header></app-header>
+<app-side-bar-un></app-side-bar-un>
+<!-- right content -->
+<div id="content">  
+        <div class="midde_cont mt-5">
+          <h4>{{ editMode ? 'Modifier le Rapport' : 'Informations du Rapport' }}</h4>
+            <table class="table mt-5">
+              <thead>
+                <tr>
+                    <th scope="col">Titre du rapport</th>
+                    <th scope="col">Nom de l'opérateur</th>
+                    <th scope="col">logo de l'opérateur</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" [(ngModel)]="titreRapport" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="nomoperateur" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                        <br>
+                        <img [src]="imagesrc" alt="" width="200">
+                   </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="button center verticle_center">
+          <button class="save-btn" type="submit" (click)="Submited()">{{ editMode ? 'Modifier' : 'Enregistrer' }}</button> 
+          <button class="next-btn" [routerLink]="editMode ? '/presentation/edit/'+id_rapport_a_modifier : '/presentation'">Suivant</button>
+        </div>
+</div>

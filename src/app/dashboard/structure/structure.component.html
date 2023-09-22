@@ -1,0 +1,726 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Structure Principale</h2>
+            <div class="midde_cont mt-5">
+                <h4>Contrôle et Description</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Provenance du pylône (Pays)</th>
+                        <th scope="col">Installateur du pylône</th>
+                        <th scope="col">Constructeur du pylône</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="pays-pylone"></td>
+                            <td><input type="text" class="form-control" id="installeur"></td>
+                            <td><input type="text" class="form-control" id="constructeur"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Date d'installation</th>
+                        <th scope="col">Charge maximale(kg)</th>
+                        <th scope="col"> Charge au vent maximale(m2)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="date" class="form-control" id="date-installation"></td>
+                            <td><input type="text" class="form-control" id="charge-maximale"></td>
+                            <td><input type="text" class="form-control" id="charge-minimale"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Charge actuelle du pylône (Kg)</th>
+                        <th scope="col">Charge au vent actuelle (m2)</th>
+                        <th scope="col">Hauteur de la structure</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="charge-pylone"></td>
+                            <td><input type="text" class="form-control" id="charge-vent"></td>
+                            <td><input type="text" class="form-control" id="hauteursp"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type structure</th>
+                        <th scope="col">Section</th>
+                        <th scope="col">Tronçon</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="type-structure" list="choisir-douze"> 
+                                <datalist id="choisir-douze">
+                                    <option value="Pylône Auto stable">
+                                    <option value="pylône Haubané">
+                                    <option value="Mât">
+                                    <option value="Trépied">
+                                    <option value="Monotube">
+                                    <option value="Troué">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="section" list="choisi-douze">
+                                <datalist id="choisi-douze">
+                                    <option value="Carré">
+                                    <option value="Triangulaire">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="tronçon" list="chois-douze"> 
+                                <datalist id="chois-douze">
+                                    <option value="Droit">
+                                    <option value="Pyramidal">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Membrures</th>
+                        <th scope="col">Etat-Membrures</th>
+                        <th scope="col">Nombre à remplacer</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="membrure" list="choisir-treize"> 
+                                <datalist id="choisir-treize">
+                                    <option value="Tubulaire">
+                                    <option value="Cornière">
+                                    <option value="Tôle pliée">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-membrure" list="choisi-treize">
+                                <datalist id="choisi-treize">
+                                    <option value="Bon">
+                                    <option value="Déformé">
+                                    <option value="Oxydé">
+                                    <option value="Troué">
+                                    <option value="À remplacer">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="nbre-membrure"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Plaque d’identification pylône</th>
+                        <th scope="col">Etat de le plaque</th>
+                        <th scope="col">Obturateur</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="plaque-pylone" list="choisir-quatorze"> 
+                                <datalist id="choisir-quatorze">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-plaque" list="choisi-quatorze">
+                                <datalist id="choisi-quatorze">
+                                    <option value="Bon">
+                                    <option value="Dégradé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="Obturateur" list="chois-quatorze"> 
+                                <datalist id="chois-quatorze">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nombre de diagonales à remplacer</th>
+                        <th scope="col">Contrevents</th>
+                        <th scope="col">Etat des contrevents</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="nbre-diagonale"></td>
+                            <td><input type="text" class="form-control" id="contrevent" list="choisi-seize">
+                                <datalist id="choisi-seize">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-contrevent" list="chois-seize"> 
+                                <datalist id="chois-seize">
+                                    <option value="Bon">
+                                    <option value="Déformé">
+                                    <option value="Oxydé">
+                                    <option value="Troué">
+                                    <option value="À remplacer">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nombre de contrevents à remplacer</th>
+                        <th scope="col">Traverses</th>
+                        <th scope="col">Etat des Traverses</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-obturateur"></td>
+                            <td><input type="text" class="form-control" id="diagonale" list="choisi-dix-sept">
+                                <datalist id="choisi-dix-sept">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-diagonale" list="chois-dix-sept"> 
+                                <datalist id="chois-dix-sept">
+                                    <option value="Bon">
+                                    <option value="Déformé">
+                                    <option value="Oxydé">
+                                    <option value="Troué">
+                                    <option value="À remplacer">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nombre de traverses à remplacer</th>
+                        <th scope="col">Couvre joint</th>
+                        <th scope="col">Etat du Couvre joint</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="nbr traverse"></td>
+                            <td><input type="text" class="form-control" id="couvre-joint" list="choisi-dix-huit">
+                                <datalist id="choisi-dix-huit">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-couvre-joint" list="chois-quize"> 
+                                <datalist id="chois-dix-huit">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Eclisses</th>
+                        <th scope="col">Etat des eclisses</th>
+                        <th scope="col">Brides de jonction</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="eclisse" list="choisir-dix-neuf">
+                            <datalist id="choisir-dix-neuf">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-eclisse" list="choisi-dix-neuf">
+                            <datalist id="choisi-dix-neuf">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist>
+                            </td>
+                            <td><input type="text" class="form-control" id="bride" list="chois-dix-neuf">
+                            <datalist id="chois-dix-neuf">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat des brides</th>
+                        <th scope="col">Anti twist</th>
+                        <th scope="col">Etat de l'anti twist</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-bride" list="choisir-vingt">
+                            <datalist id="choisir-vingt">
+                                <option value="alignées">
+                                <option value="Non alignées">
+                            </datalist>
+                            </td>
+                            <td><input type="text" class="form-control" id="twist" list="choisi-vingt">
+                            <datalist id="choisi-vingt">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-twist" list="chois-vingt">
+                            <datalist id="chois-vingt">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Ligne de vie</th>
+                        <th scope="col">Etat de la ligne de vie</th>
+                        <th scope="col">Crinoline</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="lignevie" list="choisir-vingt-un">
+                            <datalist id="choisir-vingt-un">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-lignevie" list="choisi-vingt-un">
+                            <datalist id="choisi-vingt-un">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="crinoline" list="chois-vingt-un">
+                            <datalist id="chois-vingt-un">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Paliers de repos</th>
+                        <th scope="col">Etat des paliers</th>
+                        <th scope="col">Trappes rabattables</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="palier" list="choisir-vingt-trois">
+                            <datalist id="choisir-vingt-trois">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-palier" list="choisi-vingt-trois">
+                            <datalist id="choisi-vingt-trois">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="trappe" list="chois-vingt-trois">
+                            <datalist id="chois-vingt-trois">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat des trappes</th>
+                        <th scope="col">Plate-forme de travail</th>
+                        <th scope="col">Etat de la plate-forme</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-trappe" list="choisir-vingt-quatre">
+                            <datalist id="choisir-vingt-quatre">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="plate-forme" list="choisi-vingt-quatre">
+                            <datalist id="choisi-vingt-quatre">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-plate-forme" list="chois-vingt-quatre">
+                            <datalist id="chois-vingt-quatre">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Câble hauban</th>
+                        <th scope="col">Système de mise sous tension des câbles</th>
+                        <th scope="col">Embase</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="câble" list="choisir-vingt-cinq">
+                            <datalist id="choisir-vingt-cinq">
+                                <option value="Bon">
+                                <option value="A traiter">
+                                <option value="A remplacer">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="tension-câble" list="choisi-vingt-cinq">
+                            <datalist id="choisi-vingt-cinq">
+                                <option value="Bon">
+                                <option value="A traiter">
+                                <option value="Oxydé">
+                                <option value="A remplacer">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="embase" list="chois-vingt-cinq">
+                            <datalist id="chois-vingt-cinq">
+                                <option value="Bon">
+                                <option value="A traiter">
+                                <option value="Renforcer">
+                                <option value="Dégradé">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Mesure de la résistance du massif</th>
+                        <th scope="col">Qualité de la mesure</th>
+                        <th scope="col">Nombre de câbles à remplacer</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="resistance"></td>
+                            <td><input type="text" class="form-control" id="qualite" list="choisi-vingt-six">
+                            <datalist id="choisi-vingt-six">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                            <td><input type="text" class="form-control" id="nbre-cable"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class="midde_cont mt-3">
+                <h4>Contrôle de la verticalité(Méthode au choix)</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat du pylône</th>
+                        <th scope="col">Sens de vrille</th>
+                        <th scope="col">Sens d'inclinaison</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-pylone" list="choisir-vingt-sept">
+                                <datalist id="choisir-vingt-sept">
+                                    <option value="Doit">
+                                    <option value="Incliné">
+                                 </datalist></td>
+                            <td><input type="text" class="form-control" id="vrille" list="choisi-vingt-sept"> 
+                                <datalist id="choisi-vingt-sept">
+                                    <option value="Vers la droite">
+                                    <option value=" Vers la gauche">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="sens-inclinaison" list="chois-vingt-sept">
+                                <datalist id="chois-vingt-sept">
+                                    <option value="Vers la dooite">
+                                    <option value="Vers la gauche">
+                                 </datalist>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Latitude(N) du pylône </th>
+                        <th scope="col">Longitude(w) du pylône</th>
+                        <th scope="col">Altitude du pylône</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="latitude-pylone"></td>
+                            <td><input type="text" class="form-control" id="longitude-pylone"></td>
+                            <td><input type="text" class="form-control" id="altitude-pylone"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Latitude(N) de la station th </th>
+                        <th scope="col">Longitude(w) de la station th</th>
+                        <th scope="col">Altitude de la station th</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="latitude-station"></td>
+                            <td><input type="text" class="form-control" id="longitude-station"></td>
+                            <td><input type="text" class="form-control" id="altitude-station"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Angle d'inclinaison</th>
+                        <th scope="col">Interprétation  de l’angle</th>
+                        <th scope="col">Verticalité</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="angle-inclinaison"></td>
+                            <td><input type="text" class="form-control" id="interpretation"></td>
+                            <td><input type="text" class="form-control" id="verticalité" list="chois-vingt-huit">
+                                <datalist id="chois-vingt-huit">
+                                    <option value="Bonne">
+                                    <option value="Mauvaise">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Hauteur bâtiment</th>
+                        <th scope="col">Hauteur Pylône</th>
+                        <th scope="col">Vitesse du vent</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="hauteur-batiment"></td>
+                            <td><input type="text" class="form-control" id="hauteur-pylone"></td>
+                            <td><input type="text" class="form-control" id="vitesse-vent"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Distance pylône-Théodolite</th>
+                        <th scope="col">Objet de référence</th>
+                        <th scope="col">Type objet</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="distance-py-th"></td>
+                            <td><input type="text" class="form-control" id="Objet"></td>
+                            <td><input type="text" class="form-control" id="Type-objet" list="chois-vingt-neuf">
+                            <datalist id="chois-vingt-neuf">
+                                <option value="Cornière">
+                                <option value="Tôle pliée">
+                                <option value="Tubulaire">
+                                <option value="Autre">
+                            </datalist>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Largeur de l'objet</th>
+                        <th scope="col">Déviation actuelle du pylone</th>
+                        <th scope="col">Déviation acceptable au top du pylône</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="largeur-objet"></td>
+                            <td><input type="text" class="form-control" id="deviation-actuelle"></td>
+                            <td><input type="text" class="form-control" id="deviation-acceptable"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Conclusion verticalité</th>
+                        <th scope="col">Mat</th>
+                        <th scope="col">Type de fixation</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="conclusion" list="choisir-trente">
+                                <datalist id="choisir-trente">
+                                    <option value="Bonne verticalité">
+                                    <option value="Mauvaise verticalité">
+                                </datalist>
+                            </td>
+                            <td><input type="text" class="form-control" id="mat" list="choisi-trente"> 
+                                <datalist id="choisi-trente">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="Type-fixation" list="chois-trente">
+                                <datalist id="chois-trente">
+                                    <option value="Murale">
+                                    <option value="Jambe de force">
+                                    <option value="Autoportant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Hauteur des mats</th>
+                        <th scope="col"> Nombre de mat</th>
+                        <th scope="col">Echelons d’escalade</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="hauteur-mat"></td>
+                            <td><input type="text" class="form-control" id="nbre-mat"></td>
+                            <td><input type="text" class="form-control" id="echelons" list="chois-trente-un">
+                                <datalist id="chois-trente-un">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type des échelons</th>
+                        <th scope="col">Etat de la boulonnerie</th>
+                        <th scope="col">Vitesse du vent au sol</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="type-echelons" list="choisir-trente-deux">
+                                <datalist id="choisir-trente-deux">
+                                    <option value="En barreau">
+                                    <option value="Avec collier">
+                                </datalist>
+                            </td>
+                            <td><input type="text" class="form-control" id="etat-boulonnerie" list="choisi-trente-deux"> 
+                                <datalist id="choisi-trente-deux">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="vitesse-vent-sol"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class="midde_cont mt-3">
+                <h4>Mesure des tensions mécaniques des haubans</h4>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class=" midde_cont mt-3">
+                <h4>Illustration photos</h4>
+                  <table class="table table-bordered border-primary">
+                     <thead>
+                         <tr>
+                             <th scope="col-6">Photo</th>
+                             <th scope="col-6">Description</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                     </tbody>
+                 </table>
+    
+                 <div class="button">
+                    <button class="prev-btn">Précedent</button>
+                     <button class="next-btn">Suivant</button> 
+                 </div>
+           </div>
+</div>

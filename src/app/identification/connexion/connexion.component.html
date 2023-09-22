@@ -1,0 +1,115 @@
+<body id="page-top">
+<header>
+
+   <!-- Top Navbar  -->
+   <div class="top-menubar">
+     <div class="topmenu">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-7">
+             <ul class="list-inline top-contacts">
+               <li>
+                 <i class="fa fa-envelope"></i> Email: <a href="mailto:info@themeborn.com"> infos@valsch-consulting.com</a>
+               </li>
+               <li>
+                 <i class="fa fa-phone"></i> +225 27 22 468 438 / +225 07 07 038 247
+               </li>
+             </ul>
+           </div> 
+           <div class="col-md-5">
+             <ul class="list-inline top-data">
+               <li><a href="https://www.facebook.com/valschconsultingsa" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
+               <li><a href="https://twitter.com/valsch_ci" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
+               <li><a href="https://www.linkedin.com/showcase/valsch-consultingsa/" target="_empty"><i class="fa top-social fa-linkedin"></i></a></li> 
+               <li><a href="https://www.youtube.com/channel/UC9URrN35f9zRUIrbHixOAsQ" target="_empty"><i class="fa top-social fa-youtube"></i></a></li> 
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div> 
+   </div> 
+   
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
+     <div class="container">
+       <a class="navbar-brand smooth-scroll" href="index.html">
+          <img src="assets/images/logo/Valsch.png" alt="logo" width="300px" height="50px"> 
+       </a> 
+       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
+             <span class="navbar-toggler-icon"></span>
+       </button>  
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
+             <li class="nav-item" ><a class="nav-link smooth-scroll" href="index.html">Accueil</a></li>
+             <li class="nav-item dropdown" >
+               <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a> 
+               <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
+                 <a class="dropdown-item" href="#">Telecoms</a>
+                 <a class="dropdown-item" href="#">Informatique</a>
+                 <a class="dropdown-item" href="#">Energie & Electricité</a>
+                 <a class="dropdown-item" href="#">BTP</a>
+               </div>
+             </li>
+             <li class="nav-item" ><a class="nav-link smooth-scroll" href="https://www.valsch-consulting.com">Apropos de nous</a></li> 
+         </ul>  
+       </div>
+     </div>
+   </nav>
+ </header> 
+ 
+ <section id="home">
+   <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel"> 
+     <!-- Carousel items -->
+     <div class="carousel-inner">
+         <div class="carousel-item active slides">
+           <div class="overlay"></div>
+           <div class="slide-1"></div>
+             <div class="hero ">
+               <hgroup class="wow fadeInUp">
+                   <h1>Nous Digitalisons <span ><a href="" class="typewrite" data-period="2000" data-type='[ "vos rapports", "vos documents", "le réseau"]'>
+                     <span class="wrap"></span></a></span> </h1>        
+                   <h3>La flexibilité dans la redaction de vos rapports</h3>
+               </hgroup>
+               <div class="login_form">
+                  <form action="">
+                     <div class="row">
+  
+                          <div class="connecter col-">
+                             <h3>J'ai un compte</h3>
+                                  <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email ou nom utilisateur</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="nom_utilisateur" [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp" required>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="mdp" [ngModelOptions]="{standalone: true} " required>
+                                  </div>
+                                  <div class="mb-3 form-check">
+                                    <label class="form-check-label">Mot de passe oublié ?</label>
+                                  </div>
+                                  <div class="mb-3">
+                                     <input type="submit" (click) = "Submited()" class="form-control bg-primary text-white" value="Se connecter">
+                                  </div>
+                          </div>
+  
+                          <div class="separator"></div>
+  
+                          <div class="enregistrer col-5">
+                             <h3>Je suis nouveau</h3>
+                                <div class="mb-5">
+                                   <a routerLink="/inscription"><button id=" phone-btn" class="rounded-button">S'incrire pour la première fois</button></a>
+                                </div>
+                          </div>
+                     </div>
+                  </form>
+               </div>
+               </div>           
+         </div> 
+     </div> 
+   </div> 
+   
+ </section>
+
+
+
+

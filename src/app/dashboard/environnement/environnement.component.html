@@ -1,0 +1,460 @@
+<app-header></app-header>
+<app-side-bar-un></app-side-bar-un>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Contrôle de l'environnement</h2>
+        <div class="midde_cont mt-5">
+            <h4>Accessibilité</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Chemin d'accès</th>
+                    <th scope="col">Portail d'accès</th>
+                    <th scope="col">Etat du portail</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="chemin" list="choice" [(ngModel)]="accessibilite" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choice">
+                                <option value="Escalier">
+                                <option value="Trappe d'accès">
+                                <option value="Echelle">
+                                <option value="Voie routière">
+                                <option value="Autre">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="portail" list="choic" [(ngModel)]="presenceporte" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choic">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat" list="choi" [(ngModel)]="etatporte" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choi">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Type du portail</th>
+                    <th scope="col">Serrure</th>
+                    <th scope="col">Etat de la serrure</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="tpeP" list="choisir-un" [(ngModel)]="typeporte" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-un">
+                                <option value="Métallique">
+                                <option value="Grillagée">
+                                <option value="Autre">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="serrure" list="choisi-un" [(ngModel)]="presenceserrure" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-un">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-serrure" list="chois-un" [(ngModel)]="etatserrure" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-un">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Télémétrie</th>
+                    <th scope="col">Clôture</th>
+                    <th scope="col">Etat de la clôture</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="telemetrie" list="choisir-deux" [(ngModel)]="telemetrieserrure" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-deux">
+                                <option value="Bon">
+                                <option value="Hors-service">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="serrure" list="choisi-deux" [(ngModel)]="presencecloture" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-deux">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-serrure" list="chois-deux" [(ngModel)]="etatcloture" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-deux">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Type de clôture</th>
+                    <th scope="col">Plaque Signalétique</th>
+                    <th scope="col">Etat de la Plaque</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="type-cloture" list="choisir-trois" [(ngModel)]="typecloture" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-trois">
+                                <option value="Grillagée">
+                                <option value="Semi grillagée">
+                                <option value="Agglos">
+                                <option value="Barreaux métalliques">
+                                <option value="Autre">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="serrure" list="choisi-trois" [(ngModel)]="presenceplaque" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-trois">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-serrure" list="chois-trois" [(ngModel)]="etatplaque" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-trois">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="midde_cont mt-3">
+            <h4>Terrasse/Sol</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Etanchéité sur le site</th>
+                    <th scope="col">Etat d'étanchéité du site </th>
+                    <th scope="col">Etanchéité sur les massifs</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="etancheite-site" list="choice-un" [(ngModel)]="presenceetancheitesite" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choice-un">
+                                <option value="Non">
+                                <option value="Oui">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-etancheite" list="choic-un" [(ngModel)]="etatetancheitesite" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choic-un">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etancheite-site" list="choi-un" [(ngModel)]="presenceetancheitemassif" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choi-un">
+                                <option value="Non">
+                                <option value="Oui">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Etat d'étanchéité sur les massifs</th>
+                    <th scope="col">Garde-corps</th>
+                    <th scope="col">Etat des Garde-corps</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="etat-etancheite-massif" list="choisir-quatre" [(ngModel)]="etatetancheitemassif" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-quatre">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="Garde-corps" list="choisi-quatre" [(ngModel)]="presencegardecorps" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-quatre">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-garde-corps" list="chois-quatre" [(ngModel)]="etatgardecorps" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-quatre">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Hauteur de la terrasse</th>
+                    <th scope="col">Etat du site</th>
+                    <th scope="col">Site à proximité d’une emprise</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="hauteur-terrasse" list="choisir-cinq" [(ngModel)]="hauteursol" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-cinq">
+                                <option value=">1 m">
+                                <option value="<1 m">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-site" list="choisi-cinq" [(ngModel)]="etatsol" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-cinq">
+                                <option value="Propre">
+                                <option value="Encombré">
+                                <option value="Fissuré">
+                                <option value="Humide">
+                                <option value="Sale">
+                                <option value="À nettoyer">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="proximité-emprise" list="chois-cinq" [(ngModel)]="proximiteemprise" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-cinq">
+                                <option value="Non">
+                                <option value="Oui">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Préciser l’emprise</th>
+                    <th scope="col">Préciser <span>Autre</span> emprise</th>
+                    <th scope="col">Distance Site_ Emprise</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="precision-emprise" list="choisir-six" [(ngModel)]="nomemprise" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-six">
+                                <option value="Ligne électrique">
+                                <option value="Voirie">
+                                <option value="Cour d’eau">
+                                <option value="Etablissement scolaire">
+                                <option value="Etablissement sanitaire">
+                                <option value="supermarché">
+                                <option value="Autre">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="Precision-autre" [(ngModel)]="precisionemprise" [ngModelOptions]="{standalone: true}"></td>
+                        <td><input type="text" class="form-control" id="distance-site-emprise" [(ngModel)]="distancesiteemprise" [ngModelOptions]="{standalone: true}"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Revêtement_espace site</th>
+                    <th scope="col">Système d’évacuation d’eau</th>
+                    <th scope="col">Etat du Système</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="revêtement" list="choisir-sept" [(ngModel)]="revetementespace" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-sept">
+                                <option value="Gazon">
+                                <option value="Dalle">
+                                <option value="Gravier concassé">
+                                <option value="Autre">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="systme-evacuation" list="choisi-sept" [(ngModel)]="presencesystemeevacuation" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-sept">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-systeme" list="chois-sept" [(ngModel)]="etatsystemeevacuation" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-sept">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="midde_cont mt-3">
+            <h4>Local Techique</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Type du local technique</th>
+                    <th scope="col">Etat du local</th>
+                    <th scope="col">Boulonnerie de fixation des platines</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="type-local" list="choice-deux" [(ngModel)]="type_local" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choice-deux">
+                                <option value="Shelter">
+                                <option value="Bâtiment">
+                                <option value="Abri">
+                                <option value="Autre">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-local" list="choic-deux" [(ngModel)]="etat_local" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choic-deux">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                                <option value="À réhabiliter">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="fixation des platines" list="choi-deux" [(ngModel)]="etat_boulonnerie" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choi-deux">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Accessoires de la charpente</th>
+                    <th scope="col">Système de verrouillage de la porte</th>
+                    <th scope="col">Etat du système</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="accessoire" list="choisir-huit" [(ngModel)]="etat_assessoire" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-huit">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="Garde-corps" list="choisi-huit" [(ngModel)]="presencesystemeverrouillage" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-huit">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-garde-corps" list="chois-huit" [(ngModel)]="etatsystemeverrouillage" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-huit">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Extincteur</th>
+                    <th scope="col">Validité</th>
+                    <th scope="col">Nombre d'extincteur</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="extincteur" list="choisir-neuf" [(ngModel)]="presenceextincteur" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-neuf">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="Validite" list="choisi-neuf" [(ngModel)]="validiteextincteur" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-neuf">
+                                <option value="en cours">
+                                <option value="Périmé">
+                                <option value="NA (étiquette illisible)">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="nbre-extincteur" [(ngModel)]="nbreextincteur" [ngModelOptions]="{standalone: true}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <div class="midde_cont mt-3">
+            <h4>Climatisation</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Système de climatisation</th>
+                    <th scope="col">Etat du système</th>
+                    <th scope="col">Nombre de climatiseur</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="clim" list="choice-trois" [(ngModel)]="presence_clim" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choice-trois">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-clim" list="choic-trois" [(ngModel)]="etat_clim" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choic-trois">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="nbre-clim" [(ngModel)]="nbre_clim" [ngModelOptions]="{standalone: true}"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Type de climatisation</th>
+                    <th scope="col">Etat Condenseur</th>
+                    <th scope="col">Etanchéité connexion</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="type-clim" list="choisir-dix" [(ngModel)]="type_clim" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-dix">
+                                <option value="Split">
+                                <option value="Windows">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="Condenseur" list="choisi-dix" [(ngModel)]="condenseur" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-dix">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                                <option value="Oxydé">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etancheite-connexion" list="chois-dix" [(ngModel)]="etancheite_connexion" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="chois-dix">
+                                <option value="Bon">
+                                <option value="Dégradé">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Tuyauterie du système</th>
+                    <th scope="col">Grille de protection</th>
+                    <th scope="col"> Etat de la grille</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" id="tuyauterie" list="choisir-onze" [(ngModel)]="tuyauterie_clim" [ngModelOptions]="{standalone: true}"> 
+                            <datalist id="choisir-onze">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="grille" list="choisi-onze" [(ngModel)]="presencegrille" [ngModelOptions]="{standalone: true}">
+                            <datalist id="choisi-onze">
+                                <option value="Existante">
+                                <option value="Inexistante">
+                            </datalist></td>
+                        <td><input type="text" class="form-control" id="etat-grille" list="chois-onze" [(ngModel)]="etatgrille" [ngModelOptions]="{standalone: true}">
+                            <datalist id="chois-onze">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                                <option value="Verrouillée">
+                            </datalist></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h5>Observation</h5>
+        <angular-editor class="bg-black" [(ngModel)]="observation" [ngModelOptions]="{standalone: true}" [config]="config"></angular-editor>
+        <div class="html">
+           {{ htmlContent }}
+        </div>
+        <div class="button mt-5 center verticle_center">
+            <button class="prev-btn" routerLink="/photosite">Précedent</button>
+            <button class="save-btn" type="submit" (click) = "Submited()">Enregistrer</button> 
+            <button class="next-btn" routerLink="/photoenvironnement">Suivant</button> 
+        </div>
+</div>

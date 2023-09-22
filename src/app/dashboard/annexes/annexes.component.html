@@ -1,0 +1,49 @@
+<app-header></app-header>
+<app-side-bar-un></app-side-bar-un>
+<!-- right content -->
+<div id="content">
+
+
+    <div class=" midde_cont mt-5">
+        <h4>Annexes</h4>
+          <table class="table table-bordered border-primary">
+             <thead>
+                 <tr>
+                     <th scope="col-6"><h1>Contrôle infrastructure et environnement</h1></th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                         <br>
+                         <img [src]="imageanexUn" alt="" width="200">
+                    </td>
+                 </tr>
+                 <tr>
+                     <td><input type="file" id="file-imge" name="image" (change)="reviewImage($event)">
+                         <br>
+                         <img [src]="imageanexDeux" alt="" width="200">
+                    </td>
+                 </tr>
+                 <tr>
+                     <td><input type="file" id="file-img" name="image" (change)="eviewImage($event)">
+                         <br>
+                         <img [src]="imageanexTrois" alt="" width="200">
+                    </td>
+                 </tr>
+                 <tr>
+                     <td><input type="file" id="file-im" name="image" (change)="viewImage($event)">
+                         <br>
+                         <img [src]="imageanexQuatre" alt="" width="200">
+                    </td>
+                 </tr>
+             </tbody>
+         </table>
+
+         <div class="button mt-5 center verticle_center">
+            <button class="prev-btn" routerLink="/conclusion">Précedent</button>
+            <button class="next-btn" type="submit" (click) = "Submited()">Soumettre</button> 
+        </div>
+   </div>
+  
+</div>

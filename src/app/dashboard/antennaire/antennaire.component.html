@@ -1,0 +1,225 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Système antennaire</h2>
+            <div class="midde_cont mt-5">
+                <h4 class="mt-5">Contrôle du système antennaire</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Antennes et module radio</th>
+                        <th scope="col">Kit de montage des antennes</th>
+                        <th scope="col">Fixation des antennes et MR</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="ant&module" list="choisir-cinquante">
+                                <datalist id="choisir-cinquante">
+                                    <option value="Bon">
+                                    <option value="Endommagé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="kit-montage" list="choisi-cinquante"> 
+                                <datalist id="choisi-cinquante">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                    <option value="Oxydé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="fixation-antenne" list="chois-cinquante"> 
+                                <datalist id="chois-cinquante">
+                                    <option value="Rigide">
+                                    <option value="Non rigide">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Boulonnerie et accessoires</th>
+                        <th scope="col">Supports des antennes</th>
+                        <th scope="col">Etat des supports</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="Boulonnerie&accessoire" list="choisir-cinquante-un">
+                                <datalist id="choisir-cinquante-un">
+                                    <option value="Bon">
+                                    <option value="Oxydées">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="support" list="choisi-cinquante-un"> 
+                                <datalist id="choisi-cinquante-un">
+                                    <option value="Galvanisé">
+                                    <option value="Non galvanisé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-support" list="chois-cinquante-un"> 
+                                <datalist id="chois-cinquante-un">
+                                    <option value="Oxydée">
+                                    <option value="Bon">
+                                    <option value="Endommagé">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etanchéités</th>
+                        <th scope="col">Etat des étanchéités</th>
+                        <th scope="col">Etiquetage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etancheites" list="choisir-cinquante-deux">
+                                <datalist id="choisir-cinquante-deux">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-etancheites" list="choisi-cinquante-deux"> 
+                                <datalist id="choisi-cinquante-deux">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etiquetages" list="chois-cinquante-deux"> 
+                                <datalist id="chois-cinquante-deux">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat des étiquetages</th>
+                        <th scope="col">Nombre des antennes et MR</th>
+                        <th scope="col">Fixation utilisée</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-etiquetage" list="choisir-cinquante-trois">
+                                <datalist id="choisir-cinquante-trois">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="nbre-antennes&mr"></td>
+                            <td><input type="text" class="form-control" id="fixation-utilisee" list="chois-cinquante-trois"> 
+                                <datalist id="chois-cinquante-trois">
+                                    <option value="Clamps">
+                                    <option value="colliers">
+                                    <option value="Autres">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class="midde_cont mt-5">
+                <h4 class="mt-5">Configuration radio</h4>
+            </div>
+            <div class="midde_cont mt-5">
+                <h4 class="mt-5">Configuration transmission</h4>
+            </div>
+
+
+            
+            <div class=" midde_cont mt-3">
+                <h4>Illustration photos</h4>
+                  <table class="table table-bordered border-primary">
+                     <thead>
+                         <tr>
+                             <th scope="col-6">Photo</th>
+                             <th scope="col-6">Description</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                     </tbody>
+                 </table>
+
+                 <div class="midde_cont mt-5">
+                    <h4 class="mt-5">Vues panoramiques par secteurs et technologies déployées</h4>
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col-6">Photo</th>
+                                <th scope="col-6">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                    <br>
+                                    <img [src]="imageSrc" alt="" width="200"></td>
+                                <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                    <br>
+                                    <img [src]="imageSrc" alt="" width="200"></td>
+                                <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                    <br>
+                                    <img [src]="imageSrc" alt="" width="200"></td>
+                                <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                    <br>
+                                    <img [src]="imageSrc" alt="" width="200"></td>
+                                <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                 <div class="button">
+                    <button class="prev-btn">Précedent</button>
+                     <button class="next-btn">Suivant</button> 
+                 </div>
+           </div>
+
+</div>

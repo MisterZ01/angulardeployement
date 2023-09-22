@@ -1,0 +1,255 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Système de protection anti-foudre</h2>
+            <div class="midde_cont mt-5">
+                <h4 class="mt-5">Contrôle du système anti-foudre</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Pointe paratonnerres</th>
+                        <th scope="col">Etat de la pointe</th>
+                        <th scope="col">Descente de terre</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="paratonnerre" list="choisir-quarante-cinq">
+                                <datalist id="choisir-quarante-cinq">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                    <option value="Panneaux solaires">
+                                    <option value="Autre">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-pointe" list="choisi-quarante-cinq"> 
+                                <datalist id="choisi-quarante-cinq">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                    <option value="Oxydé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="descente-terre" list="chois-quarante-cinq"> 
+                                <datalist id="chois-quarante-cinq">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type de la descente</th>
+                        <th scope="col">Accessoires de fixation</th>
+                        <th scope="col">Etat des accessoires </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="type-descente"></td>
+                            <td><input type="text" class="form-control" id="accessoire" list="choisi-quarante-six"> 
+                                <datalist id="choisi-quarante-six">
+                                    <option value="Existant">
+                                    <option value="Inexistant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-accessoire" list="chois-quarante-six"> 
+                                <datalist id="chois-quarante-six">
+                                    <option value="Bon">
+                                    <option value="Oxydé">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Barrettes de terre</th>
+                        <th scope="col">MALT des équipements</th>
+                        <th scope="col">MALT parties métalliques</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="barrette" list="choisir-quarante-sept">
+                                <datalist id="choisir-quarante-sept">
+                                    <option value="Basse">
+                                    <option value="Haute">
+                                    <option value="GSM">
+                                    <option value="FH">
+                                    <option value="Dalle outdoor">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="malt-equipement" list="choisi-quarante-sept"> 
+                                <datalist id="choisi-quarante-sept">
+                                    <option value="Antennes GSM">
+                                    <option value="Modules radio">
+                                    <option value="Antennes FH /ODU">
+                                    <option value="Feeders">
+                                    <option value="GE (si existant)">
+                                    <option value="Condenseur">
+                                    <option value="Shelter">
+                                    <option value="AVR">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="malt-metallique" list="chois-quarante-sept"> 
+                                <datalist id="chois-quarante-sept">
+                                    <option value="Supports GSM/modules radio">
+                                    <option value="Supports FH">
+                                    <option value="Pieds pylône">
+                                    <option value="Câbles Haubans">
+                                    <option value="Clôture">
+                                    <option value="Pieds des abris">
+                                    <option value="Équipements de la niche électrique">
+                                    <option value="Grille de protection condenseur">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Puits de terre</th>
+                        <th scope="col">Etat des puits</th>
+                        <th scope="col">Etiquetage des sections</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="puit" list="choisir-quarante-huit">
+                                <datalist id="choisir-quarante-huit">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-puit" list="choisi-quarante-huit"> 
+                                <datalist id="choisi-quarante-huit">
+                                    <option value="Bon">
+                                    <option value="Dégradé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etiquetage" list="chois-quarante-huit"> 
+                                <datalist id="chois-quarante-huit">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat de l'étiquétage</th>
+                        <th scope="col">Piquet de terre</th>
+                        <th scope="col">Etat du piquet</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-etiquette" list="choisir-quarante-neuf">
+                                <datalist id="choisir-quarante-neuf">
+                                    <option value="Bon">
+                                    <option value="Dégradé">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="piquet" list="choisi-quarante-neuf"> 
+                                <datalist id="choisi-quarante-neuf">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-piquet" list="chois-quarante-neuf"> 
+                                <datalist id="chois-quarante-neuf">
+                                    <option value="Bon">
+                                    <option value="oxydé">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class="midde_cont mt-5">
+                <h4 class="mt-5">Mesure de terre</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">normative isolée applicable</th>
+                        <th scope="col">Résistance de terre isolée</th>
+                        <th scope="col">Résistance de terre interconnectée</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="normative"></td>
+                            <td><input type="text" class="form-control" id="terre-isolee"></td>
+                            <td><input type="text" class="form-control" id="terre-interconnectee"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class=" midde_cont mt-3">
+                <h4>Illustration photos</h4>
+                  <table class="table table-bordered border-primary">
+                     <thead>
+                         <tr>
+                             <th scope="col-6">Photo</th>
+                             <th scope="col-6">Description</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                     </tbody>
+                 </table>
+    
+                 <div class="button">
+                    <button class="prev-btn">Précedent</button>
+                     <button class="next-btn">Suivant</button> 
+                 </div>
+           </div>
+
+</div>

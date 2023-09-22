@@ -1,0 +1,205 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<!-- right content -->
+<div id="content">
+    <h2 class="mt-5">Navigation Aérienne</h2>
+            <div class="midde_cont mt-5">
+                <h4>Contrôle du système de navigation aérienne</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Balise diurne</th>
+                        <th scope="col">Etat de la balise</th>
+                        <th scope="col">Balisage nocturne</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="balise-diurne" list="choisir-trente-trois">
+                                <datalist id="choisir-trente-trois">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-balise" list="choisi-trente-trois"> 
+                                <datalist id="choisi-trente-trois">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="balise-nocturne" list="chois-trente-trois"> 
+                                <datalist id="chois-trente-trois">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat du balisage nocturne</th>
+                        <th scope="col">Tension des feux du balisage nocturne</th>
+                        <th scope="col">Nombre de feux de balisage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-balise-nocturne" list="choisir-trente-quatre">
+                                <datalist id="choisir-trente-quatre">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="tension-balise-nocturne" list="choisi-trente-quatre"> 
+                                <datalist id="choisi-trente-quatre">
+                                    <option value="220V AC">
+                                    <option value="48V DC">
+                                    <option value="Solaire">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="nbre-balisage"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">niveau de feux de balisage </th>
+                        <th scope="col">Lampe balisage nocturne</th>
+                        <th scope="col">Etat de la lampe</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="niv-feux-balisage" list="choisir-trente-cinq">
+                                <datalist id="choisir-trente-cinq">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="lampe-balisage-nocturne" list="choisi-trente-cinq"> 
+                                <datalist id="choisi-trente-cinq">
+                                    <option value="Néon">
+                                    <option value="Incandescence">
+                                    <option value="LED">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-lampe" list="chois-trente-cinq">
+                            <datalist id="chois-trente-cinq">
+                                <option value="Bon">
+                                <option value="Mauvais">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Boîtiers à proximité des feux</th>
+                        <th scope="col">Etat du boitier</th>
+                        <th scope="col">Boîtier à proximité de l’interrupteur </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="boitier-feux" list="choisir-trente-six">
+                                <datalist id="choisir-trente-six">
+                                    <option value="Inexistant">
+                                    <option value="Existant">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="etat-boitier" list="choisi-trente-six"> 
+                                <datalist id="choisi-trente-six">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="boitier-interrupteur" list="chois-trente-six">
+                            <datalist id="chois-trente-six">
+                                <option value="Inexistant">
+                                <option value="Existant">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Etat du boîtier de l’interrupteur</th>
+                        <th scope="col">Cellule balisage nocturne</th>
+                        <th scope="col">Fonctionnelle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="etat-boitier-interrupteur" list="choisir-trente-sept">
+                                <datalist id="choisir-trente-sept">
+                                    <option value="Bon">
+                                    <option value="Mauvais">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="cellule-balisage-nocture" list="choisi-trente-sept"> 
+                                <datalist id="choisi-trente-sept">
+                                    <option value="Intégrée">
+                                    <option value="Indépendante">
+                                </datalist></td>
+                            <td><input type="text" class="form-control" id="fonctionnelle" list="chois-trente-sept">
+                            <datalist id="chois-trente-sept">
+                                <option value="Non">
+                                <option value="Oui">
+                            </datalist></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="observation">Observations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="form-control" id="floatingTextarea2" style="height: 80px"></textarea></td>
+                        </tr>
+        
+                    </tbody>
+        
+                </table>
+            </div>
+
+            <div class=" midde_cont mt-3">
+                <h4>Illustration photos</h4>
+                  <table class="table table-bordered border-primary">
+                     <thead>
+                         <tr>
+                             <th scope="col-6">Photo</th>
+                             <th scope="col-6">Description</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><input type="file" id="file-input" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-imge" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-img" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                         <tr>
+                             <td><input type="file" id="file-im" name="image" (change)="previewImage($event)">
+                                 <br>
+                                 <img [src]="imageSrc" alt="" width="200"></td>
+                             <td><textarea class="form-control" id="floatingTextarea2" style="height: 300px;"></textarea></td>
+                         </tr>
+                     </tbody>
+                 </table>
+    
+                 <div class="button">
+                    <button class="prev-btn">Précedent</button>
+                     <button class="next-btn">Suivant</button> 
+                 </div>
+           </div>
+
+</div>

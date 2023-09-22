@@ -1,0 +1,306 @@
+<app-header></app-header>
+<app-side-bar-un></app-side-bar-un>
+
+<div id="content">
+    <div class=" midde_cont mt-5">
+        <h4>Informations sur le site et le contrôle du site</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Nom du site</th>
+                <th scope="col">Région du site</th>
+                <th scope="col">Département du site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td><input type="text" class="form-control" id="nsite" [(ngModel)]="nom_site" [ngModelOptions]="{standalone: true}"></td>
+                <td><input type="text" class="form-control" id="region" list="reg" [(ngModel)]="nomregion" [ngModelOptions]="{standalone: true}">
+
+                    <datalist id="reg">
+                        <option value="Abidjan">
+                        <option value="Bas-sassandra">
+                        <option value="Comoé">
+                        <option value="Denguélé">
+                        <option value="Gôh-djiboua">
+                        <option value="Lacs">
+                        <option value="Lagunes">
+                        <option value="Montagnes">
+                        <option value="Sassandra-marahoué">
+                        <option value="Savanes">
+                        <option value="Vallée du bandama">
+                        <option value="Woroba">
+                        <option value="Yamoussokro">
+                        <option value="Gbêkê">
+                        <option value="Gontougo">
+                        <option value="Grands-ponts">
+                        <option value="N'zi-comoé">
+                        <option value="Sud-sassandra">
+                        <option value="Zanzan">
+                    </datalist>
+                
+                </td>
+                <td><input type="text" class="form-control" id="dpmt" list="dpt" [(ngModel)]="nomdepartement" [ngModelOptions]="{standalone: true}">
+                    <datalist id="dpt">
+                        <option value="Abengourou">
+                        <option value="Abidjan">
+                        <option value="Aboisso">
+                        <option value="Adiaké">
+                        <option value="Adzopé">
+                        <option value="Agboville">
+                        <option value="Akoupé">
+                        <option value="Alépé">
+                        <option value="Bangolo">
+                        <option value="Béoumi">
+                        <option value="Biankouma">
+                        <option value="Bingerville">
+                        <option value="Bloléquin">
+                        <option value="Bocanda">
+                        <option value="Bondoukou">
+                        <option value="Bongouanou">
+                        <option value="Botro">
+                        <option value="Bouaflé">
+                        <option value="Bouaké">
+                        <option value="Bouna">
+                        <option value="Boundiali">
+                        <option value="Dabakala">
+                        <option value="Dabou">
+                        <option value="Daloa">
+                        <option value="Danané">
+                        <option value="Daoukro">
+                        <option value="Dimbokro">
+                        <option value="Divo">
+                        <option value="Duékoué">
+                        <option value="Ferkessédougou">
+                        <option value="Gagnoa">
+                        <option value="Grand-Bassam">
+                        <option value="Grand-Lahou">
+                        <option value="Guiglo">
+                        <option value="Issia">
+                        <option value="Jacqueville">
+                        <option value="Katiola">
+                        <option value="Korhogo">
+                        <option value="Lakota">
+                        <option value="Man">
+                        <option value="Mankono">
+                        <option value="Minignan">
+                        <option value="Nassian">
+                        <option value="Odienné">
+                        <option value="Oumé">
+                        <option value="Sakassou">
+                        <option value="San-Pedro">
+                        <option value="Sassandra">
+                        <option value="Séguéla">
+                        <option value="Sinfra">
+                        <option value="Soubré">
+                        <option value="Tanda">
+                        <option value="Tiassalé">
+                        <option value="Tingréla">
+                        <option value="Touba">
+                        <option value="Toulepleu">
+                        <option value="Toumodi">
+                        <option value="Vavoua">
+                        <option value="Yamoussoukro">
+                        <option value="Zouan-Hounien">
+                        <option value="Zuénoula">
+                    </datalist>
+                
+                </td>
+                </tr>
+            </tbody>
+        </table> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Commune du site</th>
+                    <th scope="col">Ville/Quartier</th>
+                    <th scope="col">Environnement du site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="commune" list="com" [(ngModel)]="nomcommune" [ngModelOptions]="{standalone: true}">
+                        <datalist id="com">
+                            <option value="Abengourou">
+                            <option value="Abidjan">
+                            <option value="Aboisso">
+                            <option value="Adiaké">
+                            <option value="Adzopé">
+                            <option value="Agboville">
+                            <option value="Akoupé">
+                            <option value="Alépé">
+                            <option value="Anyama">
+                            <option value="Bingerville">
+                            <option value="Bondoukou">
+                            <option value="Bouaflé">
+                            <option value="Bouna">
+                            <option value="Boundiali">
+                            <option value="Dabakala">
+                            <option value="Dabou">
+                            <option value="Daloa">
+                            <option value="Danané">
+                            <option value="Daoukro">
+                            <option value="Dimbokro">
+                        </datalist>
+                    
+                    </td>
+                    <td><input type="text" class="form-control" id="ville" [(ngModel)]="nom_city" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="env" list="suggestions" [(ngModel)]="typenvir" [ngModelOptions]="{standalone: true}">
+                        <datalist id="suggestions">
+                            <option value="Classique">
+                            <option value="Salin">
+                            <option value="Montagneux">
+                            <option value="Autre">
+                        </datalist></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Situation géographique</th>
+                    <th scope="col">Densité de population </th>
+                    <th scope="col">Typologie du site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="situation" list="suggestion" [(ngModel)]="situation_geo" [ngModelOptions]="{standalone: true}">
+                        <datalist id="suggestion">
+                            <option value="Zone Urbaine">
+                            <option value="Zone Rurale">
+                        </datalist></td>
+                    <td><input type="text" class="form-control" id="densite" list="suggest" [(ngModel)]="densite" [ngModelOptions]="{standalone: true}">
+                        <datalist id="suggest">
+                            <option value="Forte">
+                            <option value="Faible">
+                        </datalist></td>
+                    <td><input type="text" class="form-control" id="typologie" list="sugges" [(ngModel)]="typologie" [ngModelOptions]="{standalone: true}">
+                        <datalist id="sugges">
+                            <option value="Grenfield">
+                            <option value="Rooftop">
+                        </datalist></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">station</th>
+                    <th scope="col">Local technique</th>
+                    <th scope="col">Présence de plaque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="station" list="sugge" [(ngModel)]="station" [ngModelOptions]="{standalone: true}">
+                        <datalist id="sugge">
+                            <option value="BSC/RNC">
+                            <option value="BTS">
+                            <option value="MW">
+                            <option value="Autre">
+                        </datalist></td>
+                    <td><input type="text" class="form-control" id="local" list="sugg" [(ngModel)]="localtec" [ngModelOptions]="{standalone: true}">
+                        <datalist id="sugg">
+                            <option value="Shelter">
+                            <option value="Bâtiment">
+                            <option value="Abri">
+                            <option value="Autre">
+                        </datalist></td>
+                    <td><input type="text" class="form-control" id="identite" list="sug" [(ngModel)]="plaque_ident" [ngModelOptions]="{standalone: true}">
+                        <datalist id="sug">
+                            <option value="Oui">
+                            <option value="Non">
+                        </datalist></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date de mise en service site</th>
+                    <th scope="col">Hauteur du bâtiment</th>
+                    <th scope="col">Surveillance du site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="date" class="form-control" id="m-e-s" [(ngModel)]="date_de_ms" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="hauteur" [(ngModel)]="hauteur_bat" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="surveillance" list="choix" [(ngModel)]="gardient" [ngModelOptions]="{standalone: true}">
+                        <datalist id="choix">
+                            <option value="Présent">
+                            <option value="Absent">
+                        </datalist></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre de vigile</th>
+                    <th scope="col">Société de gardiennage</th>
+                    <th scope="col">Type Station</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="nbre" [(ngModel)]="nbre_gardient" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="societe" [(ngModel)]="societe_gardient" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="type" list="choi" [(ngModel)]="typestation" [ngModelOptions]="{standalone: true}">
+                        <datalist id="choi">
+                            <option value="Indoor">
+                            <option value="Outdoor">
+                        </datalist></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Latitude (N)</th>
+                    <th scope="col">Longitude (W)</th>
+                    <th scope="col">Altitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" id="commune" [(ngModel)]="latitude" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="ville" [(ngModel)]="longitude" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" id="env" [(ngModel)]="altitude" [ngModelOptions]="{standalone: true}"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+            <h5>Observation</h5>
+            <angular-editor class="bg-black" [(ngModel)]="commentaire" [ngModelOptions]="{standalone: true}" [config]="config" #editor></angular-editor>
+            <div class="html">
+               {{ htmlContent }}
+            </div>
+          
+    </div>
+    <div class="button mt-5 center verticle_center">
+        <button class="prev-btn" [routerLink]="editMode ? '/presentation/edit/'+id_rapport_a_modifier : '/presentation'">Précedent</button>
+        <button class="save-btn" type="submit" (click)="Submited()">{{ editMode ? 'Modifier' : 'Enregistrer' }}</button> 
+        <button class="next-btn" [routerLink]="editMode ? '/photosite/edit/'+id_rapport_a_modifier : '/photosite'">Suivant</button>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<app-header></app-header>
+<app-side-bar-un></app-side-bar-un>
+<!-- right content -->
+<div id="content">
+        <div class="midde_cont mt-5">
+            <h4>Présentation de l'équipe intervenant</h4>
+            <table class="table mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Fonction</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" [(ngModel)]="nom1" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="prenom1" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="fonction1" [ngModelOptions]="{standalone: true}"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" [(ngModel)]="nom2" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="prenom2" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="fonction2" [ngModelOptions]="{standalone: true}"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" [(ngModel)]="nom3" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="prenom3" [ngModelOptions]="{standalone: true}"></td>
+                    <td><input type="text" class="form-control" [(ngModel)]="fonction3" [ngModelOptions]="{standalone: true}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="button center verticle_center">
+            <button class="prev-btn" [routerLink]="editMode ? '/inforapport/edit/'+id_rapport_a_modifier : '/inforapport'">Precedent</button>
+            <button class="save-btn" type="submit" (click)="Submited()">{{ editMode ? 'Modifier' : 'Enregistrer' }}</button> 
+            <button class="next-btn" [routerLink]="editMode ? '/infosite/edit/'+id_rapport_a_modifier : '/infosite'">Suivant</button>
+        
+        </div>
+</div>

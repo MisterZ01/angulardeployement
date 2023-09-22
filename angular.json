@@ -1,6 +1,17 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+<<<<<<< HEAD
+  "newProjectRoot": "projects",
+  "projects": {
+    "ProjetSoutenance": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+=======
   "cli": {
     "packageManager": "npm"
   },
@@ -9,6 +20,7 @@
     "myApp": {
       "projectType": "application",
       "schematics": {},
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -16,21 +28,38 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
+            "outputPath": "dist/projet-soutenance",
+=======
             "outputPath": "dist",
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+<<<<<<< HEAD
+            "inlineStyleLanguage": "scss",
+=======
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+               "node_modules/sweetalert2/src/sweetalert2.scss"
+               
+            ],
+            "scripts": [
+              
+            ]
+=======
               "src/styles.css"
             ],
             "scripts": []
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
           },
           "configurations": {
             "production": {
@@ -63,10 +92,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
+              "browserTarget": "ProjetSoutenance:build:production"
+            },
+            "development": {
+              "browserTarget": "ProjetSoutenance:build:development"
+=======
               "browserTarget": "myApp:build:production"
             },
             "development": {
               "browserTarget": "myApp:build:development"
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +110,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
+            "browserTarget": "ProjetSoutenance:build"
+=======
             "browserTarget": "myApp:build"
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
           }
         },
         "test": {
@@ -85,17 +125,35 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+<<<<<<< HEAD
+            "inlineStyleLanguage": "scss",
+=======
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "./node_modules/html2pdf.js/dist/html2pdf.bundle.min.js"
+            ]
+=======
               "src/styles.css"
             ],
             "scripts": []
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
           }
         }
       }
     }
+<<<<<<< HEAD
+  },
+  "cli": {
+    "analytics": false
+=======
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
   }
 }
