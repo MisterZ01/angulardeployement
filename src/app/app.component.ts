@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 
+=======
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+<<<<<<< HEAD
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
@@ -60,4 +64,10 @@ export class AppComponent {
       ['fontSize']
     ]
 }
+=======
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApp';
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
 }

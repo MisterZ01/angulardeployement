@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { PhotositeComponent } from './dashboard/photosite/photosite.component';
 import { PhotoenvironnementComponent } from './dashboard/photoenvironnement/photoenvironnement.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
@@ -96,6 +97,21 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     TableService, 
     QuickToolbarService,
     AuthService],
+=======
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+>>>>>>> b8f3bf356971eb55cd89b9e1b5ea8bf71233a5e3
   bootstrap: [AppComponent]
 })
 export class AppModule { }
